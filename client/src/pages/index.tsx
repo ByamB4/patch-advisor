@@ -5,7 +5,9 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
   return (
     <MainLayout>
       <div className="flex justify-center">
-        <h1 className="text-[50px]">MAYBE DRAW DASHBOARD HERE</h1>
+        <h1 className="text-[50px]">
+          DEVELOPED BY <span className="font-bold">CSD-ISD</span>
+        </h1>
       </div>
     </MainLayout>
   );
