@@ -51,7 +51,7 @@ async function insertOracle(filePath: string) {
 }
 
 async function main() {
-  const parentDir = path.resolve(__dirname, "..");
+  const parentDir = path.resolve(__dirname, "../..");
   const _static = path.resolve(parentDir, "scrape/static");
   insertRedhat(`${_static}/redhat.json`);
   insertVmware(`${_static}/vmware.json`);
