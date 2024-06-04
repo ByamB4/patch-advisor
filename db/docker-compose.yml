@@ -1,13 +1,4 @@
 services:
-  app:
-    build: .
-    ports:
-      - "3000:3000"
-    volumes:
-      - .:/app
-    depends_on:
-      - database
-
   database:
     image: postgres:alpine
     restart: always
@@ -21,3 +12,4 @@ services:
       - db-data:/var/lib/postgresql/data
 volumes:
   db-data:
+# docker compose up -d
