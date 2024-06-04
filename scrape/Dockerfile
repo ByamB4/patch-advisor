@@ -8,3 +8,4 @@ RUN DEBIAN_FRONTEND=noninteractive \
   && pip install pytest-playwright \
   && playwright install-deps \
   && playwright install
+
