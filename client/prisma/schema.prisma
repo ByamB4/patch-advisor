@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model redhat {
+  cve               String   @id
+  synopsis          String
+  severity          String
+  description       String
+  solution          String
+  affected_products String
+  fixes             String
+  cves              String
+  references        String
+  date              String
+  topics            String[]
+}
+
+model vmware {
+  cve      String @id
+  synopsis String
+  severity String
+  date     String
+  link     String
+  detail   String
+}
+
+model cisco {
+  id           String   @id
+  link         String
+  title        String
+  impact       String
+  version      String
+  last_updated String
+  clean_cves   String[]
+}
+
+model oracle {
+  id                    Int    @id @default(autoincrement())
+  affected_product      String
+  affected_product_link String
+  patch_document        String
+  patch_document_link   String
+}
