@@ -19,7 +19,7 @@ class RedhatErrata:
         self.read_data()
         self.check_new_update()
         self.scrape()
-        self.save()
+        # self.save()
         self.page.close()
         self.context.close()
 
