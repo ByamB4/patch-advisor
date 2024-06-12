@@ -3,7 +3,7 @@ import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
 import { REDHAT_TABS } from "constants/configs";
 import { useState } from "react";
 import { MARGIN_Y, PADDING_X } from "constants/layout";
-import { Button, Tab, Tabs, Typography } from "@mui/material";
+import { Button, Tab, Tabs, Typography, Pagination } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
 import { RedHatList } from "ui/redhat";
 import { IRedhat } from "interfaces";
@@ -11,6 +11,11 @@ import { db } from "server";
 
 const RedhatPage: NextPage<{ data: IRedhat[] }> = ({ data }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
+  const [page, setPage] = useState<number>(1);
+  const postPerPage: number = 10;
+  const enhancementData = [...data.filter((it) => it.severity.includes("Enhancement"))];
+  const bugFix = [...data.filter((it) => it.severity.includes("Bug Fix Advisory"))];
+  const securityAdvisory = [...data.filter((it) => it.severity.includes("Security Advisory"))];
 
   return (
     <MainLayout NO_PADDING>
@@ -50,16 +55,26 @@ const RedhatPage: NextPage<{ data: IRedhat[] }> = ({ data }): React.ReactElement
         <div className={`bg-white min-h-screen ${PADDING_X}`}>
           <div className="py-5">
             {tabNumber === 0 ? (
-              <RedHatList data={data} />
+              <RedHatList data={data.slice((page - 1) * postPerPage, page * postPerPage)} />
             ) : tabNumber === 1 ? (
-              <RedHatList data={[...data.filter((it) => it.severity.includes("Enhancement"))]} />
+              <RedHatList data={enhancementData.slice((page - 1) * postPerPage, page * postPerPage)} />
             ) : tabNumber === 2 ? (
-              <RedHatList data={[...data.filter((it) => it.severity.includes("Bug Fix Advisory"))]} />
+              <RedHatList data={bugFix.slice((page - 1) * postPerPage, page * postPerPage)} />
             ) : tabNumber === 3 ? (
-              <RedHatList data={[...data.filter((it) => it.severity.includes("Security Advisory"))]} />
+              <RedHatList data={securityAdvisory.slice((page - 1) * postPerPage, page * postPerPage)} />
             ) : (
               <></>
             )}
+          </div>
+          <div className="flex items-center justify-center">
+            <Pagination
+              size="large"
+              count={Math.ceil((tabNumber === 0 ? data.length : tabNumber === 1 ? enhancementData.length : tabNumber === 2 ? bugFix.length : securityAdvisory.length) / postPerPage)}
+              defaultPage={1}
+              onChange={(e, val) => setPage(val)}
+              variant="outlined"
+              color="primary"
+            />
           </div>
         </div>
       </div>
@@ -70,7 +85,11 @@ const RedhatPage: NextPage<{ data: IRedhat[] }> = ({ data }): React.ReactElement
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
   return {
     props: {
-      data: await db.redhat.findMany(),
+      data: await db.redhat.findMany({
+        orderBy: {
+          date: "desc",
+        },
+      }),
     },
   };
 };

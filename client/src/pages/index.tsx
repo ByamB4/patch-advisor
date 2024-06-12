@@ -5,9 +5,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
   return (
     <MainLayout>
       <div className="flex justify-center">
-        <h1 className="text-[50px]">
-          DEVELOPED BY <span className="font-bold">CSD-ISD</span>
-        </h1>
+        <img src="DigipayKBBanner.png" className="flex rounded-xl" />
       </div>
     </MainLayout>
   );

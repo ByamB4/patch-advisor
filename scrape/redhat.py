@@ -68,6 +68,7 @@ class RedhatErrata:
             header["cve"] = header["element"].query_selector("xpath=.//a").text_content()
             _date["element"] = row.query_selector("xpath=./td[@id='errataItem--date']")
             _date["date"] = _date["element"].query_selector("xpath=.//span").text_content()
+            print("[redhat@cve]", header["cve"], flush=True)
             if header["cve"] in self.NEW_ITEMS:
                 self.fetch_detail(header, _date)
 

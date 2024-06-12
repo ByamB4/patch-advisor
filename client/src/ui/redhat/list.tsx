@@ -1,16 +1,6 @@
 import { convertToLocal } from "utils";
 import { tableCellClasses } from "@mui/material/TableCell";
-import {
-  Table,
-  TableBody,
-  TableContainer,
-  TableRow,
-  TableHead,
-  TableCell,
-  CircularProgress,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import colors from "theme/colors";
 import { BsShieldExclamation } from "react-icons/bs";
@@ -43,34 +33,23 @@ interface Props {
   data: IRedHat[];
 }
 
-const RedHatUI: React.FC<Props> = ({
-  className = "",
-  data,
-}): React.ReactElement => {
+const RedHatUI: React.FC<Props> = ({ className = "", data }): React.ReactElement => {
   const router = useRouter();
   const renderSeverity = (raw: string) => {
     var el = <></>;
     if (raw.includes(":")) {
       var parts = raw.split(": ");
       if (parts[1] === "Important") {
-        el = (
-          <div className="bg-[#b85c00] p-1 rounded text-white">Important</div>
-        );
+        el = <div className="bg-[#b85c00] p-1 rounded text-white">Important</div>;
       } else if (parts[1] === "Moderate") {
         el = <div className="bg-[#f5c12e] p-1 rounded">Moderate</div>;
       } else if (parts[1] === "Low") {
         el = <div className="bg-[#316dc1] p-1 rounded text-white">Low</div>;
       } else if (parts[1] === "Critical") {
-        el = (
-          <div className="bg-[#a30000] p-1 rounded text-white">Critical</div>
-        );
+        el = <div className="bg-[#a30000] p-1 rounded text-white">Critical</div>;
       }
     }
-    const containerBuild = (
-      icon: React.ReactElement,
-      el: React.ReactElement,
-      raw: string
-    ) => {
+    const containerBuild = (icon: React.ReactElement, el: React.ReactElement, raw: string) => {
       return (
         <div className="flex flex-col items-center gap-3">
           <div className="flex gap-1">
@@ -112,17 +91,11 @@ const RedHatUI: React.FC<Props> = ({
             <TableBody>
               {data.map((row) => (
                 <StyledTableRow key={row.cve}>
-                  <StyledTableCell
-                    onClick={() => router.push(`/redhat/${row.cve}`)}
-                  >
-                    <Typography className="hover:cursor-pointer text-primary-blue underline">
-                      {row.cve}
-                    </Typography>
+                  <StyledTableCell onClick={() => router.push(`/redhat/${row.cve}`)}>
+                    <Typography className="hover:cursor-pointer text-primary-blue underline">{row.cve}</Typography>
                   </StyledTableCell>
                   <StyledTableCell>{row.synopsis}</StyledTableCell>
-                  <StyledTableCell align="center">
-                    {renderSeverity(row.severity)}
-                  </StyledTableCell>
+                  <StyledTableCell align="center">{renderSeverity(row.severity)}</StyledTableCell>
                   <StyledTableCell>
                     <div
                       dangerouslySetInnerHTML={{
@@ -130,9 +103,7 @@ const RedHatUI: React.FC<Props> = ({
                       }}
                     ></div>
                   </StyledTableCell>
-                  <StyledTableCell align="right">
-                    {convertToLocal(row.date)}
-                  </StyledTableCell>
+                  <StyledTableCell align="right">{convertToLocal(row.date)}</StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>
