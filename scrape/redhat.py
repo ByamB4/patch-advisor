@@ -42,11 +42,10 @@ class RedhatErrata:
 
     def check_new_update(self) -> bool:
         print(f"[redhat@check_new_update] starting...", flush=True)
-        for attempt in range(self.RETRY_ATTEMPT):
-            print(f"[redhat@attempt] {attempt+1}", flush=True)
+        for attempt in range(1, self.RETRY_ATTEMPT + 1):
+            print(f"[redhat@attempt] {attempt}", flush=True)
             try:
                 self.page.goto(self.URL, wait_until="networkidle")
-                self.page.screenshot(path="/home/1.png")
                 self.page.wait_for_selector(
                     "//table[@id='Security-Errata-Table']//tbody//tr"
                 )
