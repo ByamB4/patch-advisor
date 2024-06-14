@@ -1,6 +1,6 @@
 #!/bin/bash
 DEBUG=1;
-name='vmware';
+name='cisco';
 if [ "$DEBUG" -eq 1 ]; then
   path='/home/byamb4/dev/patch-advisor';
 else
