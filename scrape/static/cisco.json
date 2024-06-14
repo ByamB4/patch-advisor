@@ -1,5 +1,44 @@
 [
   {
+    "id": "cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
+    "title": "Cisco Secure Email and Web Manager, Secure Email Gateway, and Secure Web Appliance Cross-Site Scripting Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jun 12",
+    "clean_cves": [
+      "CVE-2024-20256",
+      "CVE-2024-20257",
+      "CVE-2024-20256",
+      "CVE-2024-20257",
+      "CVE-2024-20258",
+      "CVE-2024-20383"
+    ]
+  },
+  {
+    "id": "cisco-sa-esa-http-split-GLrnnOwS",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-http-split-GLrnnOwS",
+    "title": "Cisco Secure Email Gateway HTTP Response Splitting Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jun 12",
+    "clean_cves": [
+      "CVE-2024-20392"
+    ]
+  },
+  {
+    "id": "cisco-sa-finesse-ssrf-rfi-Um7wT8Ew",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-finesse-ssrf-rfi-Um7wT8Ew",
+    "title": "Cisco Finesse Web-Based Management Interface Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jun 06",
+    "clean_cves": [
+      "CVE-2024-20404",
+      "CVE-2024-20405"
+    ]
+  },
+  {
     "id": "cisco-sa-fmc-sqli-WFFDnNOs",
     "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-sqli-WFFDnNOs",
     "title": "Cisco Firepower Management Center Software SQL Injection Vulnerability",
@@ -88,6 +127,17 @@
     ]
   },
   {
+    "id": "cisco-sa-cucm-apidos-PGsDcdNF",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-apidos-PGsDcdNF",
+    "title": "Multiple Cisco Unified Communications Products Unauthenticated API High CPU Utilization Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 May 17",
+    "clean_cves": [
+      "CVE-2023-20259"
+    ]
+  },
+  {
     "id": "cisco-sa-nso-rwpesc-qrQGnh3f",
     "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-rwpesc-qrQGnh3f",
     "title": "Cisco Crosswork Network Services Orchestrator Vulnerabilities",
@@ -142,33 +192,6 @@
     "last_updated": "2024 May 15",
     "clean_cves": [
       "CVE-2024-20369"
-    ]
-  },
-  {
-    "id": "cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
-    "title": "Cisco Secure Email and Web Manager, Secure Email Gateway, and Secure Web Appliance Cross-Site Scripting Vulnerabilities",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20256",
-      "CVE-2024-20257",
-      "CVE-2024-20256",
-      "CVE-2024-20257",
-      "CVE-2024-20258",
-      "CVE-2024-20383"
-    ]
-  },
-  {
-    "id": "cisco-sa-esa-http-split-GLrnnOwS",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-http-split-GLrnnOwS",
-    "title": "Cisco Secure Email Gateway HTTP Response Splitting Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20392"
     ]
   },
   {
@@ -261,6 +284,17 @@
     "last_updated": "2024 Apr 17",
     "clean_cves": [
       "CVE-2024-20373"
+    ]
+  },
+  {
+    "id": "cisco-sa-ios-dos-Hq4d3tZG",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ios-dos-Hq4d3tZG",
+    "title": "Cisco IOS Software for Catalyst 6000 Series Switches Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Apr 04",
+    "clean_cves": [
+      "CVE-2024-20276"
     ]
   },
   {
@@ -397,6 +431,17 @@
     ]
   },
   {
+    "id": "cisco-sa-iosxe-utd-cmd-JbL8KvHT",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-utd-cmd-JbL8KvHT",
+    "title": "Cisco IOS XE Software Unified Threat Defense Command Injection Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Apr 02",
+    "clean_cves": [
+      "CVE-2024-20306"
+    ]
+  },
+  {
     "id": "cisco-sa-wlc-mdns-dos-4hv6pBGf",
     "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-wlc-mdns-dos-4hv6pBGf",
     "title": "Cisco IOS XE Software for Wireless LAN Controllers Multicast DNS Denial of Service Vulnerability",
@@ -449,17 +494,6 @@
     "last_updated": "2024 Mar 27",
     "clean_cves": [
       "CVE-2024-20314"
-    ]
-  },
-  {
-    "id": "cisco-sa-ios-dos-Hq4d3tZG",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ios-dos-Hq4d3tZG",
-    "title": "Cisco IOS Software for Catalyst 6000 Series Switches Denial of Service Vulnerability",
-    "impact": "High",
-    "version": "1.0",
-    "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20276"
     ]
   },
   {
@@ -516,17 +550,6 @@
     "last_updated": "2024 Mar 27",
     "clean_cves": [
       "CVE-2024-20324"
-    ]
-  },
-  {
-    "id": "cisco-sa-iosxe-utd-cmd-JbL8KvHT",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-utd-cmd-JbL8KvHT",
-    "title": "Cisco IOS XE Software Unified Threat Defense Command Injection Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20306"
     ]
   },
   {
@@ -1082,464 +1105,130 @@
     ]
   },
   {
-    "id": "cisco-sa-asa-ssl-vpn-Y88QOm77",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-ssl-vpn-Y88QOm77",
-    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software VPN Packet Validation Vulnerability",
+    "id": "cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
+    "title": "Cisco Secure Email and Web Manager, Secure Email Gateway, and Secure Web Appliance Cross-Site Scripting Vulnerabilities",
     "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Dec 05",
+    "version": "1.1",
+    "last_updated": "2024 Jun 12",
     "clean_cves": [
-      "CVE-2023-20275"
+      "CVE-2024-20256",
+      "CVE-2024-20257",
+      "CVE-2024-20256",
+      "CVE-2024-20257",
+      "CVE-2024-20258",
+      "CVE-2024-20383"
     ]
   },
   {
-    "id": "cisco-sa-wsa-bypass-vXvqwzsj",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-wsa-bypass-vXvqwzsj",
-    "title": "Cisco Secure Web Appliance Content Encoding Filter Bypass Vulnerability",
+    "id": "cisco-sa-esa-http-split-GLrnnOwS",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-http-split-GLrnnOwS",
+    "title": "Cisco Secure Email Gateway HTTP Response Splitting Vulnerability",
     "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jun 12",
+    "clean_cves": [
+      "CVE-2024-20392"
+    ]
+  },
+  {
+    "id": "cisco-sa-finesse-ssrf-rfi-Um7wT8Ew",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-finesse-ssrf-rfi-Um7wT8Ew",
+    "title": "Cisco Finesse Web-Based Management Interface Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jun 06",
+    "clean_cves": [
+      "CVE-2024-20404",
+      "CVE-2024-20405"
+    ]
+  },
+  {
+    "id": "cisco-sa-fmc-sqli-WFFDnNOs",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-sqli-WFFDnNOs",
+    "title": "Cisco Firepower Management Center Software SQL Injection Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20360"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-ssl-dos-uu7mV5p6",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-ssl-dos-uu7mV5p6",
+    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software for Firepower 2100 Series Appliances SSL/TLS Denial of Service Vulnerability",
+    "impact": "High",
     "version": "1.2",
-    "last_updated": "2023 Nov 17",
+    "last_updated": "2024 May 22",
     "clean_cves": [
-      "CVE-2023-20215"
+      "CVE-2023-20006"
     ]
   },
   {
-    "id": "cisco-sa-ftd-icmpv6-dos-4eMkLuN",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-icmpv6-dos-4eMkLuN",
-    "title": "Cisco Firepower Threat Defense Software and Cisco FirePOWER Services ICMPv6 with Snort 2 Denial of Service Vulnerability",
-    "impact": "High",
-    "version": "1.1",
-    "last_updated": "2023 Nov 16",
-    "clean_cves": [
-      "CVE-2023-20083"
-    ]
-  },
-  {
-    "id": "cisco-sa-uipphone-xss-NcmUykqA",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-uipphone-xss-NcmUykqA",
-    "title": "Cisco IP Phone Stored Cross-Site Scripting Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 15",
-    "clean_cves": [
-      "CVE-2023-20265"
-    ]
-  },
-  {
-    "id": "cisco-sa-secure-endpoint-dos-RzOgFKnd",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-secure-endpoint-dos-RzOgFKnd",
-    "title": "Cisco Secure Endpoint for Windows Scanning Evasion Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 15",
-    "clean_cves": [
-      "CVE-2023-20084"
-    ]
-  },
-  {
-    "id": "cisco-sa-ise-mult-j-KxpNynR",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-mult-j-KxpNynR",
-    "title": "Cisco Identity Services Engine Vulnerabilities",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 15",
-    "clean_cves": [
-      "CVE-2023-20208",
-      "CVE-2023-20272"
-    ]
-  },
-  {
-    "id": "cisco-sa-appd-php-authpriv-gEBwTvu5",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-appd-php-authpriv-gEBwTvu5",
-    "title": "Cisco AppDynamics PHP Agent Privilege Escalation Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 15",
-    "clean_cves": [
-      "CVE-2023-20274"
-    ]
-  },
-  {
-    "id": "cisco-sa-accsc-dos-9SLzkZ8",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-accsc-dos-9SLzkZ8",
-    "title": "Cisco Secure Client Software Denial of Service Vulnerabilities",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 15",
-    "clean_cves": [
-      "CVE-2023-20240",
-      "CVE-2023-20241"
-    ]
-  },
-  {
-    "id": "cisco-sa-asa-icmpv6-t5TzqwNd",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-icmpv6-t5TzqwNd",
-    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software ICMPv6 Message Processing Denial of Service Vulnerability",
-    "impact": "High",
-    "version": "1.1",
-    "last_updated": "2023 Nov 02",
-    "clean_cves": [
-      "CVE-2023-20086"
-    ]
-  },
-  {
-    "id": "cisco-sa-asa-webvpn-dos-3GhZQBAS",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-webvpn-dos-3GhZQBAS",
-    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Remote Access VPN Denial of Service Vulnerability",
-    "impact": "High",
-    "version": "1.1",
-    "last_updated": "2023 Nov 02",
-    "clean_cves": [
-      "CVE-2023-20095"
-    ]
-  },
-  {
-    "id": "cisco-sa-fmc-cmd-inj-29MP49hN",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-cmd-inj-29MP49hN",
-    "title": "Cisco Firepower Management Center Software Command Injection Vulnerability",
-    "impact": "Critical",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20048"
-    ]
-  },
-  {
-    "id": "cisco-sa-iosxe-webui-privesc-j22SaA4z",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-webui-privesc-j22SaA4z",
-    "title": "Multiple Vulnerabilities in Cisco IOS XE Software Web UI Feature",
-    "impact": "Critical",
-    "version": "2.6",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20198",
-      "CVE-2023-20273"
-    ]
-  },
-  {
-    "id": "cisco-sa-ise-injection-QeXegrCw",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-injection-QeXegrCw",
-    "title": "Cisco Identity Services Engine Command Injection Vulnerabilities",
-    "impact": "High",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20170",
-      "CVE-2023-20175"
-    ]
-  },
-  {
-    "id": "cisco-sa-ise-file-upload-FceLP4xs",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-file-upload-FceLP4xs",
-    "title": "Cisco Identity Services Engine Vulnerabilities",
-    "impact": "High",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20195",
-      "CVE-2023-20196",
-      "CVE-2023-20195",
-      "CVE-2023-20196",
-      "CVE-2023-20213"
-    ]
-  },
-  {
-    "id": "cisco-sa-ftd-intrusion-dos-DfT7wyGC",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-intrusion-dos-DfT7wyGC",
-    "title": "Cisco Firepower Threat Defense Software for Cisco Firepower 2100 Series Firewalls Inspection Rules Denial of Service Vulnerability",
-    "impact": "High",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20244"
-    ]
-  },
-  {
-    "id": "cisco-sa-ftd-fmc-code-inj-wSHrgz8L",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-fmc-code-inj-wSHrgz8L",
-    "title": "Cisco Firepower Threat Defense Software and Firepower Management Center Software Code Injection Vulnerability",
-    "impact": "High",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20063"
-    ]
-  },
-  {
-    "id": "cisco-sa-fmc-logview-dos-AYJdeX55",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-logview-dos-AYJdeX55",
-    "title": "Cisco Firepower Management Center Software Log API Denial of Service Vulnerability",
-    "impact": "High",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20155"
-    ]
-  },
-  {
-    "id": "cisco-sa-fmc-cmdinj-bTEgufOX",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-cmdinj-bTEgufOX",
-    "title": "Cisco Firepower Management Center Software Command Injection  Vulnerabilities",
-    "impact": "High",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20219",
-      "CVE-2023-20220"
-    ]
-  },
-  {
-    "id": "cisco-sa-asa-webvpn-LOeKsNmO",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-webvpn-LOeKsNmO",
-    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software VPN Web Client Services Client-Side Request Smuggling Vulnerability",
-    "impact": "Medium",
-    "version": "3.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2022-20713"
-    ]
-  },
-  {
-    "id": "cisco-sa-snort-ftd-zXYtnjOM",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort-ftd-zXYtnjOM",
-    "title": "Multiple Cisco Products Snort FTP Inspection Bypass Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20071"
-    ]
-  },
-  {
-    "id": "cisco-sa-sa-ftd-snort3-urldos-OccFQTeX",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sa-ftd-snort3-urldos-OccFQTeX",
-    "title": "Cisco Firepower Threat Defense Software SSL/TLS URL Category and Snort 3 Detection Engine Bypass and Denial of Service Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20177"
-    ]
-  },
-  {
-    "id": "cisco-sa-ftdsnort3sip-bypass-LMz2ThKn",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftdsnort3sip-bypass-LMz2ThKn",
-    "title": "Cisco Firepower Threat Defense Software Snort 3 Geolocation IP Filter Bypass Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20267"
-    ]
-  },
-  {
-    "id": "cisco-sa-ftd-snort3-uAnUntcV",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-snort3-uAnUntcV",
-    "title": "Cisco Firepower Threat Defense Software Snort 3 Detection Engine Denial of Service Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20070"
-    ]
-  },
-  {
-    "id": "cisco-sa-ftd-snort3-8U4HHxH8",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-snort3-8U4HHxH8",
-    "title": "Cisco Firepower Threat Defense Software SSL and Snort 3 Detection Engine Bypass and Denial of Service Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20031"
-    ]
-  },
-  {
-    "id": "cisco-sa-ftd-smbsnort3-dos-pfOjOYUV",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-smbsnort3-dos-pfOjOYUV",
-    "title": "Cisco Firepower Threat Defense Software SMB Protocol Snort 3 Detection Engine Bypass and Denial of Service Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20270"
-    ]
-  },
-  {
-    "id": "cisco-sa-fmc-xss-sK2gkfvJ",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-xss-sK2gkfvJ",
-    "title": "Cisco Firepower Management Center Software Cross-Site Scripting Vulnerabilities",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20005",
-      "CVE-2023-20041",
-      "CVE-2023-20005",
-      "CVE-2023-20041",
-      "CVE-2023-20074",
-      "CVE-2023-20206"
-    ]
-  },
-  {
-    "id": "cisco-sa-fmc-file-download-7js4ug2J",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-file-download-7js4ug2J",
-    "title": "Cisco Firepower Management Center Software Arbitrary File Download Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20114"
-    ]
-  },
-  {
-    "id": "cisco-sa-cms-segfault-G6ES4Ve8",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cms-segfault-G6ES4Ve8",
-    "title": "Cisco Meeting Server Web Bridge Denial of Service Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20255"
-    ]
-  },
-  {
-    "id": "cisco-sa-asaftd-ssl-dos-kxG8mpUA",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-ssl-dos-kxG8mpUA",
-    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software AnyConnect SSL/TLS VPN Denial of Service Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20042"
-    ]
-  },
-  {
-    "id": "cisco-sa-asaftd-saml-hijack-ttuQfyz",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-saml-hijack-ttuQfyz",
-    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software SAML Assertion Hijack Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20264"
-    ]
-  },
-  {
-    "id": "cisco-sa-asaftd-multi-cert-dzA3h5PT",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-multi-cert-dzA3h5PT",
-    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Remote Access SSL VPN Multiple Certificate Authentication Bypass Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20247"
-    ]
-  },
-  {
-    "id": "cisco-sa-asaftd-ac-acl-bypass-bwd7q6Gb",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-ac-acl-bypass-bwd7q6Gb",
-    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software AnyConnect Access Control List Bypass Vulnerabilities",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Nov 01",
-    "clean_cves": [
-      "CVE-2023-20245",
-      "CVE-2023-20256"
-    ]
-  },
-  {
-    "id": "cisco-sa-sdwan-vman-sc-LRLfu2z",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-vman-sc-LRLfu2z",
-    "title": "Cisco Catalyst SD-WAN Manager Vulnerabilities",
-    "impact": "Critical",
-    "version": "1.3",
-    "last_updated": "2023 Oct 25",
-    "clean_cves": [
-      "CVE-2023-20034",
-      "CVE-2023-20252",
-      "CVE-2023-20034",
-      "CVE-2023-20252",
-      "CVE-2023-20253",
-      "CVE-2023-20254",
-      "CVE-2023-20262"
-    ]
-  },
-  {
-    "id": "cisco-sa-nso-priv-esc-XXqRtTfT",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-priv-esc-XXqRtTfT",
-    "title": "Cisco Network Services Orchestrator CLI Secure Shell Server Privilege Escalation Vulnerability",
-    "impact": "High",
-    "version": "2.1",
-    "last_updated": "2023 Oct 25",
-    "clean_cves": [
-      "CVE-2021-1572"
-    ]
-  },
-  {
-    "id": "cisco-sa-iosxe-webcmdinjsh-UFJxTgZD",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-webcmdinjsh-UFJxTgZD",
-    "title": "Cisco IOS XE Software Web UI Command Injection Vulnerability",
-    "impact": "Medium",
-    "version": "1.2",
-    "last_updated": "2023 Oct 23",
-    "clean_cves": [
-      "CVE-2021-1435"
-    ]
-  },
-  {
-    "id": "cisco-sa-sdwan-lfi-OWLbKUGe",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-lfi-OWLbKUGe",
-    "title": "Cisco Catalyst SD-WAN Manager Local File Inclusion Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Oct 18",
-    "clean_cves": [
-      "CVE-2023-20261"
-    ]
-  },
-  {
-    "id": "cisco-sa-aaascp-Tyj4fEJm",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-aaascp-Tyj4fEJm",
-    "title": "Cisco IOS and IOS XE Software Command Authorization Bypass Vulnerability",
-    "impact": "High",
-    "version": "1.1",
-    "last_updated": "2023 Oct 13",
-    "clean_cves": [
-      "CVE-2023-20186"
-    ]
-  },
-  {
-    "id": "cisco-sa-asaftd-ravpn-auth-8LyfCkeC",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-ravpn-auth-8LyfCkeC",
-    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Remote Access VPN Unauthorized Access Vulnerability",
-    "impact": "Medium",
-    "version": "1.4",
-    "last_updated": "2023 Oct 11",
-    "clean_cves": [
-      "CVE-2023-20269"
-    ]
-  },
-  {
-    "id": "cisco-sa-cer-priv-esc-B9t3hqk9",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cer-priv-esc-B9t3hqk9",
-    "title": "Cisco Emergency Responder Static Credentials Vulnerability",
-    "impact": "Critical",
-    "version": "1.0",
-    "last_updated": "2023 Oct 04",
-    "clean_cves": [
-      "CVE-2023-20101"
-    ]
-  },
-  {
-    "id": "cisco-sa-confd-priv-esc-LsGtCRx4",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-confd-priv-esc-LsGtCRx4",
-    "title": "ConfD CLI Secure Shell Server Privilege Escalation Vulnerability",
+    "id": "cisco-sa-asaftd-dos-nJVAwOeq",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-dos-nJVAwOeq",
+    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software DNS Inspection Denial of Service Vulnerability",
     "impact": "High",
     "version": "2.0",
-    "last_updated": "2023 Oct 04",
+    "last_updated": "2024 May 22",
     "clean_cves": [
-      "CVE-2021-1572"
+      "CVE-2022-20760"
+    ]
+  },
+  {
+    "id": "cisco-sa-snort3-ips-bypass-uE69KBMd",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort3-ips-bypass-uE69KBMd",
+    "title": "Multiple Cisco Products Snort 3 HTTP Intrusion Prevention System Rule Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20363"
+    ]
+  },
+  {
+    "id": "cisco-sa-ftd-archive-bypass-z4wQjwcN",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-archive-bypass-z4wQjwcN",
+    "title": "Cisco Firepower Threat Defense Software Encrypted Archive File Policy Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20261"
+    ]
+  },
+  {
+    "id": "cisco-sa-fmc-object-bypass-fTH8tDjq",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-object-bypass-fTH8tDjq",
+    "title": "Cisco Firepower Management Center Software Object Group Access Control List Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20361"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-saml-bypass-KkNvXyKW",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-saml-bypass-KkNvXyKW",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Authorization Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20355"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-ogsnsg-aclbyp-3XB8q6jX",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-ogsnsg-aclbyp-3XB8q6jX",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Inactive-to-Active ACL Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20293"
     ]
   },
   {
@@ -1547,164 +1236,2082 @@
     "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-apidos-PGsDcdNF",
     "title": "Multiple Cisco Unified Communications Products Unauthenticated API High CPU Utilization Denial of Service Vulnerability",
     "impact": "High",
-    "version": "1.0",
-    "last_updated": "2023 Oct 04",
+    "version": "1.1",
+    "last_updated": "2024 May 17",
     "clean_cves": [
       "CVE-2023-20259"
     ]
   },
   {
-    "id": "cisco-sa-rdocker-uATbukKn",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-rdocker-uATbukKn",
-    "title": "Cisco IOx Application Hosting Environment Privilege Escalation Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Oct 04",
-    "clean_cves": [
-      "CVE-2023-20235"
-    ]
-  },
-  {
-    "id": "cisco-sa-webui-cmdij-FzZAeXAy",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-webui-cmdij-FzZAeXAy",
-    "title": "Cisco IOS XE Software Web UI Command Injection Vulnerability",
+    "id": "cisco-sa-nso-rwpesc-qrQGnh3f",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-rwpesc-qrQGnh3f",
+    "title": "Cisco Crosswork Network Services Orchestrator Vulnerabilities",
     "impact": "High",
     "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "last_updated": "2024 May 15",
     "clean_cves": [
-      "CVE-2023-20231"
+      "CVE-2024-20326",
+      "CVE-2024-20389"
     ]
   },
   {
-    "id": "cisco-sa-mlre-H93FswRz",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-mlre-H93FswRz",
-    "title": "Cisco IOS XE Software for ASR 1000 Series Aggregation Services Routers IPv6 Multicast Denial of Service Vulnerability",
+    "id": "cisco-sa-nso-hcc-priv-esc-OWBWCs5D",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-hcc-priv-esc-OWBWCs5D",
+    "title": "Cisco Crosswork Network Services Orchestrator Privilege Escalation Vulnerability",
     "impact": "High",
     "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "last_updated": "2024 May 15",
     "clean_cves": [
-      "CVE-2023-20187"
+      "CVE-2024-20366"
     ]
   },
   {
-    "id": "cisco-sa-ios-xe-l2tp-dos-eB5tuFmV",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ios-xe-l2tp-dos-eB5tuFmV",
-    "title": "Cisco IOS XE Software Layer 2 Tunneling Protocol Denial of Service Vulnerability",
+    "id": "cisco-sa-cnfd-rwpesc-ZAOufyx8",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cnfd-rwpesc-ZAOufyx8",
+    "title": "ConfD CLI Privilege Escalation and Arbitrary File Read and Write Vulnerabilities",
     "impact": "High",
     "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "last_updated": "2024 May 15",
     "clean_cves": [
-      "CVE-2023-20227"
+      "CVE-2024-20326",
+      "CVE-2024-20389"
     ]
   },
   {
-    "id": "cisco-sa-dnac-ins-acc-con-nHAVDRBZ",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-dnac-ins-acc-con-nHAVDRBZ",
-    "title": "Cisco DNA Center API Insufficient Access Control Vulnerability",
+    "id": "cisco-sa-secure-nam-priv-esc-szu2vYpZ",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-secure-nam-priv-esc-szu2vYpZ",
+    "title": "Cisco Secure Client for Windows with Network Access Manager Module Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 15",
+    "clean_cves": [
+      "CVE-2024-20391"
+    ]
+  },
+  {
+    "id": "cisco-sa-nso-ordir-MNM8YqzO",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-ordir-MNM8YqzO",
+    "title": "Cisco Crosswork Network Services Orchestrator Open Redirect Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 15",
+    "clean_cves": [
+      "CVE-2024-20369"
+    ]
+  },
+  {
+    "id": "cisco-sa-appd-netvisdos-9zNbsJtK",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-appd-netvisdos-9zNbsJtK",
+    "title": "Cisco AppDynamics Network Visibility Service Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 15",
+    "clean_cves": [
+      "CVE-2024-20394"
+    ]
+  },
+  {
+    "id": "cisco-sa-ipphone-multi-vulns-cXAhCvS",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ipphone-multi-vulns-cXAhCvS",
+    "title": "Cisco IP Phone 6800, 7800, and 8800 Series with Multiplatform Firmware Vulnerabilities",
     "impact": "High",
     "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "last_updated": "2024 May 01",
     "clean_cves": [
-      "CVE-2023-20223"
+      "CVE-2024-20357",
+      "CVE-2024-20376",
+      "CVE-2024-20357",
+      "CVE-2024-20376",
+      "CVE-2024-20378"
     ]
   },
   {
-    "id": "cisco-sa-cat3k-dos-ZZA4Gb3r",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cat3k-dos-ZZA4Gb3r",
-    "title": "Cisco IOS XE Software for Catalyst 3650 and Catalyst 3850 Series Switches Denial of Service Vulnerability",
+    "id": "cisco-sa-asaftd-websrvs-dos-X8gNucD2",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-websrvs-dos-X8gNucD2",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Web Services Denial of Service Vulnerability",
     "impact": "High",
     "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "last_updated": "2024 Apr 24",
     "clean_cves": [
-      "CVE-2023-20033"
+      "CVE-2024-20353"
     ]
   },
   {
-    "id": "cisco-sa-appqoe-utd-dos-p8O57p5y",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-appqoe-utd-dos-p8O57p5y",
-    "title": "Cisco IOS XE Software Application Quality of Experience and Unified Threat Defense Denial of Service Vulnerability",
+    "id": "cisco-sa-asaftd-persist-rce-FLsNXF4h",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-rce-FLsNXF4h",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Persistent Local Code Execution Vulnerability",
     "impact": "High",
     "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "last_updated": "2024 Apr 24",
     "clean_cves": [
-      "CVE-2023-20226"
+      "CVE-2024-20359"
     ]
   },
   {
-    "id": "cisco-sa-wlc-wncd-HFGMsfSD",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-wlc-wncd-HFGMsfSD",
-    "title": "Cisco IOS XE Software for Wireless LAN Controllers Wireless Network Control Denial of Service Vulnerability",
+    "id": "cisco-sa-asaftd-cmd-inj-ZJV8Wysm",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-cmd-inj-ZJV8Wysm",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Command Injection Vulnerability",
     "impact": "Medium",
     "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "last_updated": "2024 Apr 24",
     "clean_cves": [
-      "CVE-2023-20202"
+      "CVE-2024-20358"
     ]
   },
   {
-    "id": "cisco-sa-vmanage-html-3ZKh8d6x",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-vmanage-html-3ZKh8d6x",
-    "title": "Cisco Catalyst SD-WAN Manager Web UI HTML Injection Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "id": "cisco-sa-cimc-cmd-inj-bLuPcb",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cimc-cmd-inj-bLuPcb",
+    "title": "Cisco Integrated Management Controller Web-Based Management Interface Command Injection Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Apr 19",
     "clean_cves": [
-      "CVE-2023-20179"
+      "CVE-2024-20356"
     ]
   },
   {
-    "id": "cisco-sa-getvpn-rce-g8qR68sx",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-getvpn-rce-g8qR68sx",
-    "title": "Cisco IOS and IOS XE Software Cisco Group Encrypted Transport VPN Software Out-of-Bounds Write Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "id": "cisco-sa-cimc-cmd-inj-mUx4c5AJ",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cimc-cmd-inj-mUx4c5AJ",
+    "title": "Cisco Integrated Management Controller CLI Command Injection Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Apr 19",
     "clean_cves": [
-      "CVE-2023-20109"
+      "CVE-2024-20295"
     ]
   },
   {
-    "id": "cisco-sa-click-ap-dos-wdcXkvnQ",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-click-ap-dos-wdcXkvnQ",
-    "title": "Cisco Catalyst 9100 Access Points Denial of Service Vulnerability",
+    "id": "cisco-sa-snmp-uwBXfqww",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snmp-uwBXfqww",
+    "title": "Cisco IOS and IOS XE Software SNMP Extended Named Access Control List Bypass Vulnerability",
     "impact": "Medium",
     "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "last_updated": "2024 Apr 17",
     "clean_cves": [
-      "CVE-2023-20176"
+      "CVE-2024-20373"
     ]
   },
   {
-    "id": "cisco-sa-cbw-dos-YSmbUqX3",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cbw-dos-YSmbUqX3",
-    "title": "Cisco Wireless LAN Controller AireOS Software Denial of Service Vulnerability",
-    "impact": "Medium",
-    "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "id": "cisco-sa-ios-dos-Hq4d3tZG",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ios-dos-Hq4d3tZG",
+    "title": "Cisco IOS Software for Catalyst 6000 Series Switches Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Apr 04",
     "clean_cves": [
-      "CVE-2023-20251"
+      "CVE-2024-20276"
     ]
   },
   {
-    "id": "cisco-sa-ap-dos-capwap-DDMCZS4m",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ap-dos-capwap-DDMCZS4m",
-    "title": "Cisco Access Point Software Uncontrolled Resource Consumption Vulnerability",
-    "impact": "Medium",
+    "id": "cisco-sa-ndfc-dir-trav-SSn3AYDw",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndfc-dir-trav-SSn3AYDw",
+    "title": "Cisco Nexus Dashboard Fabric Controller Plug and Play Arbitrary File Read Vulnerability",
+    "impact": "High",
     "version": "1.0",
-    "last_updated": "2023 Sep 27",
+    "last_updated": "2024 Apr 03",
     "clean_cves": [
-      "CVE-2023-20268"
+      "CVE-2024-20348"
     ]
   },
   {
-    "id": "cisco-sa-lnt-L9zOkBz5",
-    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-lnt-L9zOkBz5",
-    "title": "Cisco IOS XR Software Image Verification Vulnerability",
+    "id": "cisco-sa-tms-xss-kGw4DX9Y",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-tms-xss-kGw4DX9Y",
+    "title": "Cisco TelePresence Management Suite Cross-Site Scripting Vulnerability",
     "impact": "Medium",
     "version": "1.0",
-    "last_updated": "2023 Sep 13",
+    "last_updated": "2024 Apr 03",
     "clean_cves": [
-      "CVE-2023-20135"
+      "CVE-2024-20334"
+    ]
+  },
+  {
+    "id": "cisco-sa-sbiz-rv-xss-OQeRTup",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sbiz-rv-xss-OQeRTup",
+    "title": "Cisco Small Business RV016, RV042, RV042G, RV082, RV320, and RV325 Routers Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20362"
+    ]
+  },
+  {
+    "id": "cisco-sa-ndru-pesc-kZ2PQLZH",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndru-pesc-kZ2PQLZH",
+    "title": "Cisco Nexus Dashboard Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20282"
+    ]
+  },
+  {
+    "id": "cisco-sa-ndo-upav-YRqsCcSP",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndo-upav-YRqsCcSP",
+    "title": "Cisco Nexus Dashboard Orchestrator Unauthorized Policy Actions Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20302"
+    ]
+  },
+  {
+    "id": "cisco-sa-ndidv-LmXdvAf2",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndidv-LmXdvAf2",
+    "title": "Cisco Nexus Dashboard Information Disclosure Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20283"
+    ]
+  },
+  {
+    "id": "cisco-sa-ndfccsrf-TEmZEfJ9",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndfccsrf-TEmZEfJ9",
+    "title": "Cisco Nexus Dashboard and Nexus Dashboard Hosted Services Cross-Site Request Forgery Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20281"
+    ]
+  },
+  {
+    "id": "cisco-sa-ise-ssrf-FtSTh5Oz",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-ssrf-FtSTh5Oz",
+    "title": "Cisco Identity Services Engine Server-Side Request Forgery Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20332"
+    ]
+  },
+  {
+    "id": "cisco-sa-ise-csrf-NfAKXrp5",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-csrf-NfAKXrp5",
+    "title": "Cisco Identity Services Engine Cross-Site Request Forgery Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20368"
+    ]
+  },
+  {
+    "id": "cisco-sa-ece-xss-CSQxgxfM",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ece-xss-CSQxgxfM",
+    "title": "Cisco Enterprise Chat and Email Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20367"
+    ]
+  },
+  {
+    "id": "cisco-sa-cucm-imps-xss-quWkd9yF",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-imps-xss-quWkd9yF",
+    "title": "Cisco Unified Communications Manager IM & Presence Service Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20310"
+    ]
+  },
+  {
+    "id": "cisco-sa-cem-csrf-suCmNjFr",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cem-csrf-suCmNjFr",
+    "title": "Cisco Emergency Responder Cross-Site Request Forgery and Directory Traversal Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20347",
+      "CVE-2024-20352"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxe-utd-cmd-JbL8KvHT",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-utd-cmd-JbL8KvHT",
+    "title": "Cisco IOS XE Software Unified Threat Defense Command Injection Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Apr 02",
+    "clean_cves": [
+      "CVE-2024-20306"
+    ]
+  },
+  {
+    "id": "cisco-sa-wlc-mdns-dos-4hv6pBGf",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-wlc-mdns-dos-4hv6pBGf",
+    "title": "Cisco IOS XE Software for Wireless LAN Controllers Multicast DNS Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20303"
+    ]
+  },
+  {
+    "id": "cisco-sa-lisp-3gYXs3qP",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-lisp-3gYXs3qP",
+    "title": "Cisco IOS and IOS XE Software Locator ID Separation Protocol Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20311"
+    ]
+  },
+  {
+    "id": "cisco-sa-isis-sGjyOUHX",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-isis-sGjyOUHX",
+    "title": "Cisco IOS and IOS XE Software Intermediate System-to-Intermediate System Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20312"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxe-ospf-dos-dR9Sfrxp",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-ospf-dos-dR9Sfrxp",
+    "title": "Cisco IOS XE Software OSPFv2 Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20313"
+    ]
+  },
+  {
+    "id": "cisco-sa-ios-xe-sda-edge-dos-qZWuWXWG",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ios-xe-sda-edge-dos-qZWuWXWG",
+    "title": "Cisco IOS XE Software SD-Access Fabric Edge Node Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20314"
+    ]
+  },
+  {
+    "id": "cisco-sa-ikev1-NO2ccFWz",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ikev1-NO2ccFWz",
+    "title": "Cisco IOS and IOS XE Software Internet Key Exchange Version 1 Fragmentation Denial of Service Vulnerabilities",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20307",
+      "CVE-2024-20308"
+    ]
+  },
+  {
+    "id": "cisco-sa-dhcp-dos-T3CXPO9z",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-dhcp-dos-T3CXPO9z",
+    "title": "Cisco IOS XE Software DHCP Snooping with Endpoint Analytics Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20259"
+    ]
+  },
+  {
+    "id": "cisco-sa-ap-secureboot-bypass-zT5vJkSD",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ap-secureboot-bypass-zT5vJkSD",
+    "title": "Cisco Access Point Software Secure Boot Bypass Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20265"
+    ]
+  },
+  {
+    "id": "cisco-sa-ap-dos-h9TGGX6W",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ap-dos-h9TGGX6W",
+    "title": "Cisco Access Point Software Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20271"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxe-wlc-privesc-RjSMrmPK",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-wlc-privesc-RjSMrmPK",
+    "title": "Cisco IOS XE Software for Wireless LAN Controllers Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20324"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxe-priv-esc-seAx6NLX",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-priv-esc-seAx6NLX",
+    "title": "Cisco IOS XE Software Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20278"
+    ]
+  },
+  {
+    "id": "cisco-sa-dmi-acl-bypass-Xv8FO8Vz",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-dmi-acl-bypass-Xv8FO8Vz",
+    "title": "Cisco IOS XE Software NETCONF/RESTCONF IPv4 Access Control List Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20316"
+    ]
+  },
+  {
+    "id": "cisco-sa-ccc-authz-bypass-5EKchJRb",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ccc-authz-bypass-5EKchJRb",
+    "title": "Cisco Catalyst Center Authorization Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20333"
+    ]
+  },
+  {
+    "id": "cisco-sa-aux-333WBz8f",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-aux-333WBz8f",
+    "title": "Cisco IOS XE Software Auxiliary Asynchronous Port Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20309"
+    ]
+  },
+  {
+    "id": "cisco-sa-airo-ap-dos-PPPtcVW",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-airo-ap-dos-PPPtcVW",
+    "title": "Cisco Aironet Access Point Software Resource Exhaustion Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20354"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-redis-ABJyE5xK",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-redis-ABJyE5xK",
+    "title": "Cisco IOS XR Software Health Check Open Port Vulnerability",
+    "impact": "Medium",
+    "version": "1.2",
+    "last_updated": "2024 Mar 15",
+    "clean_cves": [
+      "CVE-2022-20821"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-ipxe-sigbypass-pymfyqgB",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-ipxe-sigbypass-pymfyqgB",
+    "title": "Cisco IOS XR Software iPXE Boot Signature Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "2.1",
+    "last_updated": "2024 Mar 14",
+    "clean_cves": [
+      "CVE-2023-20236"
+    ]
+  },
+  {
+    "id": "cisco-sa-xrl2vpn-jesrU3fc",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-xrl2vpn-jesrU3fc",
+    "title": "Cisco IOS XR Software Layer 2 Services Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20318"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-ssh-privesc-eWDMKew3",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-ssh-privesc-eWDMKew3",
+    "title": "Cisco IOS XR Software SSH Privilege Escalation Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20320"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-pppma-JKWFgneW",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-pppma-JKWFgneW",
+    "title": "Cisco IOS XR Software for ASR 9000 Series Aggregation Services Routers PPPoE Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20327"
+    ]
+  },
+  {
+    "id": "cisco-sa-snmp-uhv6ZDeF",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snmp-uhv6ZDeF",
+    "title": "Cisco IOS XR Software SNMP Management Plane Protection ACL Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20319"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-scp-dos-kb6sUUHw",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-scp-dos-kb6sUUHw",
+    "title": "Cisco IOS XR Software Authenticated CLI Secure Copy Protocol and SFTP Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20262"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-dhcp-dos-3tgPKRdm",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-dhcp-dos-3tgPKRdm",
+    "title": "Cisco IOS XR Software DHCP Version 4 Server Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20266"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-acl-bypass-RZU5NL3e",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-acl-bypass-RZU5NL3e",
+    "title": "Cisco IOS XR Software MPLS and Pseudowire Interfaces Access Control List Bypass Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20315",
+      "CVE-2024-20322"
+    ]
+  },
+  {
+    "id": "cisco-sa-vmanage-unauthapi-sphCLYPA",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-vmanage-unauthapi-sphCLYPA",
+    "title": "Cisco SD-WAN vManage Unauthenticated REST API Access Vulnerability",
+    "impact": "Critical",
+    "version": "1.2",
+    "last_updated": "2024 Mar 12",
+    "clean_cves": [
+      "CVE-2023-20214"
+    ]
+  },
+  {
+    "id": "cisco-sa-secure-client-crlf-W43V4G7",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-secure-client-crlf-W43V4G7",
+    "title": "Cisco Secure Client Carriage Return Line Feed Injection Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Mar 12",
+    "clean_cves": [
+      "CVE-2024-20337"
+    ]
+  },
+  {
+    "id": "cisco-sa-duo-infodisc-rLCEqm6T",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-duo-infodisc-rLCEqm6T",
+    "title": "Cisco Duo Authentication for Windows Logon and RDP Information Disclosure Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Mar 08",
+    "clean_cves": [
+      "CVE-2024-20292"
+    ]
+  },
+  {
+    "id": "cisco-sa-secure-privesc-sYxQO6ds",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-secure-privesc-sYxQO6ds",
+    "title": "Cisco Secure Client for Linux with ISE Posture Module Privilege Escalation Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20338"
+    ]
+  },
+  {
+    "id": "cisco-sa-sb-wap-multi-85G83CRB",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-wap-multi-85G83CRB",
+    "title": "Cisco Small Business 100, 300, and 500 Series Wireless Access Points Command Injection and Buffer Overflow Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20335",
+      "CVE-2024-20336"
+    ]
+  },
+  {
+    "id": "cisco-sa-duo-win-bypass-pn42KKBm",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-duo-win-bypass-pn42KKBm",
+    "title": "Cisco Duo Authentication for Windows Logon and RDP Authentication Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20301"
+    ]
+  },
+  {
+    "id": "cisco-sa-appd-xss-3JwqSMNT",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-appd-xss-3JwqSMNT",
+    "title": "Cisco AppDynamics Controller Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20346"
+    ]
+  },
+  {
+    "id": "cisco-sa-appd-traversal-m7N8mZpF",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-appd-traversal-m7N8mZpF",
+    "title": "Cisco AppDynamics Controller Path Traversal Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20345"
+    ]
+  },
+  {
+    "id": "cisco-sa-curl-libcurl-D9ds39cV",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-curl-libcurl-D9ds39cV",
+    "title": "cURL and libcurl  Vulnerability Affecting Cisco Products: October 2023",
+    "impact": "High",
+    "version": "1.6",
+    "last_updated": "2024 Mar 05",
+    "clean_cves": [
+      "CVE-2023-38545"
+    ]
+  },
+  {
+    "id": "cisco-sa-nxos-ebgp-dos-L3QCwVJ",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-ebgp-dos-L3QCwVJ",
+    "title": "Cisco NX-OS Software External Border Gateway Protocol Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20321"
+    ]
+  },
+  {
+    "id": "cisco-sa-ipv6-mpls-dos-R9ycXkwM",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ipv6-mpls-dos-R9ycXkwM",
+    "title": "Cisco NX-OS Software MPLS Encapsulated IPv6 Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20267"
+    ]
+  },
+  {
+    "id": "cisco-sa-ucsfi-imm-syn-p6kZTDQC",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ucsfi-imm-syn-p6kZTDQC",
+    "title": "Cisco UCS 6400 and 6500 Series Fabric Interconnects Intersight Managed Mode Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20344"
+    ]
+  },
+  {
+    "id": "cisco-sa-nxos-po-acl-TkyePgvL",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-po-acl-TkyePgvL",
+    "title": "Cisco Nexus 3000 and 9000 Series Switches Port Channel ACL Programming Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20291"
+    ]
+  },
+  {
+    "id": "cisco-sa-nxos-lldp-dos-z7PncTgt",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-lldp-dos-z7PncTgt",
+    "title": "Cisco FXOS and NX-OS Software Link Layer Discovery Protocol Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20294"
+    ]
+  },
+  {
+    "id": "cisco-sa-cimc-xss-UMYtYEtr",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cimc-xss-UMYtYEtr",
+    "title": "Cisco Integrated Management Controller Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.4",
+    "last_updated": "2024 Feb 22",
+    "clean_cves": [
+      "CVE-2023-20228"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-info-disclose-9eJtycMB",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-info-disclose-9eJtycMB",
+    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Web Services Information Disclosure Vulnerability",
+    "impact": "High",
+    "version": "1.5",
+    "last_updated": "2024 Feb 21",
+    "clean_cves": [
+      "CVE-2020-3259"
+    ]
+  },
+  {
+    "id": "cisco-sa-cuic-access-control-jJsZQMjj",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cuic-access-control-jJsZQMjj",
+    "title": "Cisco Unified Intelligence Center Insufficient Access Control Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Feb 21",
+    "clean_cves": [
+      "CVE-2024-20325"
+    ]
+  },
+  {
+    "id": "cisco-sa-clamav-hDffu6t",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-clamav-hDffu6t",
+    "title": "ClamAV OLE2 File Format Parsing Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Feb 13",
+    "clean_cves": [
+      "CVE-2024-20290"
+    ]
+  },
+  {
+    "id": "cisco-sa-expressway-csrf-KnnZDMj3",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-expressway-csrf-KnnZDMj3",
+    "title": "Cisco Expressway Series Cross-Site Request Forgery Vulnerabilities",
+    "impact": "Critical",
+    "version": "1.1",
+    "last_updated": "2024 Feb 12",
+    "clean_cves": [
+      "CVE-2024-20252",
+      "CVE-2024-20254",
+      "CVE-2024-20252",
+      "CVE-2024-20254",
+      "CVE-2024-20255"
+    ]
+  },
+  {
+    "id": "cisco-sa-ftd-snort3acp-bypass-3bdR2BEh",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-snort3acp-bypass-3bdR2BEh",
+    "title": "Multiple Cisco Products Snort 3 Access Control Policy Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Feb 06",
+    "clean_cves": [
+      "CVE-2023-20246"
+    ]
+  },
+  {
+    "id": "cisco-sa-cuc-unauth-afu-FROYsCsD",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cuc-unauth-afu-FROYsCsD",
+    "title": "Cisco Unity Connection Unauthenticated Arbitrary File Upload Vulnerability",
+    "impact": "Critical",
+    "version": "1.3",
+    "last_updated": "2024 Feb 05",
+    "clean_cves": [
+      "CVE-2024-20272"
+    ]
+  },
+  {
+    "id": "cisco-sa-cucm-rce-bWNzQcUm",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-rce-bWNzQcUm",
+    "title": "Cisco Unified Communications Products Remote Code Execution Vulnerability",
+    "impact": "Critical",
+    "version": "1.3",
+    "last_updated": "2024 Jan 30",
+    "clean_cves": [
+      "CVE-2024-20253"
+    ]
+  },
+  {
+    "id": "cisco-sa-sb-bus-acl-bypass-5zn9hNJk",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-bus-acl-bypass-5zn9hNJk",
+    "title": "Cisco Small Business Series Switches Stacked Reload ACL Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 24",
+    "clean_cves": [
+      "CVE-2024-20263"
+    ]
+  },
+  {
+    "id": "cisco-sa-cuc-xss-9TFuu5MS",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cuc-xss-9TFuu5MS",
+    "title": "Cisco Unity Connection Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 24",
+    "clean_cves": [
+      "CVE-2024-20305"
+    ]
+  },
+  {
+    "id": "cisco-sa-sd-wan-file-access-VW36d28P",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sd-wan-file-access-VW36d28P",
+    "title": "Cisco SD-WAN Solution Improper Access Control Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Jan 23",
+    "clean_cves": [
+      "CVE-2022-20716"
+    ]
+  },
+  {
+    "id": "cisco-sa-sdwan-privesc-cli-xkGwmqKu",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-cli-xkGwmqKu",
+    "title": "Cisco SD-WAN Software Arbitrary File Corruption Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jan 23",
+    "clean_cves": [
+      "CVE-2022-20930"
+    ]
+  },
+  {
+    "id": "cisco-sa-broadworks-xss-6syj82Ju",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-broadworks-xss-6syj82Ju",
+    "title": "Cisco BroadWorks Application Delivery Platform and Xtended Services Platform Stored Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jan 23",
+    "clean_cves": [
+      "CVE-2024-20270"
+    ]
+  },
+  {
+    "id": "cisco-sa-tms-portal-xss-AXNeVg3s",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-tms-portal-xss-AXNeVg3s",
+    "title": "Cisco TelePresence Management Suite Cross-Site Scripting Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.2",
+    "last_updated": "2024 Jan 12",
+    "clean_cves": [
+      "CVE-2023-20248",
+      "CVE-2023-20249"
+    ]
+  },
+  {
+    "id": "cisco-sa-thouseyes-privesc-DmzHG3Qv",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-thouseyes-privesc-DmzHG3Qv",
+    "title": "Cisco ThousandEyes Enterprise Agent Virtual Appliance Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 10",
+    "clean_cves": [
+      "CVE-2024-20277"
+    ]
+  },
+  {
+    "id": "cisco-sa-sb-wap-inject-bHStWgXO",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-wap-inject-bHStWgXO",
+    "title": "Cisco WAP371 Wireless Access Point Command Injection Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 10",
+    "clean_cves": [
+      "CVE-2024-20287"
+    ]
+  },
+  {
+    "id": "cisco-sa-pi-epnm-wkZJeyeq",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-pi-epnm-wkZJeyeq",
+    "title": "Cisco Evolved Programmable Network Manager and Cisco Prime Infrastructure Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 10",
+    "clean_cves": [
+      "CVE-2023-20257",
+      "CVE-2023-20258",
+      "CVE-2023-20257",
+      "CVE-2023-20258",
+      "CVE-2023-20260",
+      "CVE-2023-20271"
+    ]
+  },
+  {
+    "id": "cisco-sa-ISE-XSS-bL4VTML",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-XSS-bL4VTML",
+    "title": "Cisco Identity Services Engine Stored Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 10",
+    "clean_cves": [
+      "CVE-2024-20251"
+    ]
+  },
+  {
+    "id": "cisco-sa-ise-priv-esc-KJLp2Aw",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-priv-esc-KJLp2Aw",
+    "title": "Cisco Identity Services Engine Privilege Escalation Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.2",
+    "last_updated": "2024 Jan 08",
+    "clean_cves": [
+      "CVE-2023-20193",
+      "CVE-2023-20194"
+    ]
+  },
+  {
+    "id": "cisco-sa-struts-C2kCMkmT",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-struts-C2kCMkmT",
+    "title": "Apache Struts Vulnerability Affecting Cisco Products: December 2023",
+    "impact": "Critical",
+    "version": "1.6",
+    "last_updated": "2023 Dec 21",
+    "clean_cves": [
+      "CVE-2023-50164"
+    ]
+  },
+  {
+    "id": "cisco-sa-http2-reset-d8Kf32vZ",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-http2-reset-d8Kf32vZ",
+    "title": "HTTP/2 Rapid Reset Attack Affecting Cisco Products: October 2023",
+    "impact": "High",
+    "version": "1.11",
+    "last_updated": "2023 Dec 21",
+    "clean_cves": [
+      "CVE-2023-44487"
+    ]
+  },
+  {
+    "id": "cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
+    "title": "Cisco Secure Email and Web Manager, Secure Email Gateway, and Secure Web Appliance Cross-Site Scripting Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jun 12",
+    "clean_cves": [
+      "CVE-2024-20256",
+      "CVE-2024-20257",
+      "CVE-2024-20256",
+      "CVE-2024-20257",
+      "CVE-2024-20258",
+      "CVE-2024-20383"
+    ]
+  },
+  {
+    "id": "cisco-sa-esa-http-split-GLrnnOwS",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-esa-http-split-GLrnnOwS",
+    "title": "Cisco Secure Email Gateway HTTP Response Splitting Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jun 12",
+    "clean_cves": [
+      "CVE-2024-20392"
+    ]
+  },
+  {
+    "id": "cisco-sa-finesse-ssrf-rfi-Um7wT8Ew",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-finesse-ssrf-rfi-Um7wT8Ew",
+    "title": "Cisco Finesse Web-Based Management Interface Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jun 06",
+    "clean_cves": [
+      "CVE-2024-20404",
+      "CVE-2024-20405"
+    ]
+  },
+  {
+    "id": "cisco-sa-fmc-sqli-WFFDnNOs",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-sqli-WFFDnNOs",
+    "title": "Cisco Firepower Management Center Software SQL Injection Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20360"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-ssl-dos-uu7mV5p6",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-ssl-dos-uu7mV5p6",
+    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software for Firepower 2100 Series Appliances SSL/TLS Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.2",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2023-20006"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-dos-nJVAwOeq",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-dos-nJVAwOeq",
+    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software DNS Inspection Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "2.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2022-20760"
+    ]
+  },
+  {
+    "id": "cisco-sa-snort3-ips-bypass-uE69KBMd",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snort3-ips-bypass-uE69KBMd",
+    "title": "Multiple Cisco Products Snort 3 HTTP Intrusion Prevention System Rule Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20363"
+    ]
+  },
+  {
+    "id": "cisco-sa-ftd-archive-bypass-z4wQjwcN",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-archive-bypass-z4wQjwcN",
+    "title": "Cisco Firepower Threat Defense Software Encrypted Archive File Policy Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20261"
+    ]
+  },
+  {
+    "id": "cisco-sa-fmc-object-bypass-fTH8tDjq",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-object-bypass-fTH8tDjq",
+    "title": "Cisco Firepower Management Center Software Object Group Access Control List Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20361"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-saml-bypass-KkNvXyKW",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-saml-bypass-KkNvXyKW",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Authorization Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20355"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-ogsnsg-aclbyp-3XB8q6jX",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-ogsnsg-aclbyp-3XB8q6jX",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Inactive-to-Active ACL Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 22",
+    "clean_cves": [
+      "CVE-2024-20293"
+    ]
+  },
+  {
+    "id": "cisco-sa-cucm-apidos-PGsDcdNF",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-apidos-PGsDcdNF",
+    "title": "Multiple Cisco Unified Communications Products Unauthenticated API High CPU Utilization Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 May 17",
+    "clean_cves": [
+      "CVE-2023-20259"
+    ]
+  },
+  {
+    "id": "cisco-sa-nso-rwpesc-qrQGnh3f",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-rwpesc-qrQGnh3f",
+    "title": "Cisco Crosswork Network Services Orchestrator Vulnerabilities",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 May 15",
+    "clean_cves": [
+      "CVE-2024-20326",
+      "CVE-2024-20389"
+    ]
+  },
+  {
+    "id": "cisco-sa-nso-hcc-priv-esc-OWBWCs5D",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-hcc-priv-esc-OWBWCs5D",
+    "title": "Cisco Crosswork Network Services Orchestrator Privilege Escalation Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 May 15",
+    "clean_cves": [
+      "CVE-2024-20366"
+    ]
+  },
+  {
+    "id": "cisco-sa-cnfd-rwpesc-ZAOufyx8",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cnfd-rwpesc-ZAOufyx8",
+    "title": "ConfD CLI Privilege Escalation and Arbitrary File Read and Write Vulnerabilities",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 May 15",
+    "clean_cves": [
+      "CVE-2024-20326",
+      "CVE-2024-20389"
+    ]
+  },
+  {
+    "id": "cisco-sa-secure-nam-priv-esc-szu2vYpZ",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-secure-nam-priv-esc-szu2vYpZ",
+    "title": "Cisco Secure Client for Windows with Network Access Manager Module Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 15",
+    "clean_cves": [
+      "CVE-2024-20391"
+    ]
+  },
+  {
+    "id": "cisco-sa-nso-ordir-MNM8YqzO",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nso-ordir-MNM8YqzO",
+    "title": "Cisco Crosswork Network Services Orchestrator Open Redirect Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 15",
+    "clean_cves": [
+      "CVE-2024-20369"
+    ]
+  },
+  {
+    "id": "cisco-sa-appd-netvisdos-9zNbsJtK",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-appd-netvisdos-9zNbsJtK",
+    "title": "Cisco AppDynamics Network Visibility Service Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 May 15",
+    "clean_cves": [
+      "CVE-2024-20394"
+    ]
+  },
+  {
+    "id": "cisco-sa-ipphone-multi-vulns-cXAhCvS",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ipphone-multi-vulns-cXAhCvS",
+    "title": "Cisco IP Phone 6800, 7800, and 8800 Series with Multiplatform Firmware Vulnerabilities",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 May 01",
+    "clean_cves": [
+      "CVE-2024-20357",
+      "CVE-2024-20376",
+      "CVE-2024-20357",
+      "CVE-2024-20376",
+      "CVE-2024-20378"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-websrvs-dos-X8gNucD2",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-websrvs-dos-X8gNucD2",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Web Services Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Apr 24",
+    "clean_cves": [
+      "CVE-2024-20353"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-persist-rce-FLsNXF4h",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-rce-FLsNXF4h",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Persistent Local Code Execution Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Apr 24",
+    "clean_cves": [
+      "CVE-2024-20359"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-cmd-inj-ZJV8Wysm",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-cmd-inj-ZJV8Wysm",
+    "title": "Cisco Adaptive Security Appliance and Firepower Threat Defense Software Command Injection Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 24",
+    "clean_cves": [
+      "CVE-2024-20358"
+    ]
+  },
+  {
+    "id": "cisco-sa-cimc-cmd-inj-bLuPcb",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cimc-cmd-inj-bLuPcb",
+    "title": "Cisco Integrated Management Controller Web-Based Management Interface Command Injection Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Apr 19",
+    "clean_cves": [
+      "CVE-2024-20356"
+    ]
+  },
+  {
+    "id": "cisco-sa-cimc-cmd-inj-mUx4c5AJ",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cimc-cmd-inj-mUx4c5AJ",
+    "title": "Cisco Integrated Management Controller CLI Command Injection Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Apr 19",
+    "clean_cves": [
+      "CVE-2024-20295"
+    ]
+  },
+  {
+    "id": "cisco-sa-snmp-uwBXfqww",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snmp-uwBXfqww",
+    "title": "Cisco IOS and IOS XE Software SNMP Extended Named Access Control List Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 17",
+    "clean_cves": [
+      "CVE-2024-20373"
+    ]
+  },
+  {
+    "id": "cisco-sa-ios-dos-Hq4d3tZG",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ios-dos-Hq4d3tZG",
+    "title": "Cisco IOS Software for Catalyst 6000 Series Switches Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Apr 04",
+    "clean_cves": [
+      "CVE-2024-20276"
+    ]
+  },
+  {
+    "id": "cisco-sa-ndfc-dir-trav-SSn3AYDw",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndfc-dir-trav-SSn3AYDw",
+    "title": "Cisco Nexus Dashboard Fabric Controller Plug and Play Arbitrary File Read Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20348"
+    ]
+  },
+  {
+    "id": "cisco-sa-tms-xss-kGw4DX9Y",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-tms-xss-kGw4DX9Y",
+    "title": "Cisco TelePresence Management Suite Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20334"
+    ]
+  },
+  {
+    "id": "cisco-sa-sbiz-rv-xss-OQeRTup",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sbiz-rv-xss-OQeRTup",
+    "title": "Cisco Small Business RV016, RV042, RV042G, RV082, RV320, and RV325 Routers Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20362"
+    ]
+  },
+  {
+    "id": "cisco-sa-ndru-pesc-kZ2PQLZH",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndru-pesc-kZ2PQLZH",
+    "title": "Cisco Nexus Dashboard Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20282"
+    ]
+  },
+  {
+    "id": "cisco-sa-ndo-upav-YRqsCcSP",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndo-upav-YRqsCcSP",
+    "title": "Cisco Nexus Dashboard Orchestrator Unauthorized Policy Actions Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20302"
+    ]
+  },
+  {
+    "id": "cisco-sa-ndidv-LmXdvAf2",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndidv-LmXdvAf2",
+    "title": "Cisco Nexus Dashboard Information Disclosure Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20283"
+    ]
+  },
+  {
+    "id": "cisco-sa-ndfccsrf-TEmZEfJ9",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndfccsrf-TEmZEfJ9",
+    "title": "Cisco Nexus Dashboard and Nexus Dashboard Hosted Services Cross-Site Request Forgery Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20281"
+    ]
+  },
+  {
+    "id": "cisco-sa-ise-ssrf-FtSTh5Oz",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-ssrf-FtSTh5Oz",
+    "title": "Cisco Identity Services Engine Server-Side Request Forgery Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20332"
+    ]
+  },
+  {
+    "id": "cisco-sa-ise-csrf-NfAKXrp5",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-csrf-NfAKXrp5",
+    "title": "Cisco Identity Services Engine Cross-Site Request Forgery Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20368"
+    ]
+  },
+  {
+    "id": "cisco-sa-ece-xss-CSQxgxfM",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ece-xss-CSQxgxfM",
+    "title": "Cisco Enterprise Chat and Email Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20367"
+    ]
+  },
+  {
+    "id": "cisco-sa-cucm-imps-xss-quWkd9yF",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-imps-xss-quWkd9yF",
+    "title": "Cisco Unified Communications Manager IM & Presence Service Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20310"
+    ]
+  },
+  {
+    "id": "cisco-sa-cem-csrf-suCmNjFr",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cem-csrf-suCmNjFr",
+    "title": "Cisco Emergency Responder Cross-Site Request Forgery and Directory Traversal Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Apr 03",
+    "clean_cves": [
+      "CVE-2024-20347",
+      "CVE-2024-20352"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxe-utd-cmd-JbL8KvHT",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-utd-cmd-JbL8KvHT",
+    "title": "Cisco IOS XE Software Unified Threat Defense Command Injection Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Apr 02",
+    "clean_cves": [
+      "CVE-2024-20306"
+    ]
+  },
+  {
+    "id": "cisco-sa-wlc-mdns-dos-4hv6pBGf",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-wlc-mdns-dos-4hv6pBGf",
+    "title": "Cisco IOS XE Software for Wireless LAN Controllers Multicast DNS Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20303"
+    ]
+  },
+  {
+    "id": "cisco-sa-lisp-3gYXs3qP",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-lisp-3gYXs3qP",
+    "title": "Cisco IOS and IOS XE Software Locator ID Separation Protocol Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20311"
+    ]
+  },
+  {
+    "id": "cisco-sa-isis-sGjyOUHX",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-isis-sGjyOUHX",
+    "title": "Cisco IOS and IOS XE Software Intermediate System-to-Intermediate System Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20312"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxe-ospf-dos-dR9Sfrxp",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-ospf-dos-dR9Sfrxp",
+    "title": "Cisco IOS XE Software OSPFv2 Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20313"
+    ]
+  },
+  {
+    "id": "cisco-sa-ios-xe-sda-edge-dos-qZWuWXWG",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ios-xe-sda-edge-dos-qZWuWXWG",
+    "title": "Cisco IOS XE Software SD-Access Fabric Edge Node Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20314"
+    ]
+  },
+  {
+    "id": "cisco-sa-ikev1-NO2ccFWz",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ikev1-NO2ccFWz",
+    "title": "Cisco IOS and IOS XE Software Internet Key Exchange Version 1 Fragmentation Denial of Service Vulnerabilities",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20307",
+      "CVE-2024-20308"
+    ]
+  },
+  {
+    "id": "cisco-sa-dhcp-dos-T3CXPO9z",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-dhcp-dos-T3CXPO9z",
+    "title": "Cisco IOS XE Software DHCP Snooping with Endpoint Analytics Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20259"
+    ]
+  },
+  {
+    "id": "cisco-sa-ap-secureboot-bypass-zT5vJkSD",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ap-secureboot-bypass-zT5vJkSD",
+    "title": "Cisco Access Point Software Secure Boot Bypass Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20265"
+    ]
+  },
+  {
+    "id": "cisco-sa-ap-dos-h9TGGX6W",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ap-dos-h9TGGX6W",
+    "title": "Cisco Access Point Software Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20271"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxe-wlc-privesc-RjSMrmPK",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-wlc-privesc-RjSMrmPK",
+    "title": "Cisco IOS XE Software for Wireless LAN Controllers Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20324"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxe-priv-esc-seAx6NLX",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-priv-esc-seAx6NLX",
+    "title": "Cisco IOS XE Software Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20278"
+    ]
+  },
+  {
+    "id": "cisco-sa-dmi-acl-bypass-Xv8FO8Vz",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-dmi-acl-bypass-Xv8FO8Vz",
+    "title": "Cisco IOS XE Software NETCONF/RESTCONF IPv4 Access Control List Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20316"
+    ]
+  },
+  {
+    "id": "cisco-sa-ccc-authz-bypass-5EKchJRb",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ccc-authz-bypass-5EKchJRb",
+    "title": "Cisco Catalyst Center Authorization Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20333"
+    ]
+  },
+  {
+    "id": "cisco-sa-aux-333WBz8f",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-aux-333WBz8f",
+    "title": "Cisco IOS XE Software Auxiliary Asynchronous Port Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20309"
+    ]
+  },
+  {
+    "id": "cisco-sa-airo-ap-dos-PPPtcVW",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-airo-ap-dos-PPPtcVW",
+    "title": "Cisco Aironet Access Point Software Resource Exhaustion Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 27",
+    "clean_cves": [
+      "CVE-2024-20354"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-redis-ABJyE5xK",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-redis-ABJyE5xK",
+    "title": "Cisco IOS XR Software Health Check Open Port Vulnerability",
+    "impact": "Medium",
+    "version": "1.2",
+    "last_updated": "2024 Mar 15",
+    "clean_cves": [
+      "CVE-2022-20821"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-ipxe-sigbypass-pymfyqgB",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-ipxe-sigbypass-pymfyqgB",
+    "title": "Cisco IOS XR Software iPXE Boot Signature Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "2.1",
+    "last_updated": "2024 Mar 14",
+    "clean_cves": [
+      "CVE-2023-20236"
+    ]
+  },
+  {
+    "id": "cisco-sa-xrl2vpn-jesrU3fc",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-xrl2vpn-jesrU3fc",
+    "title": "Cisco IOS XR Software Layer 2 Services Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20318"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-ssh-privesc-eWDMKew3",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-ssh-privesc-eWDMKew3",
+    "title": "Cisco IOS XR Software SSH Privilege Escalation Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20320"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-pppma-JKWFgneW",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-pppma-JKWFgneW",
+    "title": "Cisco IOS XR Software for ASR 9000 Series Aggregation Services Routers PPPoE Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20327"
+    ]
+  },
+  {
+    "id": "cisco-sa-snmp-uhv6ZDeF",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-snmp-uhv6ZDeF",
+    "title": "Cisco IOS XR Software SNMP Management Plane Protection ACL Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20319"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-scp-dos-kb6sUUHw",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-scp-dos-kb6sUUHw",
+    "title": "Cisco IOS XR Software Authenticated CLI Secure Copy Protocol and SFTP Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20262"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-dhcp-dos-3tgPKRdm",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-dhcp-dos-3tgPKRdm",
+    "title": "Cisco IOS XR Software DHCP Version 4 Server Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20266"
+    ]
+  },
+  {
+    "id": "cisco-sa-iosxr-acl-bypass-RZU5NL3e",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxr-acl-bypass-RZU5NL3e",
+    "title": "Cisco IOS XR Software MPLS and Pseudowire Interfaces Access Control List Bypass Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 13",
+    "clean_cves": [
+      "CVE-2024-20315",
+      "CVE-2024-20322"
+    ]
+  },
+  {
+    "id": "cisco-sa-vmanage-unauthapi-sphCLYPA",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-vmanage-unauthapi-sphCLYPA",
+    "title": "Cisco SD-WAN vManage Unauthenticated REST API Access Vulnerability",
+    "impact": "Critical",
+    "version": "1.2",
+    "last_updated": "2024 Mar 12",
+    "clean_cves": [
+      "CVE-2023-20214"
+    ]
+  },
+  {
+    "id": "cisco-sa-secure-client-crlf-W43V4G7",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-secure-client-crlf-W43V4G7",
+    "title": "Cisco Secure Client Carriage Return Line Feed Injection Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Mar 12",
+    "clean_cves": [
+      "CVE-2024-20337"
+    ]
+  },
+  {
+    "id": "cisco-sa-duo-infodisc-rLCEqm6T",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-duo-infodisc-rLCEqm6T",
+    "title": "Cisco Duo Authentication for Windows Logon and RDP Information Disclosure Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Mar 08",
+    "clean_cves": [
+      "CVE-2024-20292"
+    ]
+  },
+  {
+    "id": "cisco-sa-secure-privesc-sYxQO6ds",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-secure-privesc-sYxQO6ds",
+    "title": "Cisco Secure Client for Linux with ISE Posture Module Privilege Escalation Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20338"
+    ]
+  },
+  {
+    "id": "cisco-sa-sb-wap-multi-85G83CRB",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-wap-multi-85G83CRB",
+    "title": "Cisco Small Business 100, 300, and 500 Series Wireless Access Points Command Injection and Buffer Overflow Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20335",
+      "CVE-2024-20336"
+    ]
+  },
+  {
+    "id": "cisco-sa-duo-win-bypass-pn42KKBm",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-duo-win-bypass-pn42KKBm",
+    "title": "Cisco Duo Authentication for Windows Logon and RDP Authentication Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20301"
+    ]
+  },
+  {
+    "id": "cisco-sa-appd-xss-3JwqSMNT",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-appd-xss-3JwqSMNT",
+    "title": "Cisco AppDynamics Controller Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20346"
+    ]
+  },
+  {
+    "id": "cisco-sa-appd-traversal-m7N8mZpF",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-appd-traversal-m7N8mZpF",
+    "title": "Cisco AppDynamics Controller Path Traversal Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Mar 06",
+    "clean_cves": [
+      "CVE-2024-20345"
+    ]
+  },
+  {
+    "id": "cisco-sa-curl-libcurl-D9ds39cV",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-curl-libcurl-D9ds39cV",
+    "title": "cURL and libcurl  Vulnerability Affecting Cisco Products: October 2023",
+    "impact": "High",
+    "version": "1.6",
+    "last_updated": "2024 Mar 05",
+    "clean_cves": [
+      "CVE-2023-38545"
+    ]
+  },
+  {
+    "id": "cisco-sa-nxos-ebgp-dos-L3QCwVJ",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-ebgp-dos-L3QCwVJ",
+    "title": "Cisco NX-OS Software External Border Gateway Protocol Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20321"
+    ]
+  },
+  {
+    "id": "cisco-sa-ipv6-mpls-dos-R9ycXkwM",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ipv6-mpls-dos-R9ycXkwM",
+    "title": "Cisco NX-OS Software MPLS Encapsulated IPv6 Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20267"
+    ]
+  },
+  {
+    "id": "cisco-sa-ucsfi-imm-syn-p6kZTDQC",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ucsfi-imm-syn-p6kZTDQC",
+    "title": "Cisco UCS 6400 and 6500 Series Fabric Interconnects Intersight Managed Mode Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20344"
+    ]
+  },
+  {
+    "id": "cisco-sa-nxos-po-acl-TkyePgvL",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-po-acl-TkyePgvL",
+    "title": "Cisco Nexus 3000 and 9000 Series Switches Port Channel ACL Programming Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20291"
+    ]
+  },
+  {
+    "id": "cisco-sa-nxos-lldp-dos-z7PncTgt",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-nxos-lldp-dos-z7PncTgt",
+    "title": "Cisco FXOS and NX-OS Software Link Layer Discovery Protocol Denial of Service Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Feb 28",
+    "clean_cves": [
+      "CVE-2024-20294"
+    ]
+  },
+  {
+    "id": "cisco-sa-cimc-xss-UMYtYEtr",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cimc-xss-UMYtYEtr",
+    "title": "Cisco Integrated Management Controller Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.4",
+    "last_updated": "2024 Feb 22",
+    "clean_cves": [
+      "CVE-2023-20228"
+    ]
+  },
+  {
+    "id": "cisco-sa-asaftd-info-disclose-9eJtycMB",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-info-disclose-9eJtycMB",
+    "title": "Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Web Services Information Disclosure Vulnerability",
+    "impact": "High",
+    "version": "1.5",
+    "last_updated": "2024 Feb 21",
+    "clean_cves": [
+      "CVE-2020-3259"
+    ]
+  },
+  {
+    "id": "cisco-sa-cuic-access-control-jJsZQMjj",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cuic-access-control-jJsZQMjj",
+    "title": "Cisco Unified Intelligence Center Insufficient Access Control Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Feb 21",
+    "clean_cves": [
+      "CVE-2024-20325"
+    ]
+  },
+  {
+    "id": "cisco-sa-clamav-hDffu6t",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-clamav-hDffu6t",
+    "title": "ClamAV OLE2 File Format Parsing Denial of Service Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Feb 13",
+    "clean_cves": [
+      "CVE-2024-20290"
+    ]
+  },
+  {
+    "id": "cisco-sa-expressway-csrf-KnnZDMj3",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-expressway-csrf-KnnZDMj3",
+    "title": "Cisco Expressway Series Cross-Site Request Forgery Vulnerabilities",
+    "impact": "Critical",
+    "version": "1.1",
+    "last_updated": "2024 Feb 12",
+    "clean_cves": [
+      "CVE-2024-20252",
+      "CVE-2024-20254",
+      "CVE-2024-20252",
+      "CVE-2024-20254",
+      "CVE-2024-20255"
+    ]
+  },
+  {
+    "id": "cisco-sa-ftd-snort3acp-bypass-3bdR2BEh",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-snort3acp-bypass-3bdR2BEh",
+    "title": "Multiple Cisco Products Snort 3 Access Control Policy Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Feb 06",
+    "clean_cves": [
+      "CVE-2023-20246"
+    ]
+  },
+  {
+    "id": "cisco-sa-cuc-unauth-afu-FROYsCsD",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cuc-unauth-afu-FROYsCsD",
+    "title": "Cisco Unity Connection Unauthenticated Arbitrary File Upload Vulnerability",
+    "impact": "Critical",
+    "version": "1.3",
+    "last_updated": "2024 Feb 05",
+    "clean_cves": [
+      "CVE-2024-20272"
+    ]
+  },
+  {
+    "id": "cisco-sa-cucm-rce-bWNzQcUm",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-rce-bWNzQcUm",
+    "title": "Cisco Unified Communications Products Remote Code Execution Vulnerability",
+    "impact": "Critical",
+    "version": "1.3",
+    "last_updated": "2024 Jan 30",
+    "clean_cves": [
+      "CVE-2024-20253"
+    ]
+  },
+  {
+    "id": "cisco-sa-sb-bus-acl-bypass-5zn9hNJk",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-bus-acl-bypass-5zn9hNJk",
+    "title": "Cisco Small Business Series Switches Stacked Reload ACL Bypass Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 24",
+    "clean_cves": [
+      "CVE-2024-20263"
+    ]
+  },
+  {
+    "id": "cisco-sa-cuc-xss-9TFuu5MS",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cuc-xss-9TFuu5MS",
+    "title": "Cisco Unity Connection Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 24",
+    "clean_cves": [
+      "CVE-2024-20305"
+    ]
+  },
+  {
+    "id": "cisco-sa-sd-wan-file-access-VW36d28P",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sd-wan-file-access-VW36d28P",
+    "title": "Cisco SD-WAN Solution Improper Access Control Vulnerability",
+    "impact": "High",
+    "version": "1.1",
+    "last_updated": "2024 Jan 23",
+    "clean_cves": [
+      "CVE-2022-20716"
+    ]
+  },
+  {
+    "id": "cisco-sa-sdwan-privesc-cli-xkGwmqKu",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-cli-xkGwmqKu",
+    "title": "Cisco SD-WAN Software Arbitrary File Corruption Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jan 23",
+    "clean_cves": [
+      "CVE-2022-20930"
+    ]
+  },
+  {
+    "id": "cisco-sa-broadworks-xss-6syj82Ju",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-broadworks-xss-6syj82Ju",
+    "title": "Cisco BroadWorks Application Delivery Platform and Xtended Services Platform Stored Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.1",
+    "last_updated": "2024 Jan 23",
+    "clean_cves": [
+      "CVE-2024-20270"
+    ]
+  },
+  {
+    "id": "cisco-sa-tms-portal-xss-AXNeVg3s",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-tms-portal-xss-AXNeVg3s",
+    "title": "Cisco TelePresence Management Suite Cross-Site Scripting Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.2",
+    "last_updated": "2024 Jan 12",
+    "clean_cves": [
+      "CVE-2023-20248",
+      "CVE-2023-20249"
+    ]
+  },
+  {
+    "id": "cisco-sa-thouseyes-privesc-DmzHG3Qv",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-thouseyes-privesc-DmzHG3Qv",
+    "title": "Cisco ThousandEyes Enterprise Agent Virtual Appliance Privilege Escalation Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 10",
+    "clean_cves": [
+      "CVE-2024-20277"
+    ]
+  },
+  {
+    "id": "cisco-sa-sb-wap-inject-bHStWgXO",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sb-wap-inject-bHStWgXO",
+    "title": "Cisco WAP371 Wireless Access Point Command Injection Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 10",
+    "clean_cves": [
+      "CVE-2024-20287"
+    ]
+  },
+  {
+    "id": "cisco-sa-pi-epnm-wkZJeyeq",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-pi-epnm-wkZJeyeq",
+    "title": "Cisco Evolved Programmable Network Manager and Cisco Prime Infrastructure Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 10",
+    "clean_cves": [
+      "CVE-2023-20257",
+      "CVE-2023-20258",
+      "CVE-2023-20257",
+      "CVE-2023-20258",
+      "CVE-2023-20260",
+      "CVE-2023-20271"
+    ]
+  },
+  {
+    "id": "cisco-sa-ISE-XSS-bL4VTML",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ISE-XSS-bL4VTML",
+    "title": "Cisco Identity Services Engine Stored Cross-Site Scripting Vulnerability",
+    "impact": "Medium",
+    "version": "1.0",
+    "last_updated": "2024 Jan 10",
+    "clean_cves": [
+      "CVE-2024-20251"
+    ]
+  },
+  {
+    "id": "cisco-sa-ise-priv-esc-KJLp2Aw",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-priv-esc-KJLp2Aw",
+    "title": "Cisco Identity Services Engine Privilege Escalation Vulnerabilities",
+    "impact": "Medium",
+    "version": "1.2",
+    "last_updated": "2024 Jan 08",
+    "clean_cves": [
+      "CVE-2023-20193",
+      "CVE-2023-20194"
+    ]
+  },
+  {
+    "id": "cisco-sa-struts-C2kCMkmT",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-struts-C2kCMkmT",
+    "title": "Apache Struts Vulnerability Affecting Cisco Products: December 2023",
+    "impact": "Critical",
+    "version": "1.6",
+    "last_updated": "2023 Dec 21",
+    "clean_cves": [
+      "CVE-2023-50164"
+    ]
+  },
+  {
+    "id": "cisco-sa-http2-reset-d8Kf32vZ",
+    "link": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-http2-reset-d8Kf32vZ",
+    "title": "HTTP/2 Rapid Reset Attack Affecting Cisco Products: October 2023",
+    "impact": "High",
+    "version": "1.11",
+    "last_updated": "2023 Dec 21",
+    "clean_cves": [
+      "CVE-2023-44487"
     ]
   }
 ]
