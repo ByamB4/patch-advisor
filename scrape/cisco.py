@@ -33,19 +33,37 @@ class CiscoSecurityAdvisor:
 
     def scrape(self) -> bool:
         print(f"[cisco@scrape] starting...")
-        self.page.goto(f"{self.URL}/publicationListing.x?product=Cisco&sort=-day_sir&limit=100#~Vulnerabilities")
+        self.page.goto(
+            f"{self.URL}/publicationListing.x?product=Cisco&sort=-day_sir&limit=100#~Vulnerabilities"
+        )
         self.page.wait_for_selector("xpath=//table[@class='advisoryAlertTable']//table")
-        for row in self.page.wait_for_selector("xpath=//table[@class='advisoryAlertTable']").query_selector_all("xpath=.//tr[@ng-repeat='list in advisoryList']"):
+        for row in self.page.wait_for_selector(
+            "xpath=//table[@class='advisoryAlertTable']"
+        ).query_selector_all("xpath=.//tr[@ng-repeat='list in advisoryList']"):
             header = {}
-            header["link"] = row.query_selector("xpath=.//span[@class='advListItem']/a").get_attribute("href")
-            header["title"] = row.query_selector("xpath=.//span[@class='advListItem']/a").text_content()
-            header["impact"] = row.query_selector("xpath=.//td[@class='impactTD']//span[@class='ng-binding']").text_content()
+            header["link"] = row.query_selector(
+                "xpath=.//span[@class='advListItem']/a"
+            ).get_attribute("href")
+            header["title"] = row.query_selector(
+                "xpath=.//span[@class='advListItem']/a"
+            ).text_content()
+            header["impact"] = row.query_selector(
+                "xpath=.//td[@class='impactTD']//span[@class='ng-binding']"
+            ).text_content()
             header["id"] = header["link"].split("/")[-1]
-            header["version"] = row.query_selector("xpath=.//span[@class='ng-binding ng-scope']").text_content()
-            header["last_updated"] = row.query_selector("xpath=//td[@width='15%']/span[@class='ng-binding']").text_content()
+            header["version"] = row.query_selector(
+                "xpath=.//span[@class='ng-binding ng-scope']"
+            ).text_content()
+            header["last_updated"] = row.query_selector(
+                "xpath=//td[@width='15%']/span[@class='ng-binding']"
+            ).text_content()
             if header["impact"] == "Informational":
                 continue
-            header["raw_cves"] = row.query_selector("xpath=.//td[@style='position:relative;']/p/span").text_content().split()
+            header["raw_cves"] = (
+                row.query_selector("xpath=.//td[@style='position:relative;']/p/span")
+                .text_content()
+                .split()
+            )
             if len(header["raw_cves"]) > 2:
                 clean_cves = header["raw_cves"][:2] + header["raw_cves"][3].split(",")
             else:
@@ -76,12 +94,18 @@ class CiscoSecurityAdvisor:
     def fetch_detail(self, url: str, cves: str) -> None:
         self.context.new_page()
         self.context.pages[1].goto(url)
-        container = self.context.pages[1].wait_for_selector("xpath=//div[@id='ud-master-container']")
+        container = self.context.pages[1].wait_for_selector(
+            "xpath=//div[@id='ud-master-container']"
+        )
         title = container.query_selector("xpath=.//h1[@class='headline']")
-        first_published = container.query_selector("xpath=.//div[@id='ud-published']//div[@class='divLabelContent']").text_content()
+        first_published = container.query_selector(
+            "xpath=.//div[@id='ud-published']//div[@class='divLabelContent']"
+        ).text_content()
         # print("\t[final_title]", title)
         summary = container.query_selector("xpath=.//div[@id='summaryfield']")
-        affected_products = container.query_selector("xpath=.//div[@id='affectfield']//div[@class='ud-subsectionindent']")
+        affected_products = container.query_selector(
+            "xpath=.//div[@id='affectfield']//div[@class='ud-subsectionindent']"
+        )
         print(summary.inner_html())
         print(affected_products.inner_html())
         self.context.pages[1].close()

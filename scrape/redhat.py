@@ -1,4 +1,5 @@
 from playwright.sync_api import sync_playwright, ElementHandle
+from playwright_stealth import stealth_sync
 from configs import STATIC_ROOT
 from json import dump as json_dump, load as json_load
 from os import path, listdir
@@ -22,6 +23,7 @@ class RedhatErrata:
         self.browser = p.chromium.launch(headless=False, args=["--start-maximized"])
         self.context = self.browser.new_context(no_viewport=True)
         self.page = self.context.new_page()
+        stealth_sync(self.page)
         self.read_data()
         self.check_new_update()
         self.scrape()
@@ -94,6 +96,7 @@ class RedhatErrata:
 
     def fetch_detail(self, header: dict, _date: List[dict]) -> bool:
         self.context.new_page()
+        stealth_sync(self.context.pages[1])
         self.context.pages[1].goto(header["link"], wait_until="networkidle")
         if len(self.context.pages[1].title()) == 0:
             return False
