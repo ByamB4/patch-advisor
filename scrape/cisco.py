@@ -25,6 +25,9 @@ class CiscoSecurityAdvisor:
         self.scrape()
         self.save()
         self.page.close()
+
+
+        
         self.context.close()
 
     def read_data(self) -> bool:

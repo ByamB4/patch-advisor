@@ -1,9 +1,22 @@
 #!/bin/bash
-DEBUG=1;
-name='oracle';
-if [ "$DEBUG" -eq 1 ]; then
-  path='/home/byamb4/dev/patch-advisor';
+
+source .env
+
+if [[ $DEBUG == "1" ]]; then
+  # development
+  DATA_DIR="/Users/byamb4/dev/patch-advisor";
 else
-  path='/root/patch-advisor';
+  # production
+  DATA_DIR="/root/patch-advisor"
 fi
-docker run --rm -v $path/scrape:/home ubuntu-scrape python3 /home/$name.py >/tmp/patch/$name/scrape.suc 2>/tmp/patch/$name/scrape.err;
+
+NAME='oracle';
+
+docker run --rm \
+  -v "$DATA_DIR/scrape:/home" \
+  patch-scraper \
+  python3 /home/$NAME.py \
+  1>/tmp/patch/$NAME/scrape.suc \
+  2>/tmp/patch/$NAME/scrape.err;
+
+exit $?

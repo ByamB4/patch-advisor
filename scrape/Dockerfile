@@ -7,6 +7,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
   && apt-get install -y vim \
   && pip install pytest-playwright \
   && pip install playwright-stealth \
+  && pip install python-dotenv \
   && playwright install-deps \
   && playwright install
 
