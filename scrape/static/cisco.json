@@ -6,14 +6,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jun 12",
-    "clean_cves": [
-      "CVE-2024-20256",
-      "CVE-2024-20257",
-      "CVE-2024-20256",
-      "CVE-2024-20257",
-      "CVE-2024-20258",
-      "CVE-2024-20383"
-    ]
+    "clean_cves": ["CVE-2024-20256", "CVE-2024-20257", "CVE-2024-20256", "CVE-2024-20257", "CVE-2024-20258", "CVE-2024-20383"]
   },
   {
     "id": "cisco-sa-esa-http-split-GLrnnOwS",
@@ -22,9 +15,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jun 12",
-    "clean_cves": [
-      "CVE-2024-20392"
-    ]
+    "clean_cves": ["CVE-2024-20392"]
   },
   {
     "id": "cisco-sa-finesse-ssrf-rfi-Um7wT8Ew",
@@ -33,10 +24,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jun 06",
-    "clean_cves": [
-      "CVE-2024-20404",
-      "CVE-2024-20405"
-    ]
+    "clean_cves": ["CVE-2024-20404", "CVE-2024-20405"]
   },
   {
     "id": "cisco-sa-fmc-sqli-WFFDnNOs",
@@ -45,9 +33,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20360"
-    ]
+    "clean_cves": ["CVE-2024-20360"]
   },
   {
     "id": "cisco-sa-asaftd-ssl-dos-uu7mV5p6",
@@ -56,9 +42,7 @@
     "impact": "High",
     "version": "1.2",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2023-20006"
-    ]
+    "clean_cves": ["CVE-2023-20006"]
   },
   {
     "id": "cisco-sa-asaftd-dos-nJVAwOeq",
@@ -67,9 +51,7 @@
     "impact": "High",
     "version": "2.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2022-20760"
-    ]
+    "clean_cves": ["CVE-2022-20760"]
   },
   {
     "id": "cisco-sa-snort3-ips-bypass-uE69KBMd",
@@ -78,9 +60,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20363"
-    ]
+    "clean_cves": ["CVE-2024-20363"]
   },
   {
     "id": "cisco-sa-ftd-archive-bypass-z4wQjwcN",
@@ -89,9 +69,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20261"
-    ]
+    "clean_cves": ["CVE-2024-20261"]
   },
   {
     "id": "cisco-sa-fmc-object-bypass-fTH8tDjq",
@@ -100,9 +78,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20361"
-    ]
+    "clean_cves": ["CVE-2024-20361"]
   },
   {
     "id": "cisco-sa-asaftd-saml-bypass-KkNvXyKW",
@@ -111,9 +87,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20355"
-    ]
+    "clean_cves": ["CVE-2024-20355"]
   },
   {
     "id": "cisco-sa-asaftd-ogsnsg-aclbyp-3XB8q6jX",
@@ -122,9 +96,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20293"
-    ]
+    "clean_cves": ["CVE-2024-20293"]
   },
   {
     "id": "cisco-sa-cucm-apidos-PGsDcdNF",
@@ -133,9 +105,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 May 17",
-    "clean_cves": [
-      "CVE-2023-20259"
-    ]
+    "clean_cves": ["CVE-2023-20259"]
   },
   {
     "id": "cisco-sa-nso-rwpesc-qrQGnh3f",
@@ -144,10 +114,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20326",
-      "CVE-2024-20389"
-    ]
+    "clean_cves": ["CVE-2024-20326", "CVE-2024-20389"]
   },
   {
     "id": "cisco-sa-nso-hcc-priv-esc-OWBWCs5D",
@@ -156,9 +123,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20366"
-    ]
+    "clean_cves": ["CVE-2024-20366"]
   },
   {
     "id": "cisco-sa-cnfd-rwpesc-ZAOufyx8",
@@ -167,10 +132,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20326",
-      "CVE-2024-20389"
-    ]
+    "clean_cves": ["CVE-2024-20326", "CVE-2024-20389"]
   },
   {
     "id": "cisco-sa-secure-nam-priv-esc-szu2vYpZ",
@@ -179,9 +141,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20391"
-    ]
+    "clean_cves": ["CVE-2024-20391"]
   },
   {
     "id": "cisco-sa-nso-ordir-MNM8YqzO",
@@ -190,9 +150,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20369"
-    ]
+    "clean_cves": ["CVE-2024-20369"]
   },
   {
     "id": "cisco-sa-appd-netvisdos-9zNbsJtK",
@@ -201,9 +159,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20394"
-    ]
+    "clean_cves": ["CVE-2024-20394"]
   },
   {
     "id": "cisco-sa-ipphone-multi-vulns-cXAhCvS",
@@ -212,13 +168,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 01",
-    "clean_cves": [
-      "CVE-2024-20357",
-      "CVE-2024-20376",
-      "CVE-2024-20357",
-      "CVE-2024-20376",
-      "CVE-2024-20378"
-    ]
+    "clean_cves": ["CVE-2024-20357", "CVE-2024-20376", "CVE-2024-20357", "CVE-2024-20376", "CVE-2024-20378"]
   },
   {
     "id": "cisco-sa-asaftd-websrvs-dos-X8gNucD2",
@@ -227,9 +177,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Apr 24",
-    "clean_cves": [
-      "CVE-2024-20353"
-    ]
+    "clean_cves": ["CVE-2024-20353"]
   },
   {
     "id": "cisco-sa-asaftd-persist-rce-FLsNXF4h",
@@ -238,9 +186,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Apr 24",
-    "clean_cves": [
-      "CVE-2024-20359"
-    ]
+    "clean_cves": ["CVE-2024-20359"]
   },
   {
     "id": "cisco-sa-asaftd-cmd-inj-ZJV8Wysm",
@@ -249,9 +195,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 24",
-    "clean_cves": [
-      "CVE-2024-20358"
-    ]
+    "clean_cves": ["CVE-2024-20358"]
   },
   {
     "id": "cisco-sa-cimc-cmd-inj-bLuPcb",
@@ -260,9 +204,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Apr 19",
-    "clean_cves": [
-      "CVE-2024-20356"
-    ]
+    "clean_cves": ["CVE-2024-20356"]
   },
   {
     "id": "cisco-sa-cimc-cmd-inj-mUx4c5AJ",
@@ -271,9 +213,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Apr 19",
-    "clean_cves": [
-      "CVE-2024-20295"
-    ]
+    "clean_cves": ["CVE-2024-20295"]
   },
   {
     "id": "cisco-sa-snmp-uwBXfqww",
@@ -282,9 +222,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 17",
-    "clean_cves": [
-      "CVE-2024-20373"
-    ]
+    "clean_cves": ["CVE-2024-20373"]
   },
   {
     "id": "cisco-sa-ios-dos-Hq4d3tZG",
@@ -293,9 +231,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Apr 04",
-    "clean_cves": [
-      "CVE-2024-20276"
-    ]
+    "clean_cves": ["CVE-2024-20276"]
   },
   {
     "id": "cisco-sa-ndfc-dir-trav-SSn3AYDw",
@@ -304,9 +240,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20348"
-    ]
+    "clean_cves": ["CVE-2024-20348"]
   },
   {
     "id": "cisco-sa-tms-xss-kGw4DX9Y",
@@ -315,9 +249,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20334"
-    ]
+    "clean_cves": ["CVE-2024-20334"]
   },
   {
     "id": "cisco-sa-sbiz-rv-xss-OQeRTup",
@@ -326,9 +258,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20362"
-    ]
+    "clean_cves": ["CVE-2024-20362"]
   },
   {
     "id": "cisco-sa-ndru-pesc-kZ2PQLZH",
@@ -337,9 +267,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20282"
-    ]
+    "clean_cves": ["CVE-2024-20282"]
   },
   {
     "id": "cisco-sa-ndo-upav-YRqsCcSP",
@@ -348,9 +276,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20302"
-    ]
+    "clean_cves": ["CVE-2024-20302"]
   },
   {
     "id": "cisco-sa-ndidv-LmXdvAf2",
@@ -359,9 +285,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20283"
-    ]
+    "clean_cves": ["CVE-2024-20283"]
   },
   {
     "id": "cisco-sa-ndfccsrf-TEmZEfJ9",
@@ -370,9 +294,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20281"
-    ]
+    "clean_cves": ["CVE-2024-20281"]
   },
   {
     "id": "cisco-sa-ise-ssrf-FtSTh5Oz",
@@ -381,9 +303,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20332"
-    ]
+    "clean_cves": ["CVE-2024-20332"]
   },
   {
     "id": "cisco-sa-ise-csrf-NfAKXrp5",
@@ -392,9 +312,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20368"
-    ]
+    "clean_cves": ["CVE-2024-20368"]
   },
   {
     "id": "cisco-sa-ece-xss-CSQxgxfM",
@@ -403,9 +321,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20367"
-    ]
+    "clean_cves": ["CVE-2024-20367"]
   },
   {
     "id": "cisco-sa-cucm-imps-xss-quWkd9yF",
@@ -414,9 +330,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20310"
-    ]
+    "clean_cves": ["CVE-2024-20310"]
   },
   {
     "id": "cisco-sa-cem-csrf-suCmNjFr",
@@ -425,10 +339,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20347",
-      "CVE-2024-20352"
-    ]
+    "clean_cves": ["CVE-2024-20347", "CVE-2024-20352"]
   },
   {
     "id": "cisco-sa-iosxe-utd-cmd-JbL8KvHT",
@@ -437,9 +348,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Apr 02",
-    "clean_cves": [
-      "CVE-2024-20306"
-    ]
+    "clean_cves": ["CVE-2024-20306"]
   },
   {
     "id": "cisco-sa-wlc-mdns-dos-4hv6pBGf",
@@ -448,9 +357,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20303"
-    ]
+    "clean_cves": ["CVE-2024-20303"]
   },
   {
     "id": "cisco-sa-lisp-3gYXs3qP",
@@ -459,9 +366,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20311"
-    ]
+    "clean_cves": ["CVE-2024-20311"]
   },
   {
     "id": "cisco-sa-isis-sGjyOUHX",
@@ -470,9 +375,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20312"
-    ]
+    "clean_cves": ["CVE-2024-20312"]
   },
   {
     "id": "cisco-sa-iosxe-ospf-dos-dR9Sfrxp",
@@ -481,9 +384,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20313"
-    ]
+    "clean_cves": ["CVE-2024-20313"]
   },
   {
     "id": "cisco-sa-ios-xe-sda-edge-dos-qZWuWXWG",
@@ -492,9 +393,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20314"
-    ]
+    "clean_cves": ["CVE-2024-20314"]
   },
   {
     "id": "cisco-sa-ikev1-NO2ccFWz",
@@ -503,10 +402,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20307",
-      "CVE-2024-20308"
-    ]
+    "clean_cves": ["CVE-2024-20307", "CVE-2024-20308"]
   },
   {
     "id": "cisco-sa-dhcp-dos-T3CXPO9z",
@@ -515,9 +411,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20259"
-    ]
+    "clean_cves": ["CVE-2024-20259"]
   },
   {
     "id": "cisco-sa-ap-secureboot-bypass-zT5vJkSD",
@@ -526,9 +420,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20265"
-    ]
+    "clean_cves": ["CVE-2024-20265"]
   },
   {
     "id": "cisco-sa-ap-dos-h9TGGX6W",
@@ -537,9 +429,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20271"
-    ]
+    "clean_cves": ["CVE-2024-20271"]
   },
   {
     "id": "cisco-sa-iosxe-wlc-privesc-RjSMrmPK",
@@ -548,9 +438,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20324"
-    ]
+    "clean_cves": ["CVE-2024-20324"]
   },
   {
     "id": "cisco-sa-iosxe-priv-esc-seAx6NLX",
@@ -559,9 +447,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20278"
-    ]
+    "clean_cves": ["CVE-2024-20278"]
   },
   {
     "id": "cisco-sa-dmi-acl-bypass-Xv8FO8Vz",
@@ -570,9 +456,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20316"
-    ]
+    "clean_cves": ["CVE-2024-20316"]
   },
   {
     "id": "cisco-sa-ccc-authz-bypass-5EKchJRb",
@@ -581,9 +465,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20333"
-    ]
+    "clean_cves": ["CVE-2024-20333"]
   },
   {
     "id": "cisco-sa-aux-333WBz8f",
@@ -592,9 +474,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20309"
-    ]
+    "clean_cves": ["CVE-2024-20309"]
   },
   {
     "id": "cisco-sa-airo-ap-dos-PPPtcVW",
@@ -603,9 +483,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20354"
-    ]
+    "clean_cves": ["CVE-2024-20354"]
   },
   {
     "id": "cisco-sa-iosxr-redis-ABJyE5xK",
@@ -614,9 +492,7 @@
     "impact": "Medium",
     "version": "1.2",
     "last_updated": "2024 Mar 15",
-    "clean_cves": [
-      "CVE-2022-20821"
-    ]
+    "clean_cves": ["CVE-2022-20821"]
   },
   {
     "id": "cisco-sa-iosxr-ipxe-sigbypass-pymfyqgB",
@@ -625,9 +501,7 @@
     "impact": "Medium",
     "version": "2.1",
     "last_updated": "2024 Mar 14",
-    "clean_cves": [
-      "CVE-2023-20236"
-    ]
+    "clean_cves": ["CVE-2023-20236"]
   },
   {
     "id": "cisco-sa-xrl2vpn-jesrU3fc",
@@ -636,9 +510,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20318"
-    ]
+    "clean_cves": ["CVE-2024-20318"]
   },
   {
     "id": "cisco-sa-iosxr-ssh-privesc-eWDMKew3",
@@ -647,9 +519,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20320"
-    ]
+    "clean_cves": ["CVE-2024-20320"]
   },
   {
     "id": "cisco-sa-iosxr-pppma-JKWFgneW",
@@ -658,9 +528,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20327"
-    ]
+    "clean_cves": ["CVE-2024-20327"]
   },
   {
     "id": "cisco-sa-snmp-uhv6ZDeF",
@@ -669,9 +537,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20319"
-    ]
+    "clean_cves": ["CVE-2024-20319"]
   },
   {
     "id": "cisco-sa-iosxr-scp-dos-kb6sUUHw",
@@ -680,9 +546,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20262"
-    ]
+    "clean_cves": ["CVE-2024-20262"]
   },
   {
     "id": "cisco-sa-iosxr-dhcp-dos-3tgPKRdm",
@@ -691,9 +555,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20266"
-    ]
+    "clean_cves": ["CVE-2024-20266"]
   },
   {
     "id": "cisco-sa-iosxr-acl-bypass-RZU5NL3e",
@@ -702,10 +564,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20315",
-      "CVE-2024-20322"
-    ]
+    "clean_cves": ["CVE-2024-20315", "CVE-2024-20322"]
   },
   {
     "id": "cisco-sa-vmanage-unauthapi-sphCLYPA",
@@ -714,9 +573,7 @@
     "impact": "Critical",
     "version": "1.2",
     "last_updated": "2024 Mar 12",
-    "clean_cves": [
-      "CVE-2023-20214"
-    ]
+    "clean_cves": ["CVE-2023-20214"]
   },
   {
     "id": "cisco-sa-secure-client-crlf-W43V4G7",
@@ -725,9 +582,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Mar 12",
-    "clean_cves": [
-      "CVE-2024-20337"
-    ]
+    "clean_cves": ["CVE-2024-20337"]
   },
   {
     "id": "cisco-sa-duo-infodisc-rLCEqm6T",
@@ -736,9 +591,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Mar 08",
-    "clean_cves": [
-      "CVE-2024-20292"
-    ]
+    "clean_cves": ["CVE-2024-20292"]
   },
   {
     "id": "cisco-sa-secure-privesc-sYxQO6ds",
@@ -747,9 +600,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20338"
-    ]
+    "clean_cves": ["CVE-2024-20338"]
   },
   {
     "id": "cisco-sa-sb-wap-multi-85G83CRB",
@@ -758,10 +609,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20335",
-      "CVE-2024-20336"
-    ]
+    "clean_cves": ["CVE-2024-20335", "CVE-2024-20336"]
   },
   {
     "id": "cisco-sa-duo-win-bypass-pn42KKBm",
@@ -770,9 +618,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20301"
-    ]
+    "clean_cves": ["CVE-2024-20301"]
   },
   {
     "id": "cisco-sa-appd-xss-3JwqSMNT",
@@ -781,9 +627,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20346"
-    ]
+    "clean_cves": ["CVE-2024-20346"]
   },
   {
     "id": "cisco-sa-appd-traversal-m7N8mZpF",
@@ -792,9 +636,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20345"
-    ]
+    "clean_cves": ["CVE-2024-20345"]
   },
   {
     "id": "cisco-sa-curl-libcurl-D9ds39cV",
@@ -803,9 +645,7 @@
     "impact": "High",
     "version": "1.6",
     "last_updated": "2024 Mar 05",
-    "clean_cves": [
-      "CVE-2023-38545"
-    ]
+    "clean_cves": ["CVE-2023-38545"]
   },
   {
     "id": "cisco-sa-nxos-ebgp-dos-L3QCwVJ",
@@ -814,9 +654,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20321"
-    ]
+    "clean_cves": ["CVE-2024-20321"]
   },
   {
     "id": "cisco-sa-ipv6-mpls-dos-R9ycXkwM",
@@ -825,9 +663,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20267"
-    ]
+    "clean_cves": ["CVE-2024-20267"]
   },
   {
     "id": "cisco-sa-ucsfi-imm-syn-p6kZTDQC",
@@ -836,9 +672,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20344"
-    ]
+    "clean_cves": ["CVE-2024-20344"]
   },
   {
     "id": "cisco-sa-nxos-po-acl-TkyePgvL",
@@ -847,9 +681,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20291"
-    ]
+    "clean_cves": ["CVE-2024-20291"]
   },
   {
     "id": "cisco-sa-nxos-lldp-dos-z7PncTgt",
@@ -858,9 +690,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20294"
-    ]
+    "clean_cves": ["CVE-2024-20294"]
   },
   {
     "id": "cisco-sa-cimc-xss-UMYtYEtr",
@@ -869,9 +699,7 @@
     "impact": "Medium",
     "version": "1.4",
     "last_updated": "2024 Feb 22",
-    "clean_cves": [
-      "CVE-2023-20228"
-    ]
+    "clean_cves": ["CVE-2023-20228"]
   },
   {
     "id": "cisco-sa-asaftd-info-disclose-9eJtycMB",
@@ -880,9 +708,7 @@
     "impact": "High",
     "version": "1.5",
     "last_updated": "2024 Feb 21",
-    "clean_cves": [
-      "CVE-2020-3259"
-    ]
+    "clean_cves": ["CVE-2020-3259"]
   },
   {
     "id": "cisco-sa-cuic-access-control-jJsZQMjj",
@@ -891,9 +717,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 21",
-    "clean_cves": [
-      "CVE-2024-20325"
-    ]
+    "clean_cves": ["CVE-2024-20325"]
   },
   {
     "id": "cisco-sa-clamav-hDffu6t",
@@ -902,9 +726,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Feb 13",
-    "clean_cves": [
-      "CVE-2024-20290"
-    ]
+    "clean_cves": ["CVE-2024-20290"]
   },
   {
     "id": "cisco-sa-expressway-csrf-KnnZDMj3",
@@ -913,13 +735,7 @@
     "impact": "Critical",
     "version": "1.1",
     "last_updated": "2024 Feb 12",
-    "clean_cves": [
-      "CVE-2024-20252",
-      "CVE-2024-20254",
-      "CVE-2024-20252",
-      "CVE-2024-20254",
-      "CVE-2024-20255"
-    ]
+    "clean_cves": ["CVE-2024-20252", "CVE-2024-20254", "CVE-2024-20252", "CVE-2024-20254", "CVE-2024-20255"]
   },
   {
     "id": "cisco-sa-ftd-snort3acp-bypass-3bdR2BEh",
@@ -928,9 +744,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Feb 06",
-    "clean_cves": [
-      "CVE-2023-20246"
-    ]
+    "clean_cves": ["CVE-2023-20246"]
   },
   {
     "id": "cisco-sa-cuc-unauth-afu-FROYsCsD",
@@ -939,9 +753,7 @@
     "impact": "Critical",
     "version": "1.3",
     "last_updated": "2024 Feb 05",
-    "clean_cves": [
-      "CVE-2024-20272"
-    ]
+    "clean_cves": ["CVE-2024-20272"]
   },
   {
     "id": "cisco-sa-cucm-rce-bWNzQcUm",
@@ -950,9 +762,7 @@
     "impact": "Critical",
     "version": "1.3",
     "last_updated": "2024 Jan 30",
-    "clean_cves": [
-      "CVE-2024-20253"
-    ]
+    "clean_cves": ["CVE-2024-20253"]
   },
   {
     "id": "cisco-sa-sb-bus-acl-bypass-5zn9hNJk",
@@ -961,9 +771,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 24",
-    "clean_cves": [
-      "CVE-2024-20263"
-    ]
+    "clean_cves": ["CVE-2024-20263"]
   },
   {
     "id": "cisco-sa-cuc-xss-9TFuu5MS",
@@ -972,9 +780,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 24",
-    "clean_cves": [
-      "CVE-2024-20305"
-    ]
+    "clean_cves": ["CVE-2024-20305"]
   },
   {
     "id": "cisco-sa-sd-wan-file-access-VW36d28P",
@@ -983,9 +789,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Jan 23",
-    "clean_cves": [
-      "CVE-2022-20716"
-    ]
+    "clean_cves": ["CVE-2022-20716"]
   },
   {
     "id": "cisco-sa-sdwan-privesc-cli-xkGwmqKu",
@@ -994,9 +798,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jan 23",
-    "clean_cves": [
-      "CVE-2022-20930"
-    ]
+    "clean_cves": ["CVE-2022-20930"]
   },
   {
     "id": "cisco-sa-broadworks-xss-6syj82Ju",
@@ -1005,9 +807,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jan 23",
-    "clean_cves": [
-      "CVE-2024-20270"
-    ]
+    "clean_cves": ["CVE-2024-20270"]
   },
   {
     "id": "cisco-sa-tms-portal-xss-AXNeVg3s",
@@ -1016,10 +816,7 @@
     "impact": "Medium",
     "version": "1.2",
     "last_updated": "2024 Jan 12",
-    "clean_cves": [
-      "CVE-2023-20248",
-      "CVE-2023-20249"
-    ]
+    "clean_cves": ["CVE-2023-20248", "CVE-2023-20249"]
   },
   {
     "id": "cisco-sa-thouseyes-privesc-DmzHG3Qv",
@@ -1028,9 +825,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2024-20277"
-    ]
+    "clean_cves": ["CVE-2024-20277"]
   },
   {
     "id": "cisco-sa-sb-wap-inject-bHStWgXO",
@@ -1039,9 +834,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2024-20287"
-    ]
+    "clean_cves": ["CVE-2024-20287"]
   },
   {
     "id": "cisco-sa-pi-epnm-wkZJeyeq",
@@ -1050,14 +843,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2023-20257",
-      "CVE-2023-20258",
-      "CVE-2023-20257",
-      "CVE-2023-20258",
-      "CVE-2023-20260",
-      "CVE-2023-20271"
-    ]
+    "clean_cves": ["CVE-2023-20257", "CVE-2023-20258", "CVE-2023-20257", "CVE-2023-20258", "CVE-2023-20260", "CVE-2023-20271"]
   },
   {
     "id": "cisco-sa-ISE-XSS-bL4VTML",
@@ -1066,9 +852,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2024-20251"
-    ]
+    "clean_cves": ["CVE-2024-20251"]
   },
   {
     "id": "cisco-sa-ise-priv-esc-KJLp2Aw",
@@ -1077,10 +861,7 @@
     "impact": "Medium",
     "version": "1.2",
     "last_updated": "2024 Jan 08",
-    "clean_cves": [
-      "CVE-2023-20193",
-      "CVE-2023-20194"
-    ]
+    "clean_cves": ["CVE-2023-20193", "CVE-2023-20194"]
   },
   {
     "id": "cisco-sa-struts-C2kCMkmT",
@@ -1089,9 +870,7 @@
     "impact": "Critical",
     "version": "1.6",
     "last_updated": "2023 Dec 21",
-    "clean_cves": [
-      "CVE-2023-50164"
-    ]
+    "clean_cves": ["CVE-2023-50164"]
   },
   {
     "id": "cisco-sa-http2-reset-d8Kf32vZ",
@@ -1100,9 +879,7 @@
     "impact": "High",
     "version": "1.11",
     "last_updated": "2023 Dec 21",
-    "clean_cves": [
-      "CVE-2023-44487"
-    ]
+    "clean_cves": ["CVE-2023-44487"]
   },
   {
     "id": "cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
@@ -1111,14 +888,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jun 12",
-    "clean_cves": [
-      "CVE-2024-20256",
-      "CVE-2024-20257",
-      "CVE-2024-20256",
-      "CVE-2024-20257",
-      "CVE-2024-20258",
-      "CVE-2024-20383"
-    ]
+    "clean_cves": ["CVE-2024-20256", "CVE-2024-20257", "CVE-2024-20256", "CVE-2024-20257", "CVE-2024-20258", "CVE-2024-20383"]
   },
   {
     "id": "cisco-sa-esa-http-split-GLrnnOwS",
@@ -1127,9 +897,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jun 12",
-    "clean_cves": [
-      "CVE-2024-20392"
-    ]
+    "clean_cves": ["CVE-2024-20392"]
   },
   {
     "id": "cisco-sa-finesse-ssrf-rfi-Um7wT8Ew",
@@ -1138,10 +906,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jun 06",
-    "clean_cves": [
-      "CVE-2024-20404",
-      "CVE-2024-20405"
-    ]
+    "clean_cves": ["CVE-2024-20404", "CVE-2024-20405"]
   },
   {
     "id": "cisco-sa-fmc-sqli-WFFDnNOs",
@@ -1150,9 +915,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20360"
-    ]
+    "clean_cves": ["CVE-2024-20360"]
   },
   {
     "id": "cisco-sa-asaftd-ssl-dos-uu7mV5p6",
@@ -1161,9 +924,7 @@
     "impact": "High",
     "version": "1.2",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2023-20006"
-    ]
+    "clean_cves": ["CVE-2023-20006"]
   },
   {
     "id": "cisco-sa-asaftd-dos-nJVAwOeq",
@@ -1172,9 +933,7 @@
     "impact": "High",
     "version": "2.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2022-20760"
-    ]
+    "clean_cves": ["CVE-2022-20760"]
   },
   {
     "id": "cisco-sa-snort3-ips-bypass-uE69KBMd",
@@ -1183,9 +942,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20363"
-    ]
+    "clean_cves": ["CVE-2024-20363"]
   },
   {
     "id": "cisco-sa-ftd-archive-bypass-z4wQjwcN",
@@ -1194,9 +951,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20261"
-    ]
+    "clean_cves": ["CVE-2024-20261"]
   },
   {
     "id": "cisco-sa-fmc-object-bypass-fTH8tDjq",
@@ -1205,9 +960,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20361"
-    ]
+    "clean_cves": ["CVE-2024-20361"]
   },
   {
     "id": "cisco-sa-asaftd-saml-bypass-KkNvXyKW",
@@ -1216,9 +969,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20355"
-    ]
+    "clean_cves": ["CVE-2024-20355"]
   },
   {
     "id": "cisco-sa-asaftd-ogsnsg-aclbyp-3XB8q6jX",
@@ -1227,9 +978,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20293"
-    ]
+    "clean_cves": ["CVE-2024-20293"]
   },
   {
     "id": "cisco-sa-cucm-apidos-PGsDcdNF",
@@ -1238,9 +987,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 May 17",
-    "clean_cves": [
-      "CVE-2023-20259"
-    ]
+    "clean_cves": ["CVE-2023-20259"]
   },
   {
     "id": "cisco-sa-nso-rwpesc-qrQGnh3f",
@@ -1249,10 +996,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20326",
-      "CVE-2024-20389"
-    ]
+    "clean_cves": ["CVE-2024-20326", "CVE-2024-20389"]
   },
   {
     "id": "cisco-sa-nso-hcc-priv-esc-OWBWCs5D",
@@ -1261,9 +1005,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20366"
-    ]
+    "clean_cves": ["CVE-2024-20366"]
   },
   {
     "id": "cisco-sa-cnfd-rwpesc-ZAOufyx8",
@@ -1272,10 +1014,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20326",
-      "CVE-2024-20389"
-    ]
+    "clean_cves": ["CVE-2024-20326", "CVE-2024-20389"]
   },
   {
     "id": "cisco-sa-secure-nam-priv-esc-szu2vYpZ",
@@ -1284,9 +1023,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20391"
-    ]
+    "clean_cves": ["CVE-2024-20391"]
   },
   {
     "id": "cisco-sa-nso-ordir-MNM8YqzO",
@@ -1295,9 +1032,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20369"
-    ]
+    "clean_cves": ["CVE-2024-20369"]
   },
   {
     "id": "cisco-sa-appd-netvisdos-9zNbsJtK",
@@ -1306,9 +1041,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20394"
-    ]
+    "clean_cves": ["CVE-2024-20394"]
   },
   {
     "id": "cisco-sa-ipphone-multi-vulns-cXAhCvS",
@@ -1317,13 +1050,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 01",
-    "clean_cves": [
-      "CVE-2024-20357",
-      "CVE-2024-20376",
-      "CVE-2024-20357",
-      "CVE-2024-20376",
-      "CVE-2024-20378"
-    ]
+    "clean_cves": ["CVE-2024-20357", "CVE-2024-20376", "CVE-2024-20357", "CVE-2024-20376", "CVE-2024-20378"]
   },
   {
     "id": "cisco-sa-asaftd-websrvs-dos-X8gNucD2",
@@ -1332,9 +1059,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Apr 24",
-    "clean_cves": [
-      "CVE-2024-20353"
-    ]
+    "clean_cves": ["CVE-2024-20353"]
   },
   {
     "id": "cisco-sa-asaftd-persist-rce-FLsNXF4h",
@@ -1343,9 +1068,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Apr 24",
-    "clean_cves": [
-      "CVE-2024-20359"
-    ]
+    "clean_cves": ["CVE-2024-20359"]
   },
   {
     "id": "cisco-sa-asaftd-cmd-inj-ZJV8Wysm",
@@ -1354,9 +1077,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 24",
-    "clean_cves": [
-      "CVE-2024-20358"
-    ]
+    "clean_cves": ["CVE-2024-20358"]
   },
   {
     "id": "cisco-sa-cimc-cmd-inj-bLuPcb",
@@ -1365,9 +1086,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Apr 19",
-    "clean_cves": [
-      "CVE-2024-20356"
-    ]
+    "clean_cves": ["CVE-2024-20356"]
   },
   {
     "id": "cisco-sa-cimc-cmd-inj-mUx4c5AJ",
@@ -1376,9 +1095,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Apr 19",
-    "clean_cves": [
-      "CVE-2024-20295"
-    ]
+    "clean_cves": ["CVE-2024-20295"]
   },
   {
     "id": "cisco-sa-snmp-uwBXfqww",
@@ -1387,9 +1104,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 17",
-    "clean_cves": [
-      "CVE-2024-20373"
-    ]
+    "clean_cves": ["CVE-2024-20373"]
   },
   {
     "id": "cisco-sa-ios-dos-Hq4d3tZG",
@@ -1398,9 +1113,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Apr 04",
-    "clean_cves": [
-      "CVE-2024-20276"
-    ]
+    "clean_cves": ["CVE-2024-20276"]
   },
   {
     "id": "cisco-sa-ndfc-dir-trav-SSn3AYDw",
@@ -1409,9 +1122,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20348"
-    ]
+    "clean_cves": ["CVE-2024-20348"]
   },
   {
     "id": "cisco-sa-tms-xss-kGw4DX9Y",
@@ -1420,9 +1131,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20334"
-    ]
+    "clean_cves": ["CVE-2024-20334"]
   },
   {
     "id": "cisco-sa-sbiz-rv-xss-OQeRTup",
@@ -1431,9 +1140,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20362"
-    ]
+    "clean_cves": ["CVE-2024-20362"]
   },
   {
     "id": "cisco-sa-ndru-pesc-kZ2PQLZH",
@@ -1442,9 +1149,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20282"
-    ]
+    "clean_cves": ["CVE-2024-20282"]
   },
   {
     "id": "cisco-sa-ndo-upav-YRqsCcSP",
@@ -1453,9 +1158,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20302"
-    ]
+    "clean_cves": ["CVE-2024-20302"]
   },
   {
     "id": "cisco-sa-ndidv-LmXdvAf2",
@@ -1464,9 +1167,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20283"
-    ]
+    "clean_cves": ["CVE-2024-20283"]
   },
   {
     "id": "cisco-sa-ndfccsrf-TEmZEfJ9",
@@ -1475,9 +1176,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20281"
-    ]
+    "clean_cves": ["CVE-2024-20281"]
   },
   {
     "id": "cisco-sa-ise-ssrf-FtSTh5Oz",
@@ -1486,9 +1185,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20332"
-    ]
+    "clean_cves": ["CVE-2024-20332"]
   },
   {
     "id": "cisco-sa-ise-csrf-NfAKXrp5",
@@ -1497,9 +1194,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20368"
-    ]
+    "clean_cves": ["CVE-2024-20368"]
   },
   {
     "id": "cisco-sa-ece-xss-CSQxgxfM",
@@ -1508,9 +1203,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20367"
-    ]
+    "clean_cves": ["CVE-2024-20367"]
   },
   {
     "id": "cisco-sa-cucm-imps-xss-quWkd9yF",
@@ -1519,9 +1212,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20310"
-    ]
+    "clean_cves": ["CVE-2024-20310"]
   },
   {
     "id": "cisco-sa-cem-csrf-suCmNjFr",
@@ -1530,10 +1221,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20347",
-      "CVE-2024-20352"
-    ]
+    "clean_cves": ["CVE-2024-20347", "CVE-2024-20352"]
   },
   {
     "id": "cisco-sa-iosxe-utd-cmd-JbL8KvHT",
@@ -1542,9 +1230,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Apr 02",
-    "clean_cves": [
-      "CVE-2024-20306"
-    ]
+    "clean_cves": ["CVE-2024-20306"]
   },
   {
     "id": "cisco-sa-wlc-mdns-dos-4hv6pBGf",
@@ -1553,9 +1239,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20303"
-    ]
+    "clean_cves": ["CVE-2024-20303"]
   },
   {
     "id": "cisco-sa-lisp-3gYXs3qP",
@@ -1564,9 +1248,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20311"
-    ]
+    "clean_cves": ["CVE-2024-20311"]
   },
   {
     "id": "cisco-sa-isis-sGjyOUHX",
@@ -1575,9 +1257,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20312"
-    ]
+    "clean_cves": ["CVE-2024-20312"]
   },
   {
     "id": "cisco-sa-iosxe-ospf-dos-dR9Sfrxp",
@@ -1586,9 +1266,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20313"
-    ]
+    "clean_cves": ["CVE-2024-20313"]
   },
   {
     "id": "cisco-sa-ios-xe-sda-edge-dos-qZWuWXWG",
@@ -1597,9 +1275,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20314"
-    ]
+    "clean_cves": ["CVE-2024-20314"]
   },
   {
     "id": "cisco-sa-ikev1-NO2ccFWz",
@@ -1608,10 +1284,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20307",
-      "CVE-2024-20308"
-    ]
+    "clean_cves": ["CVE-2024-20307", "CVE-2024-20308"]
   },
   {
     "id": "cisco-sa-dhcp-dos-T3CXPO9z",
@@ -1620,9 +1293,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20259"
-    ]
+    "clean_cves": ["CVE-2024-20259"]
   },
   {
     "id": "cisco-sa-ap-secureboot-bypass-zT5vJkSD",
@@ -1631,9 +1302,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20265"
-    ]
+    "clean_cves": ["CVE-2024-20265"]
   },
   {
     "id": "cisco-sa-ap-dos-h9TGGX6W",
@@ -1642,9 +1311,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20271"
-    ]
+    "clean_cves": ["CVE-2024-20271"]
   },
   {
     "id": "cisco-sa-iosxe-wlc-privesc-RjSMrmPK",
@@ -1653,9 +1320,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20324"
-    ]
+    "clean_cves": ["CVE-2024-20324"]
   },
   {
     "id": "cisco-sa-iosxe-priv-esc-seAx6NLX",
@@ -1664,9 +1329,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20278"
-    ]
+    "clean_cves": ["CVE-2024-20278"]
   },
   {
     "id": "cisco-sa-dmi-acl-bypass-Xv8FO8Vz",
@@ -1675,9 +1338,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20316"
-    ]
+    "clean_cves": ["CVE-2024-20316"]
   },
   {
     "id": "cisco-sa-ccc-authz-bypass-5EKchJRb",
@@ -1686,9 +1347,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20333"
-    ]
+    "clean_cves": ["CVE-2024-20333"]
   },
   {
     "id": "cisco-sa-aux-333WBz8f",
@@ -1697,9 +1356,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20309"
-    ]
+    "clean_cves": ["CVE-2024-20309"]
   },
   {
     "id": "cisco-sa-airo-ap-dos-PPPtcVW",
@@ -1708,9 +1365,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20354"
-    ]
+    "clean_cves": ["CVE-2024-20354"]
   },
   {
     "id": "cisco-sa-iosxr-redis-ABJyE5xK",
@@ -1719,9 +1374,7 @@
     "impact": "Medium",
     "version": "1.2",
     "last_updated": "2024 Mar 15",
-    "clean_cves": [
-      "CVE-2022-20821"
-    ]
+    "clean_cves": ["CVE-2022-20821"]
   },
   {
     "id": "cisco-sa-iosxr-ipxe-sigbypass-pymfyqgB",
@@ -1730,9 +1383,7 @@
     "impact": "Medium",
     "version": "2.1",
     "last_updated": "2024 Mar 14",
-    "clean_cves": [
-      "CVE-2023-20236"
-    ]
+    "clean_cves": ["CVE-2023-20236"]
   },
   {
     "id": "cisco-sa-xrl2vpn-jesrU3fc",
@@ -1741,9 +1392,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20318"
-    ]
+    "clean_cves": ["CVE-2024-20318"]
   },
   {
     "id": "cisco-sa-iosxr-ssh-privesc-eWDMKew3",
@@ -1752,9 +1401,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20320"
-    ]
+    "clean_cves": ["CVE-2024-20320"]
   },
   {
     "id": "cisco-sa-iosxr-pppma-JKWFgneW",
@@ -1763,9 +1410,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20327"
-    ]
+    "clean_cves": ["CVE-2024-20327"]
   },
   {
     "id": "cisco-sa-snmp-uhv6ZDeF",
@@ -1774,9 +1419,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20319"
-    ]
+    "clean_cves": ["CVE-2024-20319"]
   },
   {
     "id": "cisco-sa-iosxr-scp-dos-kb6sUUHw",
@@ -1785,9 +1428,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20262"
-    ]
+    "clean_cves": ["CVE-2024-20262"]
   },
   {
     "id": "cisco-sa-iosxr-dhcp-dos-3tgPKRdm",
@@ -1796,9 +1437,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20266"
-    ]
+    "clean_cves": ["CVE-2024-20266"]
   },
   {
     "id": "cisco-sa-iosxr-acl-bypass-RZU5NL3e",
@@ -1807,10 +1446,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20315",
-      "CVE-2024-20322"
-    ]
+    "clean_cves": ["CVE-2024-20315", "CVE-2024-20322"]
   },
   {
     "id": "cisco-sa-vmanage-unauthapi-sphCLYPA",
@@ -1819,9 +1455,7 @@
     "impact": "Critical",
     "version": "1.2",
     "last_updated": "2024 Mar 12",
-    "clean_cves": [
-      "CVE-2023-20214"
-    ]
+    "clean_cves": ["CVE-2023-20214"]
   },
   {
     "id": "cisco-sa-secure-client-crlf-W43V4G7",
@@ -1830,9 +1464,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Mar 12",
-    "clean_cves": [
-      "CVE-2024-20337"
-    ]
+    "clean_cves": ["CVE-2024-20337"]
   },
   {
     "id": "cisco-sa-duo-infodisc-rLCEqm6T",
@@ -1841,9 +1473,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Mar 08",
-    "clean_cves": [
-      "CVE-2024-20292"
-    ]
+    "clean_cves": ["CVE-2024-20292"]
   },
   {
     "id": "cisco-sa-secure-privesc-sYxQO6ds",
@@ -1852,9 +1482,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20338"
-    ]
+    "clean_cves": ["CVE-2024-20338"]
   },
   {
     "id": "cisco-sa-sb-wap-multi-85G83CRB",
@@ -1863,10 +1491,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20335",
-      "CVE-2024-20336"
-    ]
+    "clean_cves": ["CVE-2024-20335", "CVE-2024-20336"]
   },
   {
     "id": "cisco-sa-duo-win-bypass-pn42KKBm",
@@ -1875,9 +1500,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20301"
-    ]
+    "clean_cves": ["CVE-2024-20301"]
   },
   {
     "id": "cisco-sa-appd-xss-3JwqSMNT",
@@ -1886,9 +1509,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20346"
-    ]
+    "clean_cves": ["CVE-2024-20346"]
   },
   {
     "id": "cisco-sa-appd-traversal-m7N8mZpF",
@@ -1897,9 +1518,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20345"
-    ]
+    "clean_cves": ["CVE-2024-20345"]
   },
   {
     "id": "cisco-sa-curl-libcurl-D9ds39cV",
@@ -1908,9 +1527,7 @@
     "impact": "High",
     "version": "1.6",
     "last_updated": "2024 Mar 05",
-    "clean_cves": [
-      "CVE-2023-38545"
-    ]
+    "clean_cves": ["CVE-2023-38545"]
   },
   {
     "id": "cisco-sa-nxos-ebgp-dos-L3QCwVJ",
@@ -1919,9 +1536,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20321"
-    ]
+    "clean_cves": ["CVE-2024-20321"]
   },
   {
     "id": "cisco-sa-ipv6-mpls-dos-R9ycXkwM",
@@ -1930,9 +1545,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20267"
-    ]
+    "clean_cves": ["CVE-2024-20267"]
   },
   {
     "id": "cisco-sa-ucsfi-imm-syn-p6kZTDQC",
@@ -1941,9 +1554,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20344"
-    ]
+    "clean_cves": ["CVE-2024-20344"]
   },
   {
     "id": "cisco-sa-nxos-po-acl-TkyePgvL",
@@ -1952,9 +1563,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20291"
-    ]
+    "clean_cves": ["CVE-2024-20291"]
   },
   {
     "id": "cisco-sa-nxos-lldp-dos-z7PncTgt",
@@ -1963,9 +1572,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20294"
-    ]
+    "clean_cves": ["CVE-2024-20294"]
   },
   {
     "id": "cisco-sa-cimc-xss-UMYtYEtr",
@@ -1974,9 +1581,7 @@
     "impact": "Medium",
     "version": "1.4",
     "last_updated": "2024 Feb 22",
-    "clean_cves": [
-      "CVE-2023-20228"
-    ]
+    "clean_cves": ["CVE-2023-20228"]
   },
   {
     "id": "cisco-sa-asaftd-info-disclose-9eJtycMB",
@@ -1985,9 +1590,7 @@
     "impact": "High",
     "version": "1.5",
     "last_updated": "2024 Feb 21",
-    "clean_cves": [
-      "CVE-2020-3259"
-    ]
+    "clean_cves": ["CVE-2020-3259"]
   },
   {
     "id": "cisco-sa-cuic-access-control-jJsZQMjj",
@@ -1996,9 +1599,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 21",
-    "clean_cves": [
-      "CVE-2024-20325"
-    ]
+    "clean_cves": ["CVE-2024-20325"]
   },
   {
     "id": "cisco-sa-clamav-hDffu6t",
@@ -2007,9 +1608,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Feb 13",
-    "clean_cves": [
-      "CVE-2024-20290"
-    ]
+    "clean_cves": ["CVE-2024-20290"]
   },
   {
     "id": "cisco-sa-expressway-csrf-KnnZDMj3",
@@ -2018,13 +1617,7 @@
     "impact": "Critical",
     "version": "1.1",
     "last_updated": "2024 Feb 12",
-    "clean_cves": [
-      "CVE-2024-20252",
-      "CVE-2024-20254",
-      "CVE-2024-20252",
-      "CVE-2024-20254",
-      "CVE-2024-20255"
-    ]
+    "clean_cves": ["CVE-2024-20252", "CVE-2024-20254", "CVE-2024-20252", "CVE-2024-20254", "CVE-2024-20255"]
   },
   {
     "id": "cisco-sa-ftd-snort3acp-bypass-3bdR2BEh",
@@ -2033,9 +1626,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Feb 06",
-    "clean_cves": [
-      "CVE-2023-20246"
-    ]
+    "clean_cves": ["CVE-2023-20246"]
   },
   {
     "id": "cisco-sa-cuc-unauth-afu-FROYsCsD",
@@ -2044,9 +1635,7 @@
     "impact": "Critical",
     "version": "1.3",
     "last_updated": "2024 Feb 05",
-    "clean_cves": [
-      "CVE-2024-20272"
-    ]
+    "clean_cves": ["CVE-2024-20272"]
   },
   {
     "id": "cisco-sa-cucm-rce-bWNzQcUm",
@@ -2055,9 +1644,7 @@
     "impact": "Critical",
     "version": "1.3",
     "last_updated": "2024 Jan 30",
-    "clean_cves": [
-      "CVE-2024-20253"
-    ]
+    "clean_cves": ["CVE-2024-20253"]
   },
   {
     "id": "cisco-sa-sb-bus-acl-bypass-5zn9hNJk",
@@ -2066,9 +1653,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 24",
-    "clean_cves": [
-      "CVE-2024-20263"
-    ]
+    "clean_cves": ["CVE-2024-20263"]
   },
   {
     "id": "cisco-sa-cuc-xss-9TFuu5MS",
@@ -2077,9 +1662,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 24",
-    "clean_cves": [
-      "CVE-2024-20305"
-    ]
+    "clean_cves": ["CVE-2024-20305"]
   },
   {
     "id": "cisco-sa-sd-wan-file-access-VW36d28P",
@@ -2088,9 +1671,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Jan 23",
-    "clean_cves": [
-      "CVE-2022-20716"
-    ]
+    "clean_cves": ["CVE-2022-20716"]
   },
   {
     "id": "cisco-sa-sdwan-privesc-cli-xkGwmqKu",
@@ -2099,9 +1680,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jan 23",
-    "clean_cves": [
-      "CVE-2022-20930"
-    ]
+    "clean_cves": ["CVE-2022-20930"]
   },
   {
     "id": "cisco-sa-broadworks-xss-6syj82Ju",
@@ -2110,9 +1689,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jan 23",
-    "clean_cves": [
-      "CVE-2024-20270"
-    ]
+    "clean_cves": ["CVE-2024-20270"]
   },
   {
     "id": "cisco-sa-tms-portal-xss-AXNeVg3s",
@@ -2121,10 +1698,7 @@
     "impact": "Medium",
     "version": "1.2",
     "last_updated": "2024 Jan 12",
-    "clean_cves": [
-      "CVE-2023-20248",
-      "CVE-2023-20249"
-    ]
+    "clean_cves": ["CVE-2023-20248", "CVE-2023-20249"]
   },
   {
     "id": "cisco-sa-thouseyes-privesc-DmzHG3Qv",
@@ -2133,9 +1707,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2024-20277"
-    ]
+    "clean_cves": ["CVE-2024-20277"]
   },
   {
     "id": "cisco-sa-sb-wap-inject-bHStWgXO",
@@ -2144,9 +1716,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2024-20287"
-    ]
+    "clean_cves": ["CVE-2024-20287"]
   },
   {
     "id": "cisco-sa-pi-epnm-wkZJeyeq",
@@ -2155,14 +1725,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2023-20257",
-      "CVE-2023-20258",
-      "CVE-2023-20257",
-      "CVE-2023-20258",
-      "CVE-2023-20260",
-      "CVE-2023-20271"
-    ]
+    "clean_cves": ["CVE-2023-20257", "CVE-2023-20258", "CVE-2023-20257", "CVE-2023-20258", "CVE-2023-20260", "CVE-2023-20271"]
   },
   {
     "id": "cisco-sa-ISE-XSS-bL4VTML",
@@ -2171,9 +1734,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2024-20251"
-    ]
+    "clean_cves": ["CVE-2024-20251"]
   },
   {
     "id": "cisco-sa-ise-priv-esc-KJLp2Aw",
@@ -2182,10 +1743,7 @@
     "impact": "Medium",
     "version": "1.2",
     "last_updated": "2024 Jan 08",
-    "clean_cves": [
-      "CVE-2023-20193",
-      "CVE-2023-20194"
-    ]
+    "clean_cves": ["CVE-2023-20193", "CVE-2023-20194"]
   },
   {
     "id": "cisco-sa-struts-C2kCMkmT",
@@ -2194,9 +1752,7 @@
     "impact": "Critical",
     "version": "1.6",
     "last_updated": "2023 Dec 21",
-    "clean_cves": [
-      "CVE-2023-50164"
-    ]
+    "clean_cves": ["CVE-2023-50164"]
   },
   {
     "id": "cisco-sa-http2-reset-d8Kf32vZ",
@@ -2205,9 +1761,7 @@
     "impact": "High",
     "version": "1.11",
     "last_updated": "2023 Dec 21",
-    "clean_cves": [
-      "CVE-2023-44487"
-    ]
+    "clean_cves": ["CVE-2023-44487"]
   },
   {
     "id": "cisco-sa-esa-sma-wsa-xss-bgG5WHOD",
@@ -2216,14 +1770,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jun 12",
-    "clean_cves": [
-      "CVE-2024-20256",
-      "CVE-2024-20257",
-      "CVE-2024-20256",
-      "CVE-2024-20257",
-      "CVE-2024-20258",
-      "CVE-2024-20383"
-    ]
+    "clean_cves": ["CVE-2024-20256", "CVE-2024-20257", "CVE-2024-20256", "CVE-2024-20257", "CVE-2024-20258", "CVE-2024-20383"]
   },
   {
     "id": "cisco-sa-esa-http-split-GLrnnOwS",
@@ -2232,9 +1779,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jun 12",
-    "clean_cves": [
-      "CVE-2024-20392"
-    ]
+    "clean_cves": ["CVE-2024-20392"]
   },
   {
     "id": "cisco-sa-finesse-ssrf-rfi-Um7wT8Ew",
@@ -2243,10 +1788,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jun 06",
-    "clean_cves": [
-      "CVE-2024-20404",
-      "CVE-2024-20405"
-    ]
+    "clean_cves": ["CVE-2024-20404", "CVE-2024-20405"]
   },
   {
     "id": "cisco-sa-fmc-sqli-WFFDnNOs",
@@ -2255,9 +1797,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20360"
-    ]
+    "clean_cves": ["CVE-2024-20360"]
   },
   {
     "id": "cisco-sa-asaftd-ssl-dos-uu7mV5p6",
@@ -2266,9 +1806,7 @@
     "impact": "High",
     "version": "1.2",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2023-20006"
-    ]
+    "clean_cves": ["CVE-2023-20006"]
   },
   {
     "id": "cisco-sa-asaftd-dos-nJVAwOeq",
@@ -2277,9 +1815,7 @@
     "impact": "High",
     "version": "2.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2022-20760"
-    ]
+    "clean_cves": ["CVE-2022-20760"]
   },
   {
     "id": "cisco-sa-snort3-ips-bypass-uE69KBMd",
@@ -2288,9 +1824,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20363"
-    ]
+    "clean_cves": ["CVE-2024-20363"]
   },
   {
     "id": "cisco-sa-ftd-archive-bypass-z4wQjwcN",
@@ -2299,9 +1833,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20261"
-    ]
+    "clean_cves": ["CVE-2024-20261"]
   },
   {
     "id": "cisco-sa-fmc-object-bypass-fTH8tDjq",
@@ -2310,9 +1842,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20361"
-    ]
+    "clean_cves": ["CVE-2024-20361"]
   },
   {
     "id": "cisco-sa-asaftd-saml-bypass-KkNvXyKW",
@@ -2321,9 +1851,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20355"
-    ]
+    "clean_cves": ["CVE-2024-20355"]
   },
   {
     "id": "cisco-sa-asaftd-ogsnsg-aclbyp-3XB8q6jX",
@@ -2332,9 +1860,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 22",
-    "clean_cves": [
-      "CVE-2024-20293"
-    ]
+    "clean_cves": ["CVE-2024-20293"]
   },
   {
     "id": "cisco-sa-cucm-apidos-PGsDcdNF",
@@ -2343,9 +1869,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 May 17",
-    "clean_cves": [
-      "CVE-2023-20259"
-    ]
+    "clean_cves": ["CVE-2023-20259"]
   },
   {
     "id": "cisco-sa-nso-rwpesc-qrQGnh3f",
@@ -2354,10 +1878,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20326",
-      "CVE-2024-20389"
-    ]
+    "clean_cves": ["CVE-2024-20326", "CVE-2024-20389"]
   },
   {
     "id": "cisco-sa-nso-hcc-priv-esc-OWBWCs5D",
@@ -2366,9 +1887,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20366"
-    ]
+    "clean_cves": ["CVE-2024-20366"]
   },
   {
     "id": "cisco-sa-cnfd-rwpesc-ZAOufyx8",
@@ -2377,10 +1896,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20326",
-      "CVE-2024-20389"
-    ]
+    "clean_cves": ["CVE-2024-20326", "CVE-2024-20389"]
   },
   {
     "id": "cisco-sa-secure-nam-priv-esc-szu2vYpZ",
@@ -2389,9 +1905,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20391"
-    ]
+    "clean_cves": ["CVE-2024-20391"]
   },
   {
     "id": "cisco-sa-nso-ordir-MNM8YqzO",
@@ -2400,9 +1914,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20369"
-    ]
+    "clean_cves": ["CVE-2024-20369"]
   },
   {
     "id": "cisco-sa-appd-netvisdos-9zNbsJtK",
@@ -2411,9 +1923,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 May 15",
-    "clean_cves": [
-      "CVE-2024-20394"
-    ]
+    "clean_cves": ["CVE-2024-20394"]
   },
   {
     "id": "cisco-sa-ipphone-multi-vulns-cXAhCvS",
@@ -2422,13 +1932,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 May 01",
-    "clean_cves": [
-      "CVE-2024-20357",
-      "CVE-2024-20376",
-      "CVE-2024-20357",
-      "CVE-2024-20376",
-      "CVE-2024-20378"
-    ]
+    "clean_cves": ["CVE-2024-20357", "CVE-2024-20376", "CVE-2024-20357", "CVE-2024-20376", "CVE-2024-20378"]
   },
   {
     "id": "cisco-sa-asaftd-websrvs-dos-X8gNucD2",
@@ -2437,9 +1941,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Apr 24",
-    "clean_cves": [
-      "CVE-2024-20353"
-    ]
+    "clean_cves": ["CVE-2024-20353"]
   },
   {
     "id": "cisco-sa-asaftd-persist-rce-FLsNXF4h",
@@ -2448,9 +1950,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Apr 24",
-    "clean_cves": [
-      "CVE-2024-20359"
-    ]
+    "clean_cves": ["CVE-2024-20359"]
   },
   {
     "id": "cisco-sa-asaftd-cmd-inj-ZJV8Wysm",
@@ -2459,9 +1959,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 24",
-    "clean_cves": [
-      "CVE-2024-20358"
-    ]
+    "clean_cves": ["CVE-2024-20358"]
   },
   {
     "id": "cisco-sa-cimc-cmd-inj-bLuPcb",
@@ -2470,9 +1968,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Apr 19",
-    "clean_cves": [
-      "CVE-2024-20356"
-    ]
+    "clean_cves": ["CVE-2024-20356"]
   },
   {
     "id": "cisco-sa-cimc-cmd-inj-mUx4c5AJ",
@@ -2481,9 +1977,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Apr 19",
-    "clean_cves": [
-      "CVE-2024-20295"
-    ]
+    "clean_cves": ["CVE-2024-20295"]
   },
   {
     "id": "cisco-sa-snmp-uwBXfqww",
@@ -2492,9 +1986,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 17",
-    "clean_cves": [
-      "CVE-2024-20373"
-    ]
+    "clean_cves": ["CVE-2024-20373"]
   },
   {
     "id": "cisco-sa-ios-dos-Hq4d3tZG",
@@ -2503,9 +1995,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Apr 04",
-    "clean_cves": [
-      "CVE-2024-20276"
-    ]
+    "clean_cves": ["CVE-2024-20276"]
   },
   {
     "id": "cisco-sa-ndfc-dir-trav-SSn3AYDw",
@@ -2514,9 +2004,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20348"
-    ]
+    "clean_cves": ["CVE-2024-20348"]
   },
   {
     "id": "cisco-sa-tms-xss-kGw4DX9Y",
@@ -2525,9 +2013,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20334"
-    ]
+    "clean_cves": ["CVE-2024-20334"]
   },
   {
     "id": "cisco-sa-sbiz-rv-xss-OQeRTup",
@@ -2536,9 +2022,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20362"
-    ]
+    "clean_cves": ["CVE-2024-20362"]
   },
   {
     "id": "cisco-sa-ndru-pesc-kZ2PQLZH",
@@ -2547,9 +2031,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20282"
-    ]
+    "clean_cves": ["CVE-2024-20282"]
   },
   {
     "id": "cisco-sa-ndo-upav-YRqsCcSP",
@@ -2558,9 +2040,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20302"
-    ]
+    "clean_cves": ["CVE-2024-20302"]
   },
   {
     "id": "cisco-sa-ndidv-LmXdvAf2",
@@ -2569,9 +2049,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20283"
-    ]
+    "clean_cves": ["CVE-2024-20283"]
   },
   {
     "id": "cisco-sa-ndfccsrf-TEmZEfJ9",
@@ -2580,9 +2058,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20281"
-    ]
+    "clean_cves": ["CVE-2024-20281"]
   },
   {
     "id": "cisco-sa-ise-ssrf-FtSTh5Oz",
@@ -2591,9 +2067,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20332"
-    ]
+    "clean_cves": ["CVE-2024-20332"]
   },
   {
     "id": "cisco-sa-ise-csrf-NfAKXrp5",
@@ -2602,9 +2076,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20368"
-    ]
+    "clean_cves": ["CVE-2024-20368"]
   },
   {
     "id": "cisco-sa-ece-xss-CSQxgxfM",
@@ -2613,9 +2085,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20367"
-    ]
+    "clean_cves": ["CVE-2024-20367"]
   },
   {
     "id": "cisco-sa-cucm-imps-xss-quWkd9yF",
@@ -2624,9 +2094,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20310"
-    ]
+    "clean_cves": ["CVE-2024-20310"]
   },
   {
     "id": "cisco-sa-cem-csrf-suCmNjFr",
@@ -2635,10 +2103,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Apr 03",
-    "clean_cves": [
-      "CVE-2024-20347",
-      "CVE-2024-20352"
-    ]
+    "clean_cves": ["CVE-2024-20347", "CVE-2024-20352"]
   },
   {
     "id": "cisco-sa-iosxe-utd-cmd-JbL8KvHT",
@@ -2647,9 +2112,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Apr 02",
-    "clean_cves": [
-      "CVE-2024-20306"
-    ]
+    "clean_cves": ["CVE-2024-20306"]
   },
   {
     "id": "cisco-sa-wlc-mdns-dos-4hv6pBGf",
@@ -2658,9 +2121,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20303"
-    ]
+    "clean_cves": ["CVE-2024-20303"]
   },
   {
     "id": "cisco-sa-lisp-3gYXs3qP",
@@ -2669,9 +2130,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20311"
-    ]
+    "clean_cves": ["CVE-2024-20311"]
   },
   {
     "id": "cisco-sa-isis-sGjyOUHX",
@@ -2680,9 +2139,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20312"
-    ]
+    "clean_cves": ["CVE-2024-20312"]
   },
   {
     "id": "cisco-sa-iosxe-ospf-dos-dR9Sfrxp",
@@ -2691,9 +2148,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20313"
-    ]
+    "clean_cves": ["CVE-2024-20313"]
   },
   {
     "id": "cisco-sa-ios-xe-sda-edge-dos-qZWuWXWG",
@@ -2702,9 +2157,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20314"
-    ]
+    "clean_cves": ["CVE-2024-20314"]
   },
   {
     "id": "cisco-sa-ikev1-NO2ccFWz",
@@ -2713,10 +2166,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20307",
-      "CVE-2024-20308"
-    ]
+    "clean_cves": ["CVE-2024-20307", "CVE-2024-20308"]
   },
   {
     "id": "cisco-sa-dhcp-dos-T3CXPO9z",
@@ -2725,9 +2175,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20259"
-    ]
+    "clean_cves": ["CVE-2024-20259"]
   },
   {
     "id": "cisco-sa-ap-secureboot-bypass-zT5vJkSD",
@@ -2736,9 +2184,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20265"
-    ]
+    "clean_cves": ["CVE-2024-20265"]
   },
   {
     "id": "cisco-sa-ap-dos-h9TGGX6W",
@@ -2747,9 +2193,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20271"
-    ]
+    "clean_cves": ["CVE-2024-20271"]
   },
   {
     "id": "cisco-sa-iosxe-wlc-privesc-RjSMrmPK",
@@ -2758,9 +2202,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20324"
-    ]
+    "clean_cves": ["CVE-2024-20324"]
   },
   {
     "id": "cisco-sa-iosxe-priv-esc-seAx6NLX",
@@ -2769,9 +2211,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20278"
-    ]
+    "clean_cves": ["CVE-2024-20278"]
   },
   {
     "id": "cisco-sa-dmi-acl-bypass-Xv8FO8Vz",
@@ -2780,9 +2220,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20316"
-    ]
+    "clean_cves": ["CVE-2024-20316"]
   },
   {
     "id": "cisco-sa-ccc-authz-bypass-5EKchJRb",
@@ -2791,9 +2229,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20333"
-    ]
+    "clean_cves": ["CVE-2024-20333"]
   },
   {
     "id": "cisco-sa-aux-333WBz8f",
@@ -2802,9 +2238,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20309"
-    ]
+    "clean_cves": ["CVE-2024-20309"]
   },
   {
     "id": "cisco-sa-airo-ap-dos-PPPtcVW",
@@ -2813,9 +2247,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 27",
-    "clean_cves": [
-      "CVE-2024-20354"
-    ]
+    "clean_cves": ["CVE-2024-20354"]
   },
   {
     "id": "cisco-sa-iosxr-redis-ABJyE5xK",
@@ -2824,9 +2256,7 @@
     "impact": "Medium",
     "version": "1.2",
     "last_updated": "2024 Mar 15",
-    "clean_cves": [
-      "CVE-2022-20821"
-    ]
+    "clean_cves": ["CVE-2022-20821"]
   },
   {
     "id": "cisco-sa-iosxr-ipxe-sigbypass-pymfyqgB",
@@ -2835,9 +2265,7 @@
     "impact": "Medium",
     "version": "2.1",
     "last_updated": "2024 Mar 14",
-    "clean_cves": [
-      "CVE-2023-20236"
-    ]
+    "clean_cves": ["CVE-2023-20236"]
   },
   {
     "id": "cisco-sa-xrl2vpn-jesrU3fc",
@@ -2846,9 +2274,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20318"
-    ]
+    "clean_cves": ["CVE-2024-20318"]
   },
   {
     "id": "cisco-sa-iosxr-ssh-privesc-eWDMKew3",
@@ -2857,9 +2283,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20320"
-    ]
+    "clean_cves": ["CVE-2024-20320"]
   },
   {
     "id": "cisco-sa-iosxr-pppma-JKWFgneW",
@@ -2868,9 +2292,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20327"
-    ]
+    "clean_cves": ["CVE-2024-20327"]
   },
   {
     "id": "cisco-sa-snmp-uhv6ZDeF",
@@ -2879,9 +2301,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20319"
-    ]
+    "clean_cves": ["CVE-2024-20319"]
   },
   {
     "id": "cisco-sa-iosxr-scp-dos-kb6sUUHw",
@@ -2890,9 +2310,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20262"
-    ]
+    "clean_cves": ["CVE-2024-20262"]
   },
   {
     "id": "cisco-sa-iosxr-dhcp-dos-3tgPKRdm",
@@ -2901,9 +2319,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20266"
-    ]
+    "clean_cves": ["CVE-2024-20266"]
   },
   {
     "id": "cisco-sa-iosxr-acl-bypass-RZU5NL3e",
@@ -2912,10 +2328,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 13",
-    "clean_cves": [
-      "CVE-2024-20315",
-      "CVE-2024-20322"
-    ]
+    "clean_cves": ["CVE-2024-20315", "CVE-2024-20322"]
   },
   {
     "id": "cisco-sa-vmanage-unauthapi-sphCLYPA",
@@ -2924,9 +2337,7 @@
     "impact": "Critical",
     "version": "1.2",
     "last_updated": "2024 Mar 12",
-    "clean_cves": [
-      "CVE-2023-20214"
-    ]
+    "clean_cves": ["CVE-2023-20214"]
   },
   {
     "id": "cisco-sa-secure-client-crlf-W43V4G7",
@@ -2935,9 +2346,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Mar 12",
-    "clean_cves": [
-      "CVE-2024-20337"
-    ]
+    "clean_cves": ["CVE-2024-20337"]
   },
   {
     "id": "cisco-sa-duo-infodisc-rLCEqm6T",
@@ -2946,9 +2355,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Mar 08",
-    "clean_cves": [
-      "CVE-2024-20292"
-    ]
+    "clean_cves": ["CVE-2024-20292"]
   },
   {
     "id": "cisco-sa-secure-privesc-sYxQO6ds",
@@ -2957,9 +2364,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20338"
-    ]
+    "clean_cves": ["CVE-2024-20338"]
   },
   {
     "id": "cisco-sa-sb-wap-multi-85G83CRB",
@@ -2968,10 +2373,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20335",
-      "CVE-2024-20336"
-    ]
+    "clean_cves": ["CVE-2024-20335", "CVE-2024-20336"]
   },
   {
     "id": "cisco-sa-duo-win-bypass-pn42KKBm",
@@ -2980,9 +2382,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20301"
-    ]
+    "clean_cves": ["CVE-2024-20301"]
   },
   {
     "id": "cisco-sa-appd-xss-3JwqSMNT",
@@ -2991,9 +2391,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20346"
-    ]
+    "clean_cves": ["CVE-2024-20346"]
   },
   {
     "id": "cisco-sa-appd-traversal-m7N8mZpF",
@@ -3002,9 +2400,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Mar 06",
-    "clean_cves": [
-      "CVE-2024-20345"
-    ]
+    "clean_cves": ["CVE-2024-20345"]
   },
   {
     "id": "cisco-sa-curl-libcurl-D9ds39cV",
@@ -3013,9 +2409,7 @@
     "impact": "High",
     "version": "1.6",
     "last_updated": "2024 Mar 05",
-    "clean_cves": [
-      "CVE-2023-38545"
-    ]
+    "clean_cves": ["CVE-2023-38545"]
   },
   {
     "id": "cisco-sa-nxos-ebgp-dos-L3QCwVJ",
@@ -3024,9 +2418,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20321"
-    ]
+    "clean_cves": ["CVE-2024-20321"]
   },
   {
     "id": "cisco-sa-ipv6-mpls-dos-R9ycXkwM",
@@ -3035,9 +2427,7 @@
     "impact": "High",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20267"
-    ]
+    "clean_cves": ["CVE-2024-20267"]
   },
   {
     "id": "cisco-sa-ucsfi-imm-syn-p6kZTDQC",
@@ -3046,9 +2436,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20344"
-    ]
+    "clean_cves": ["CVE-2024-20344"]
   },
   {
     "id": "cisco-sa-nxos-po-acl-TkyePgvL",
@@ -3057,9 +2445,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20291"
-    ]
+    "clean_cves": ["CVE-2024-20291"]
   },
   {
     "id": "cisco-sa-nxos-lldp-dos-z7PncTgt",
@@ -3068,9 +2454,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 28",
-    "clean_cves": [
-      "CVE-2024-20294"
-    ]
+    "clean_cves": ["CVE-2024-20294"]
   },
   {
     "id": "cisco-sa-cimc-xss-UMYtYEtr",
@@ -3079,9 +2463,7 @@
     "impact": "Medium",
     "version": "1.4",
     "last_updated": "2024 Feb 22",
-    "clean_cves": [
-      "CVE-2023-20228"
-    ]
+    "clean_cves": ["CVE-2023-20228"]
   },
   {
     "id": "cisco-sa-asaftd-info-disclose-9eJtycMB",
@@ -3090,9 +2472,7 @@
     "impact": "High",
     "version": "1.5",
     "last_updated": "2024 Feb 21",
-    "clean_cves": [
-      "CVE-2020-3259"
-    ]
+    "clean_cves": ["CVE-2020-3259"]
   },
   {
     "id": "cisco-sa-cuic-access-control-jJsZQMjj",
@@ -3101,9 +2481,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Feb 21",
-    "clean_cves": [
-      "CVE-2024-20325"
-    ]
+    "clean_cves": ["CVE-2024-20325"]
   },
   {
     "id": "cisco-sa-clamav-hDffu6t",
@@ -3112,9 +2490,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Feb 13",
-    "clean_cves": [
-      "CVE-2024-20290"
-    ]
+    "clean_cves": ["CVE-2024-20290"]
   },
   {
     "id": "cisco-sa-expressway-csrf-KnnZDMj3",
@@ -3123,13 +2499,7 @@
     "impact": "Critical",
     "version": "1.1",
     "last_updated": "2024 Feb 12",
-    "clean_cves": [
-      "CVE-2024-20252",
-      "CVE-2024-20254",
-      "CVE-2024-20252",
-      "CVE-2024-20254",
-      "CVE-2024-20255"
-    ]
+    "clean_cves": ["CVE-2024-20252", "CVE-2024-20254", "CVE-2024-20252", "CVE-2024-20254", "CVE-2024-20255"]
   },
   {
     "id": "cisco-sa-ftd-snort3acp-bypass-3bdR2BEh",
@@ -3138,9 +2508,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Feb 06",
-    "clean_cves": [
-      "CVE-2023-20246"
-    ]
+    "clean_cves": ["CVE-2023-20246"]
   },
   {
     "id": "cisco-sa-cuc-unauth-afu-FROYsCsD",
@@ -3149,9 +2517,7 @@
     "impact": "Critical",
     "version": "1.3",
     "last_updated": "2024 Feb 05",
-    "clean_cves": [
-      "CVE-2024-20272"
-    ]
+    "clean_cves": ["CVE-2024-20272"]
   },
   {
     "id": "cisco-sa-cucm-rce-bWNzQcUm",
@@ -3160,9 +2526,7 @@
     "impact": "Critical",
     "version": "1.3",
     "last_updated": "2024 Jan 30",
-    "clean_cves": [
-      "CVE-2024-20253"
-    ]
+    "clean_cves": ["CVE-2024-20253"]
   },
   {
     "id": "cisco-sa-sb-bus-acl-bypass-5zn9hNJk",
@@ -3171,9 +2535,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 24",
-    "clean_cves": [
-      "CVE-2024-20263"
-    ]
+    "clean_cves": ["CVE-2024-20263"]
   },
   {
     "id": "cisco-sa-cuc-xss-9TFuu5MS",
@@ -3182,9 +2544,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 24",
-    "clean_cves": [
-      "CVE-2024-20305"
-    ]
+    "clean_cves": ["CVE-2024-20305"]
   },
   {
     "id": "cisco-sa-sd-wan-file-access-VW36d28P",
@@ -3193,9 +2553,7 @@
     "impact": "High",
     "version": "1.1",
     "last_updated": "2024 Jan 23",
-    "clean_cves": [
-      "CVE-2022-20716"
-    ]
+    "clean_cves": ["CVE-2022-20716"]
   },
   {
     "id": "cisco-sa-sdwan-privesc-cli-xkGwmqKu",
@@ -3204,9 +2562,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jan 23",
-    "clean_cves": [
-      "CVE-2022-20930"
-    ]
+    "clean_cves": ["CVE-2022-20930"]
   },
   {
     "id": "cisco-sa-broadworks-xss-6syj82Ju",
@@ -3215,9 +2571,7 @@
     "impact": "Medium",
     "version": "1.1",
     "last_updated": "2024 Jan 23",
-    "clean_cves": [
-      "CVE-2024-20270"
-    ]
+    "clean_cves": ["CVE-2024-20270"]
   },
   {
     "id": "cisco-sa-tms-portal-xss-AXNeVg3s",
@@ -3226,10 +2580,7 @@
     "impact": "Medium",
     "version": "1.2",
     "last_updated": "2024 Jan 12",
-    "clean_cves": [
-      "CVE-2023-20248",
-      "CVE-2023-20249"
-    ]
+    "clean_cves": ["CVE-2023-20248", "CVE-2023-20249"]
   },
   {
     "id": "cisco-sa-thouseyes-privesc-DmzHG3Qv",
@@ -3238,9 +2589,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2024-20277"
-    ]
+    "clean_cves": ["CVE-2024-20277"]
   },
   {
     "id": "cisco-sa-sb-wap-inject-bHStWgXO",
@@ -3249,9 +2598,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2024-20287"
-    ]
+    "clean_cves": ["CVE-2024-20287"]
   },
   {
     "id": "cisco-sa-pi-epnm-wkZJeyeq",
@@ -3260,14 +2607,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2023-20257",
-      "CVE-2023-20258",
-      "CVE-2023-20257",
-      "CVE-2023-20258",
-      "CVE-2023-20260",
-      "CVE-2023-20271"
-    ]
+    "clean_cves": ["CVE-2023-20257", "CVE-2023-20258", "CVE-2023-20257", "CVE-2023-20258", "CVE-2023-20260", "CVE-2023-20271"]
   },
   {
     "id": "cisco-sa-ISE-XSS-bL4VTML",
@@ -3276,9 +2616,7 @@
     "impact": "Medium",
     "version": "1.0",
     "last_updated": "2024 Jan 10",
-    "clean_cves": [
-      "CVE-2024-20251"
-    ]
+    "clean_cves": ["CVE-2024-20251"]
   },
   {
     "id": "cisco-sa-ise-priv-esc-KJLp2Aw",
@@ -3287,10 +2625,7 @@
     "impact": "Medium",
     "version": "1.2",
     "last_updated": "2024 Jan 08",
-    "clean_cves": [
-      "CVE-2023-20193",
-      "CVE-2023-20194"
-    ]
+    "clean_cves": ["CVE-2023-20193", "CVE-2023-20194"]
   },
   {
     "id": "cisco-sa-struts-C2kCMkmT",
@@ -3299,9 +2634,7 @@
     "impact": "Critical",
     "version": "1.6",
     "last_updated": "2023 Dec 21",
-    "clean_cves": [
-      "CVE-2023-50164"
-    ]
+    "clean_cves": ["CVE-2023-50164"]
   },
   {
     "id": "cisco-sa-http2-reset-d8Kf32vZ",
@@ -3310,8 +2643,6 @@
     "impact": "High",
     "version": "1.11",
     "last_updated": "2023 Dec 21",
-    "clean_cves": [
-      "CVE-2023-44487"
-    ]
+    "clean_cves": ["CVE-2023-44487"]
   }
 ]

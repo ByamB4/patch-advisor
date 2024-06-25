@@ -1,12 +1,10 @@
 from playwright.sync_api import sync_playwright, ElementHandle
 from playwright_stealth import stealth_sync
-from configs import STATIC_ROOT
-from json import dump as json_dump, load as json_load
-from os import path, getenv
 from typing import List
 from time import sleep
 from datetime import datetime
 from dotenv import load_dotenv
+from prisma import Prisma, Client
 
 
 class RedhatErrata:
@@ -17,40 +15,31 @@ class RedhatErrata:
     RETRY_ATTEMPT: int = 3
     RETRY_DELAY: int = 2
 
-    def __init__(self, DEBUG: bool) -> None:
-        p = sync_playwright().start()
-        self.browser = p.chromium.launch(headless=not DEBUG, args=["--start-maximized"])
-        self.context = self.browser.new_context(no_viewport=True)
-        self.page = self.context.new_page()
-        stealth_sync(self.page)
-        self.read_data()
-        self.check_new_update()
-        self.scrape()
-        self.save()
-        self.page.close()
-        self.context.close()
-
-    def read_data(self) -> bool:
-        try:
-            with open(path.join(STATIC_ROOT, "redhat.json"), "r") as f:
-                self.DATA = json_load(f)
-            return True
-        except Exception as e:
-            print("[redhat@read_data] ", e, flush=True)
-            return False
+    def __init__(self, db: Client) -> any:
+        with sync_playwright() as p:
+            self.db = db
+            self.browser = p.chromium.launch(headless=True, args=["--start-maximized"])
+            self.context = self.browser.new_context(no_viewport=True)
+            self._1_tab = self.context.new_page()
+            stealth_sync(self._1_tab)
+            self.check_new_update()
+            self.scrape()
+            self.write_to_db()
+            self._1_tab.close()
+            self.context.close()
 
     def check_new_update(self) -> bool:
         print(f"[redhat@check_new_update] starting...", flush=True)
         for attempt in range(1, self.RETRY_ATTEMPT + 1):
             print(f"[redhat@attempt] {attempt}", flush=True)
             try:
-                self.page.goto(self.URL, wait_until="networkidle")
-                self.page.wait_for_selector("//table[@id='Security-Errata-Table']//tbody//tr")
-                for row in self.page.query_selector_all("xpath=//table[@id='Security-Errata-Table']//tbody//tr"):
+                self._1_tab.goto(self.URL, wait_until="networkidle")
+                self._1_tab.wait_for_selector("//table[@id='Security-Errata-Table']//tbody//tr")
+                for row in self._1_tab.query_selector_all("xpath=//table[@id='Security-Errata-Table']//tbody//tr"):
                     header = {}
                     header["element"] = row.query_selector("xpath=./th[@headers='th-errata']")
                     header["cve"] = header["element"].query_selector("xpath=.//a").text_content()
-                    if not header["cve"] in [_["cve"] for _ in self.DATA]:
+                    if not self.db.redhat.find_unique({"cve": header["cve"]}):
                         self.NEW_ITEMS.append(header["cve"])
                 print(f"[redhat@check_new_update]", self.NEW_ITEMS, flush=True)
                 break
@@ -62,7 +51,7 @@ class RedhatErrata:
         return [el.inner_html() for el in source.query_selector_all(f"xpath={query}")]
 
     def scrape(self) -> bool:
-        table = self.page.wait_for_selector("xpath=//table[@id='Security-Errata-Table']")
+        table = self._1_tab.wait_for_selector("xpath=//table[@id='Security-Errata-Table']")
         for row in table.query_selector_all("xpath=.//tbody//tr"):
             header, _date = {}, {}
             header["element"] = row.query_selector("xpath=./th[@headers='th-errata']")
@@ -78,11 +67,12 @@ class RedhatErrata:
 
     def fetch_detail(self, header: dict, _date: List[dict]) -> bool:
         self.context.new_page()
-        stealth_sync(self.context.pages[1])
-        self.context.pages[1].goto(header["link"], wait_until="networkidle")
-        if len(self.context.pages[1].title()) == 0:
+        _2_tab = self.context.pages[1]
+        stealth_sync(_2_tab)
+        _2_tab.goto(header["link"], wait_until="networkidle")
+        if len(_2_tab.title()) == 0:
             return False
-        tab_content = self.context.pages[1].wait_for_selector("xpath=//div[@class='tab-content']")
+        tab_content = _2_tab.wait_for_selector("xpath=//div[@class='tab-content']")
         synopsis = tab_content.query_selector("xpath=.//div[@id='synpopsis']//p").text_content()
         severity = tab_content.query_selector("xpath=.//div[@id='type-severity']//p").text_content()
         topics = self.query_inner(tab_content, ".//div[@id='topic']//p")
@@ -107,20 +97,24 @@ class RedhatErrata:
                 "date": _date["date"],
             }
         )
-        self.context.pages[1].close()
+        _2_tab.close()
         return True
 
-    def save(self) -> bool:
-        with open(path.join(STATIC_ROOT, "redhat.json"), "w") as f:
-            json_dump(self.TMP + self.DATA, f, indent=2)
-
+    def write_to_db(self) -> bool:
+        self.db.redhat.create_many(data=self.TMP, skip_duplicates=True)
         print(f"[redhat@save] done", flush=True)
         return True
 
 
-if __name__ == "__main__":
+def main():
+    db = Prisma()
+    db.connect()
     load_dotenv()
-    now = datetime.now()
-    formatted_time = now.strftime("%Y-%m-%d %H:%M")
+    formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M")
     print("[current_time]", formatted_time, flush=True)
-    RedhatErrata(True if getenv("DEBUG") == "1" else False)
+    RedhatErrata(db)
+    db.disconnect()
+
+
+if __name__ == "__main__":
+    main()
