@@ -26,9 +26,9 @@ interface IItem {
 const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
 
-  useEffect(() => {
-    console.log(data);
-  }, []);
+  // useEffect(() => {
+  //   console.log(data);
+  // }, []);
 
   return (
     <MainLayout NO_PADDING>
@@ -102,28 +102,34 @@ export const getServerSideProps: GetServerSideProps = async (context): Promise<G
     };
 
     const last_updates = await axios
-      .get("https://api.msrc.microsoft.com/cvrf/v2.0/updates", {
+      .get("https://api.msrc.microsoft.com/cvrf/v3.0/updates", {
         responseType: "json",
       })
       .then((data) => {
         return data;
       });
 
-    const sortedItems: IItem[] = customSort(last_updates.data.value);
+    const sortedItems: IItem[] = customSort(last_updates.data["value"]);
     const lastItem: IItem = sortedItems[sortedItems.length - 1];
 
-    const current_month = await axios.get(`https://api.msrc.microsoft.com/cvrf/v2.0/cvrf/${lastItem["ID"]}`).then((data) => {
-      return data;
-    });
+    const current_month = await axios
+      .get(`https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/${lastItem["ID"]}`, {
+        responseType: "json",
+      })
+      .then((data) => {
+        return data;
+      });
 
+    // console.log("current_month", current_month.data);
     return {
       props: {
         success: true,
-        data: current_month.data,
+        // data: current_month.data,
+        data: {},
       },
     };
   } catch (e) {
-    console.log("[error]", e);
+    // console.log("[error]", e);
     return {
       props: {
         success: false,

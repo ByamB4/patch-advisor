@@ -42,18 +42,12 @@ class OracleAdvisor:
             try:
                 self.page.goto(f"{self.URL}/security-alerts")
                 self.page.wait_for_selector("xpath=//div[@data-ocomid='otable']")
-                new_url: str = self.page.query_selector(
-                    "xpath=//div[@data-ocomid='otable']//table[@class='otable-tech-basic otable-w2 otable-scroll']/tbody/tr/td/a"
-                ).get_attribute("href")
+                new_url: str = self.page.query_selector("xpath=//div[@data-ocomid='otable']//table[@class='otable-tech-basic otable-w2 otable-scroll']/tbody/tr/td/a").get_attribute("href")
                 self.page.goto(f"{self.URL}{new_url}")
                 self.page.wait_for_selector("xpath=//div[@data-ocomid='otable']")
-                for tr in self.page.query_selector_all(
-                    "xpath=//div[@data-ocomid='otable'][1]//table[@class='otable-tech-basic otable-w2']/tbody//tr"
-                ):
+                for tr in self.page.query_selector_all("xpath=//div[@data-ocomid='otable'][1]//table[@class='otable-tech-basic otable-w2']/tbody//tr"):
                     a, b = tr.query_selector_all("xpath=./td")
-                    if not a.text_content() in [
-                        _["affected_product"] for _ in self.DATA
-                    ]:
+                    if not a.text_content() in [_["affected_product"] for _ in self.DATA]:
                         print(
                             f"[oracle@new]",
                             b.query_selector("xpath=./a").get_attribute("href"),
@@ -64,9 +58,7 @@ class OracleAdvisor:
                                 "affected_product": a.text_content(),
                                 "affected_product_link": f'{self.URL}{new_url}{a.query_selector("xpath=./a").get_attribute("href")}',
                                 "patch_document": b.text_content(),
-                                "patch_document_link": b.query_selector(
-                                    "xpath=./a"
-                                ).get_attribute("href"),
+                                "patch_document_link": b.query_selector("xpath=./a").get_attribute("href"),
                             }
                         )
                 return True

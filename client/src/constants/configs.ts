@@ -1,5 +1,18 @@
 import { v4 } from "uuid";
 
+export const NEWS_TABS = [
+  {
+    id: v4(),
+    title: "Hacker news",
+    unread: 0,
+  },
+  {
+    id: v4(),
+    title: "Bleeping computer",
+    unread: 0,
+  },
+];
+
 export const REDHAT_TABS = [
   {
     id: v4(),

@@ -15,6 +15,11 @@ const AppNavbar: React.FC<Props> = ({ className = "" }): React.ReactElement => {
   const middleLinks = [
     {
       id: v4(),
+      title: "News",
+      link: "/news",
+    },
+    {
+      id: v4(),
       title: "Redhat",
       link: "/redhat",
     },
