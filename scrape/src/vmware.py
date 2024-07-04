@@ -5,7 +5,7 @@
 
 from playwright.sync_api import sync_playwright
 from playwright_stealth import stealth_sync
-from configs import STATIC_ROOT
+from scrape.src.configs import STATIC_ROOT
 from json import dump as json_dump, load as json_load
 from os import path, getenv
 from typing import List

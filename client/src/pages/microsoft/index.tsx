@@ -6,12 +6,13 @@ import { MARGIN_Y, PADDING_X } from "constants/layout";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
 import { GetServerSideProps, GetServerSidePropsResult } from "next";
+import { IVulnerability } from "interfaces";
 import axios from "axios";
 import MicrosoftUI from "ui/microsoft/list";
 
 interface Props {
   className?: string;
-  data: any;
+  data: IVulnerability[];
 }
 
 interface IItem {
@@ -25,10 +26,9 @@ interface IItem {
 
 const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
-
-  // useEffect(() => {
-  //   console.log(data);
-  // }, []);
+  useEffect(() => {
+    console.log(data);
+  }, []);
 
   return (
     <MainLayout NO_PADDING>
@@ -66,7 +66,7 @@ const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.Re
           </div>
         </div>
         <div className={`bg-white min-h-screen ${PADDING_X}`}>
-          <div className="py-5">{tabNumber === 0 ? <MicrosoftUI data={data.Vulnerability} /> : <></>}</div>
+          <div className="py-5">{tabNumber === 0 ? <MicrosoftUI data={data} /> : <></>}</div>
         </div>
       </div>
     </MainLayout>
@@ -111,25 +111,25 @@ export const getServerSideProps: GetServerSideProps = async (context): Promise<G
 
     const sortedItems: IItem[] = customSort(last_updates.data["value"]);
     const lastItem: IItem = sortedItems[sortedItems.length - 1];
-
+    console.log(`https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/${lastItem["ID"]}`);
     const current_month = await axios
       .get(`https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/${lastItem["ID"]}`, {
+        headers: {
+          Accept: "application/json",
+        },
         responseType: "json",
       })
       .then((data) => {
         return data;
       });
 
-    // console.log("current_month", current_month.data);
     return {
       props: {
         success: true,
-        // data: current_month.data,
-        data: {},
+        data: current_month.data.Vulnerability,
       },
     };
   } catch (e) {
-    // console.log("[error]", e);
     return {
       props: {
         success: false,

@@ -50,6 +50,17 @@ model oracle {
   patch_document_link   String
 }
 
+model microsoft {
+  cve           String @id
+  release_date  String
+  revision_date String
+  cve_link      String
+  cve_title     String
+  impact        String
+  severity      String
+  tag           String
+}
+
 model hackernews {
   title       String @id
   link        String
