@@ -42,21 +42,6 @@ export const MICROSOFT_TABS = [
     title: "All",
     unread: 0,
   },
-  {
-    id: v4(),
-    title: "Moderate",
-    unread: 0,
-  },
-  {
-    id: v4(),
-    title: "Low",
-    unread: 0,
-  },
-  {
-    id: v4(),
-    title: "Important",
-    unread: 0,
-  },
 ];
 
 export const VMWARE_TABS = [

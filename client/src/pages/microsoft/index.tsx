@@ -1,27 +1,18 @@
 import { MainLayout } from "layouts";
 import { NextPage } from "next";
-import { REDHAT_TABS } from "constants/configs";
+import { MICROSOFT_TABS } from "constants/configs";
 import { useEffect, useState } from "react";
 import { MARGIN_Y, PADDING_X } from "constants/layout";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
 import { GetServerSideProps, GetServerSidePropsResult } from "next";
-import { IVulnerability } from "interfaces";
-import axios from "axios";
+import { db } from "server";
+import { IMicrosoft } from "interfaces";
 import MicrosoftUI from "ui/microsoft/list";
 
 interface Props {
   className?: string;
-  data: IVulnerability[];
-}
-
-interface IItem {
-  ID: string;
-  Alias: string;
-  DocumentTitle: string;
-  Severity: null;
-  InitialReleaseDate: string;
-  CurrentReleaseDate: string;
+  data: IMicrosoft[];
 }
 
 const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.ReactElement => {
@@ -43,7 +34,7 @@ const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.Re
             </div>
             <div className="mt-5">
               <Tabs value={tabNumber} onChange={(event, val) => setTabNumber(+val)} aria-label="homepage-tabs">
-                {REDHAT_TABS.map((it, _: number) => (
+                {MICROSOFT_TABS.map((it, _: number) => (
                   <Tab
                     key={it.id}
                     value={_}
@@ -74,69 +65,13 @@ const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.Re
 };
 
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
-  try {
-    const customSort = (items: IItem[]) => {
-      const monthMap: { [key: string]: number } = {
-        Jan: 1,
-        Feb: 2,
-        Mar: 3,
-        Apr: 4,
-        May: 5,
-        Jun: 6,
-        Jul: 7,
-        Aug: 8,
-        Sep: 9,
-        Oct: 10,
-        Nov: 11,
-        Dec: 12,
-      };
-      return items.sort((a, b) => {
-        const datePartsA: string[] = a.ID.split("-");
-        const dateA = new Date(parseInt(datePartsA[0]), monthMap[datePartsA[1].charAt(0).toUpperCase() + datePartsA[1].slice(1)] - 1, 1).getTime();
+  console.log("[DEBUG]", await db.microsoft.findFirst({}));
 
-        const datePartsB: string[] = b.ID.split("-");
-        const dateB = new Date(parseInt(datePartsB[0]), monthMap[datePartsB[1].charAt(0).toUpperCase() + datePartsB[1].slice(1)] - 1, 1).getTime();
-
-        return dateA - dateB;
-      });
-    };
-
-    const last_updates = await axios
-      .get("https://api.msrc.microsoft.com/cvrf/v3.0/updates", {
-        responseType: "json",
-      })
-      .then((data) => {
-        return data;
-      });
-
-    const sortedItems: IItem[] = customSort(last_updates.data["value"]);
-    const lastItem: IItem = sortedItems[sortedItems.length - 1];
-    console.log(`https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/${lastItem["ID"]}`);
-    const current_month = await axios
-      .get(`https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/${lastItem["ID"]}`, {
-        headers: {
-          Accept: "application/json",
-        },
-        responseType: "json",
-      })
-      .then((data) => {
-        return data;
-      });
-
-    return {
-      props: {
-        success: true,
-        data: current_month.data.Vulnerability,
-      },
-    };
-  } catch (e) {
-    return {
-      props: {
-        success: false,
-        data: {},
-      },
-    };
-  }
+  return {
+    props: {
+      data: await db.microsoft.findMany({}),
+    },
+  };
 };
 
 export default MicrosoftPage;

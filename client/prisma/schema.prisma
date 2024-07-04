@@ -1,5 +1,6 @@
 generator client {
-  provider = "prisma-client-js"
+  recursive_type_depth = 5
+  provider             = "prisma-client-js"
 }
 
 datasource db {
@@ -46,6 +47,17 @@ model oracle {
   affected_product_link String
   patch_document        String
   patch_document_link   String
+}
+
+model microsoft {
+  cve           String @id
+  release_date  String
+  revision_date String
+  cve_link      String
+  cve_title     String
+  impact        String
+  severity      String
+  tag           String
 }
 
 model hackernews {

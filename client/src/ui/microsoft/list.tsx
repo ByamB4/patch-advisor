@@ -1,9 +1,9 @@
 import { tableCellClasses } from "@mui/material/TableCell";
-import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper, Typography } from "@mui/material";
+import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import colors from "theme/colors";
-import { convertToLocal } from "utils";
-import { IVulnerability } from "interfaces/IMicrosoft";
+import { IMicrosoft } from "interfaces";
+import { useEffect, useState } from "react";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -26,41 +26,61 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 interface Props {
   className?: string;
-  data: IVulnerability[];
+  data: IMicrosoft[];
 }
 
-const MicrosoftUI: React.FC<Props> = ({ className = "", data }): React.ReactElement => {
+const MicrosoftUI: React.FC<Props> = ({ className = "", data = [] }): React.ReactElement => {
+  const [sortedData, setSortedData] = useState<IMicrosoft[]>([]);
+
+  useEffect(() => {
+    const sorted = data.sort((a, b) => {
+      const dateA = a.release_date.split(" ").map(Number);
+      const dateB = b.release_date.split(" ").map(Number);
+
+      for (let i = 0; i < 3; i++) {
+        if (dateA[i] > dateB[i]) return -1;
+        if (dateA[i] < dateB[i]) return 1;
+      }
+      return 0;
+    });
+    setSortedData(sorted);
+  }, [data]);
+
   return (
     <>
-      {data.length > 0 ? (
+      {sortedData.length > 0 ? (
         <TableContainer component={Paper} className={`${className}`}>
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow>
-                <StyledTableCell>Title</StyledTableCell>
+                <StyledTableCell>Release date</StyledTableCell>
                 <StyledTableCell align="center" width={200}>
-                  CVE
+                  Last Updated
                 </StyledTableCell>
-                <StyledTableCell align="center">Threat</StyledTableCell>
+                <StyledTableCell align="center">CVE Number</StyledTableCell>
+                <StyledTableCell align="center">CVE Title</StyledTableCell>
                 <StyledTableCell align="center">Impact</StyledTableCell>
-                <StyledTableCell align="center">Description</StyledTableCell>
-                <StyledTableCell align="center">Date</StyledTableCell>
+                <StyledTableCell align="center">Max Severity</StyledTableCell>
+                <StyledTableCell align="center">Tag</StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {data.map((row) => (
-                <StyledTableRow key={row.CVE}>
-                  <StyledTableCell>
-                    <a target="_blank" href={`https://msrc.microsoft.com/update-guide/vulnerability/${row.CVE}`}>
-                      {row.Title.Value}
+              {sortedData.map((row) => (
+                <StyledTableRow key={row.cve}>
+                  <StyledTableCell>{row.release_date}</StyledTableCell>
+                  <StyledTableCell align="center">{row.revision_date}</StyledTableCell>
+                  <StyledTableCell align="center">
+                    <a target="_blank" href={`https://msrc.microsoft.com/update-guide/vulnerability/${row.cve}`}>
+                      {row.cve}
                     </a>
                   </StyledTableCell>
-                  <StyledTableCell align="center">{row.CVE}</StyledTableCell>
-                  <StyledTableCell align="center">{row.Threats[0].Description.Value}</StyledTableCell>
-                  <StyledTableCell align="center">{row.Threats[1].Description.Value}</StyledTableCell>
-                  <StyledTableCell align="center">{row.Threats[2].Description.Value}</StyledTableCell>
+                  <StyledTableCell align="center">{row.cve_title}</StyledTableCell>
+                  <StyledTableCell align="center">{row.impact}</StyledTableCell>
                   <StyledTableCell className="flex flex-column gap-12" align="center">
-                    {convertToLocal(row.RevisionHistory[0].Date)}
+                    {row.severity}
+                  </StyledTableCell>
+                  <StyledTableCell className="flex flex-column gap-12" align="center">
+                    {row.tag}
                   </StyledTableCell>
                 </StyledTableRow>
               ))}
