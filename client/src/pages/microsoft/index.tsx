@@ -1,14 +1,14 @@
-import { MainLayout } from "layouts";
+import { MainLayout } from "@/layouts";
 import { NextPage } from "next";
-import { MICROSOFT_TABS } from "constants/configs";
+import { MICROSOFT_TABS } from "@/constants/configs";
 import { useEffect, useState } from "react";
-import { MARGIN_Y, PADDING_X } from "constants/layout";
+import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
 import { GetServerSideProps, GetServerSidePropsResult } from "next";
-import { db } from "server";
-import { IMicrosoft } from "interfaces";
-import MicrosoftUI from "ui/microsoft/list";
+import { db } from "@/server";
+import { IMicrosoft } from "@/interfaces";
+import MicrosoftUI from "@/ui/microsoft/list";
 
 interface Props {
   className?: string;

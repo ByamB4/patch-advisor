@@ -17,11 +17,7 @@ export const TabProvider: React.FC<{
 
   // useEffect(() => {}, []);
 
-  return (
-    <TabContext.Provider value={{ activeTab, setActiveTab }}>
-      {children}
-    </TabContext.Provider>
-  );
+  return <TabContext.Provider value={{ activeTab, setActiveTab }}>{children}</TabContext.Provider>;
 };
 
 export const useTab: () => {

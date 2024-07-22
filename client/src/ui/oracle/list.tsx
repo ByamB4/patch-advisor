@@ -1,8 +1,8 @@
 import { tableCellClasses } from "@mui/material/TableCell";
 import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import colors from "theme/colors";
-import { IOracle } from "interfaces";
+import colors from "@/theme/colors";
+import { IOracle } from "@/interfaces";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {

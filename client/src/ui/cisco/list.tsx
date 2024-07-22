@@ -1,18 +1,8 @@
 import { tableCellClasses } from "@mui/material/TableCell";
-import {
-  Table,
-  TableBody,
-  TableContainer,
-  TableRow,
-  TableHead,
-  TableCell,
-  CircularProgress,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import colors from "theme/colors";
-import { ICisco } from "interfaces";
+import colors from "@/theme/colors";
+import { ICisco } from "@/interfaces";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -38,10 +28,7 @@ interface Props {
   data: ICisco[];
 }
 
-const CiscoUI: React.FC<Props> = ({
-  className = "",
-  data,
-}): React.ReactElement => {
+const CiscoUI: React.FC<Props> = ({ className = "", data }): React.ReactElement => {
   const renderSeverity = (raw: string) => {
     var el = <></>;
     if (raw === "Medium") {
@@ -92,27 +79,18 @@ const CiscoUI: React.FC<Props> = ({
                 <StyledTableRow key={row.id}>
                   <StyledTableCell>
                     <a target="_blank" href={row.link}>
-                      <Typography className="hover:cursor-pointer text-primary-blue underline">
-                        {row.title}
-                      </Typography>
+                      <Typography className="hover:cursor-pointer text-primary-blue underline">{row.title}</Typography>
                     </a>
                   </StyledTableCell>
-                  <StyledTableCell>
-                    {renderSeverity(row.impact)}
-                  </StyledTableCell>
-                  <StyledTableCell
-                    className="flex flex-column gap-12"
-                    align="center"
-                  >
+                  <StyledTableCell>{renderSeverity(row.impact)}</StyledTableCell>
+                  <StyledTableCell className="flex flex-column gap-12" align="center">
                     {row.clean_cves.map((it) => (
                       <Typography variant="body1" key={it}>
                         {it}
                       </Typography>
                     ))}
                   </StyledTableCell>
-                  <StyledTableCell align="center">
-                    {row.last_updated}
-                  </StyledTableCell>
+                  <StyledTableCell align="center">{row.last_updated}</StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>

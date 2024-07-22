@@ -1,10 +1,10 @@
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import { MdOutlineNavigateNext } from "react-icons/md";
-import { MainLayout } from "layouts";
-import { IRedhat } from "interfaces";
+import { MainLayout } from "@/layouts";
+import { IRedhat } from "@/interfaces";
 import { useRouter } from "next/router";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import { db } from "server";
+import { db } from "@/server";
 
 const RedhatDetail: NextPage<{
   data: IRedhat;

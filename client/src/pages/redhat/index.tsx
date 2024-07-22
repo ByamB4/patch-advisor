@@ -1,13 +1,13 @@
-import { MainLayout } from "layouts";
+import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import { REDHAT_TABS } from "constants/configs";
+import { REDHAT_TABS } from "@/constants/configs";
 import { useState } from "react";
-import { MARGIN_Y, PADDING_X } from "constants/layout";
+import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography, Pagination } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
-import { RedHatList } from "ui/redhat";
-import { IRedhat } from "interfaces";
-import { db } from "server";
+import { RedHatList } from "@/ui/redhat";
+import { IRedhat } from "@/interfaces";
+import { db } from "@/server";
 
 const RedhatPage: NextPage<{ data: IRedhat[] }> = ({ data }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);

@@ -1,11 +1,11 @@
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import { MdOutlineNavigateNext } from "react-icons/md";
-import { MainLayout } from "layouts";
-import { IVmware } from "interfaces";
+import { MainLayout } from "@/layouts";
+import { IVmware } from "@/interfaces";
 import { useRouter } from "next/router";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
 import styles from "styles/vmware.module.scss";
-import { db } from "server";
+import { db } from "@/server";
 
 const VmwareDetail: NextPage<{
   data: IVmware;

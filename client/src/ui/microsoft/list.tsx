@@ -1,8 +1,8 @@
 import { tableCellClasses } from "@mui/material/TableCell";
 import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import colors from "theme/colors";
-import { IMicrosoft } from "interfaces";
+import colors from "@/theme/colors";
+import { IMicrosoft } from "@/interfaces";
 import { useEffect, useState } from "react";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({

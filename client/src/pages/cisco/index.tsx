@@ -1,13 +1,13 @@
-import { MainLayout } from "layouts";
+import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import { CISCO_TABS } from "constants/configs";
+import { CISCO_TABS } from "@/constants/configs";
 import { useState } from "react";
-import { MARGIN_Y, PADDING_X } from "constants/layout";
+import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
-import { CiscoList } from "ui/cisco";
-import { ICisco } from "interfaces";
-import { db } from "server";
+import { CiscoList } from "@/ui/cisco";
+import { ICisco } from "@/interfaces";
+import { db } from "@/server";
 
 const CiscoPage: NextPage<{
   data: ICisco[];

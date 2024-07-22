@@ -1,45 +1,33 @@
 {
-  "name": "client",
+  "name": "new",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "seed": "npx tsx prisma/seed.ts"
-  },
-  "prisma": {
-    "seed": "tsx prisma/seed.ts"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/cache": "^11.11.0",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.15.20",
-    "@prisma/client": "^5.15.1",
-    "@types/react": "18.2.60",
-    "@types/react-dom": "18.2.19",
-    "axios": "^1.7.2",
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.4",
-    "next": "14.2.4",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "@emotion/cache": "^11.13.0",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^5.16.4",
+    "@prisma/client": "^5.17.0",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "sans": "^1.0.0",
-    "sass": "^1.77.6",
-    "uuid": "^9.0.1",
-    "yarn": "^1.22.22"
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.14.8",
-    "@types/uuid": "^9.0.8",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.4",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.15.7",
-    "typescript": "^5.5.2"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }

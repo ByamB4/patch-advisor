@@ -1,14 +1,14 @@
-import { MainLayout } from "layouts";
+import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
 import { useState } from "react";
-import { MARGIN_Y, PADDING_X } from "constants/layout";
+import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
-import { VMWARE_TABS } from "constants/configs";
-import { VMwareList } from "ui/vmware";
-import { IVmware } from "interfaces";
-import VmwareList from "ui/vmware/list";
-import { db } from "server";
+import { VMWARE_TABS } from "@/constants/configs";
+import { VMwareList } from "@/ui/vmware";
+import { IVmware } from "@/interfaces";
+import VmwareList from "@/ui/vmware/list";
+import { db } from "@/server";
 
 const VMWare: NextPage<{
   data: IVmware[];

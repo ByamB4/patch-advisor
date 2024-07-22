@@ -1,8 +1,8 @@
-import { IVmware } from "interfaces";
+import { IVmware } from "@/interfaces";
 import { tableCellClasses } from "@mui/material/TableCell";
 import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import colors from "theme/colors";
+import colors from "@/theme/colors";
 import { useRouter } from "next/router";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({

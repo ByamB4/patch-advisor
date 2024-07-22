@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { v4 } from "uuid";
 
 interface Props {
   className?: string;
@@ -14,32 +13,32 @@ const AppNavbar: React.FC<Props> = ({ className = "" }): React.ReactElement => {
 
   const middleLinks = [
     {
-      id: v4(),
+      id: "716a267a-c157-4409-8cf9-318489460ef0",
       title: "News",
       link: "/news",
     },
     {
-      id: v4(),
+      id: "92e15847-0493-4ed9-a7df-086ea4b0713e",
       title: "Redhat",
       link: "/redhat",
     },
     {
-      id: v4(),
+      id: "424f5e35-8f1e-430d-af6a-88d86eb29207",
       title: "VMware",
       link: "/vmware",
     },
     {
-      id: v4(),
+      id: "930a48d3-c9c2-4aa7-8603-01284a343bcc",
       title: "Cisco",
       link: "/cisco",
     },
     {
-      id: v4(),
+      id: "ff3ad85f-88be-499e-9e96-0f1e36c243fa",
       title: "Microsoft",
       link: "/microsoft",
     },
     {
-      id: v4(),
+      id: "261e515c-2fc7-4e3e-972c-101eb117b974",
       title: "Oracle",
       link: "/oracle",
     },

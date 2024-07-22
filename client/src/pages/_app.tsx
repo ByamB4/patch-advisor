@@ -1,9 +1,9 @@
-import "styles/globals.css";
+import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { TabProvider } from "contexts/nav";
+import { TabProvider } from "@/contexts/nav";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { MuiTheme, createEmotionCache } from "theme";
+import { MuiTheme, createEmotionCache } from "@/theme";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 
 const clientSideEmotionCache = createEmotionCache();

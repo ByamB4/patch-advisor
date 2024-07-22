@@ -1,4 +1,4 @@
-import { MainLayout } from "layouts";
+import { MainLayout } from "@/layouts";
 import { NextPage } from "next";
 
 const LandingPage: NextPage<unknown> = (): React.ReactElement => {

@@ -1,12 +1,12 @@
-import { convertToLocal } from "utils";
+import { convertToLocal } from "@/utils";
 import { tableCellClasses } from "@mui/material/TableCell";
 import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import colors from "theme/colors";
+import colors from "@/theme/colors";
 import { BsShieldExclamation } from "react-icons/bs";
 import { BiCog } from "react-icons/bi";
 import { IoBugOutline } from "react-icons/io5";
-import IRedHat from "interfaces/IRedHat";
+import IRedHat from "@/interfaces/IRedHat";
 import { useRouter } from "next/router";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
