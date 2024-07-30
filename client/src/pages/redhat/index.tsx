@@ -6,16 +6,17 @@ import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography, Pagination } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
 import { RedHatList } from "@/ui/redhat";
-import { IRedhat } from "@/interfaces";
+import { ICSAF } from "@/interfaces";
 import { db } from "@/server";
+import axios from "axios";
 
-const RedhatPage: NextPage<{ data: IRedhat[] }> = ({ data }): React.ReactElement => {
+const RedhatPage: NextPage<{ data: ICSAF[] }> = ({ data }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
   const [page, setPage] = useState<number>(1);
   const postPerPage: number = 10;
-  const enhancementData = [...data.filter((it) => it.severity.includes("Enhancement"))];
-  const bugFix = [...data.filter((it) => it.severity.includes("Bug Fix Advisory"))];
-  const securityAdvisory = [...data.filter((it) => it.severity.includes("Security Advisory"))];
+  // const enhancementData = [...data.filter((it) => it.severity.includes("Enhancement"))];
+  // const bugFix = [...data.filter((it) => it.severity.includes("Bug Fix Advisory"))];
+  // const securityAdvisory = [...data.filter((it) => it.severity.includes("Security Advisory"))];
 
   return (
     <MainLayout NO_PADDING>
@@ -57,19 +58,22 @@ const RedhatPage: NextPage<{ data: IRedhat[] }> = ({ data }): React.ReactElement
             {tabNumber === 0 ? (
               <RedHatList data={data.slice((page - 1) * postPerPage, page * postPerPage)} />
             ) : tabNumber === 1 ? (
-              <RedHatList data={enhancementData.slice((page - 1) * postPerPage, page * postPerPage)} />
-            ) : tabNumber === 2 ? (
-              <RedHatList data={bugFix.slice((page - 1) * postPerPage, page * postPerPage)} />
-            ) : tabNumber === 3 ? (
-              <RedHatList data={securityAdvisory.slice((page - 1) * postPerPage, page * postPerPage)} />
+              <h1>enhancement</h1>
+            ) : // <RedHatList data={enhancementData.slice((page - 1) * postPerPage, page * postPerPage)} />
+            tabNumber === 2 ? (
+              <h1>bugfix</h1>
+            ) : // <RedHatList data={bugFix.slice((page - 1) * postPerPage, page * postPerPage)} />
+            tabNumber === 3 ? (
+              <h1>security advisory</h1>
             ) : (
+              // <RedHatList data={securityAdvisory.slice((page - 1) * postPerPage, page * postPerPage)} />
               <></>
             )}
           </div>
           <div className="flex items-center justify-center">
             <Pagination
               size="large"
-              count={Math.ceil((tabNumber === 0 ? data.length : tabNumber === 1 ? enhancementData.length : tabNumber === 2 ? bugFix.length : securityAdvisory.length) / postPerPage)}
+              // count={Math.ceil((tabNumber === 0 ? data.length : tabNumber === 1 ? enhancementData.length : tabNumber === 2 ? bugFix.length : securityAdvisory.length) / postPerPage)}
               defaultPage={1}
               onChange={(e, val) => setPage(val)}
               variant="outlined"
@@ -83,13 +87,11 @@ const RedhatPage: NextPage<{ data: IRedhat[] }> = ({ data }): React.ReactElement
 };
 
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
+  const a = await axios.get("https://access.redhat.com/hydra/rest/securitydata/csaf.json?after=2024-06-14");
+  console.log(a.data);
   return {
     props: {
-      data: await db.redhat.findMany({
-        orderBy: {
-          date: "desc",
-        },
-      }),
+      data: (await axios.get("https://access.redhat.com/hydra/rest/securitydata/csaf.json?after=2024-06-14")).data,
     },
   };
 };

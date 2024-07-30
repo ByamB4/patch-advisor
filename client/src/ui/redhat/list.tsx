@@ -6,7 +6,7 @@ import colors from "@/theme/colors";
 import { BsShieldExclamation } from "react-icons/bs";
 import { BiCog } from "react-icons/bi";
 import { IoBugOutline } from "react-icons/io5";
-import IRedHat from "@/interfaces/IRedHat";
+import { ICSAF } from "@/interfaces";
 import { useRouter } from "next/router";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -30,7 +30,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 interface Props {
   className?: string;
-  data: IRedHat[];
+  data: ICSAF[];
 }
 
 const RedHatUI: React.FC<Props> = ({ className = "", data }): React.ReactElement => {
@@ -90,9 +90,9 @@ const RedHatUI: React.FC<Props> = ({ className = "", data }): React.ReactElement
             </TableHead>
             <TableBody>
               {data.map((row) => (
-                <StyledTableRow key={row.cve}>
-                  <StyledTableCell onClick={() => router.push(`/redhat/${row.cve}`)}>
-                    <Typography className="hover:cursor-pointer text-primary-blue underline">{row.cve}</Typography>
+                <StyledTableRow key={row.RHSA}>
+                  <StyledTableCell onClick={() => router.push(`/redhat/${row.RHSA}`)}>
+                    <Typography className="hover:cursor-pointer text-primary-blue underline">{row.RHSA}</Typography>
                   </StyledTableCell>
                   <StyledTableCell>{row.synopsis}</StyledTableCell>
                   <StyledTableCell align="center">{renderSeverity(row.severity)}</StyledTableCell>

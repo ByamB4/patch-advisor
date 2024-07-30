@@ -1,115 +1,245 @@
-from playwright.sync_api import sync_playwright, ElementHandle
-from playwright_stealth import stealth_sync
-from typing import List
-from time import sleep
-from datetime import datetime
-from dotenv import load_dotenv
+from requests import get
 from prisma import Prisma, Client
+from dotenv import load_dotenv
+from datetime import datetime
+from json import loads as json_loads
 
 
 class RedhatErrata:
-    DATA: List[dict] = []
-    TMP: List[dict] = []
-    NEW_ITEMS: List[dict] = []
-    URL: str = "https://access.redhat.com/errata-search/?q=&p=1&sort=portal_publication_date+desc&rows=100"
-    RETRY_ATTEMPT: int = 3
-    RETRY_DELAY: int = 2
+    URL: str = "https://access.redhat.com/hydra/rest/securitydata"
 
-    def __init__(self, db: Client) -> any:
-        with sync_playwright() as p:
-            self.db = db
-            self.browser = p.chromium.launch(headless=True, args=["--start-maximized"])
-            self.context = self.browser.new_context(no_viewport=True)
-            self._1_tab = self.context.new_page()
-            stealth_sync(self._1_tab)
-            self.check_new_update()
-            self.scrape()
-            self.write_to_db()
-            self._1_tab.close()
-            self.context.close()
+    def __init__(self, db: Client) -> None:
+        self.db = db
+        # self.clear_db()
+        self.write_db()
+        # self.read_db()
 
-    def check_new_update(self) -> bool:
-        print(f"[redhat@check_new_update] starting...", flush=True)
-        for attempt in range(1, self.RETRY_ATTEMPT + 1):
-            print(f"[redhat@attempt] {attempt}", flush=True)
-            try:
-                self._1_tab.goto(self.URL, wait_until="networkidle")
-                self._1_tab.wait_for_selector("//table[@id='Security-Errata-Table']//tbody//tr")
-                for row in self._1_tab.query_selector_all("xpath=//table[@id='Security-Errata-Table']//tbody//tr"):
-                    header = {}
-                    header["element"] = row.query_selector("xpath=./th[@headers='th-errata']")
-                    header["cve"] = header["element"].query_selector("xpath=.//a").text_content()
-                    if not self.db.redhat.find_unique({"cve": header["cve"]}):
-                        self.NEW_ITEMS.append(header["cve"])
-                print(f"[redhat@check_new_update]", self.NEW_ITEMS, flush=True)
-                break
-            except Exception as e:
-                print(f"[redhat@attempt] failed", flush=True)
-                sleep(self.RETRY_DELAY)
-
-    def query_inner(self, source: ElementHandle, query: str) -> List[str]:
-        return [el.inner_html() for el in source.query_selector_all(f"xpath={query}")]
-
-    def scrape(self) -> bool:
-        table = self._1_tab.wait_for_selector("xpath=//table[@id='Security-Errata-Table']")
-        for row in table.query_selector_all("xpath=.//tbody//tr"):
-            header, _date = {}, {}
-            header["element"] = row.query_selector("xpath=./th[@headers='th-errata']")
-            header["link"] = header["element"].query_selector("xpath=.//a").get_attribute("href")
-            header["cve"] = header["element"].query_selector("xpath=.//a").text_content()
-            _date["element"] = row.query_selector("xpath=./td[@id='errataItem--date']")
-            _date["date"] = _date["element"].query_selector("xpath=.//span").text_content()
-            if header["cve"] in self.NEW_ITEMS:
-                self.fetch_detail(header, _date)
-
-        print("[redhat@scrape] done", flush=True)
-        return True
-
-    def fetch_detail(self, header: dict, _date: List[dict]) -> bool:
-        self.context.new_page()
-        _2_tab = self.context.pages[1]
-        stealth_sync(_2_tab)
-        _2_tab.goto(header["link"], wait_until="networkidle")
-        if len(_2_tab.title()) == 0:
-            return False
-        tab_content = _2_tab.wait_for_selector("xpath=//div[@class='tab-content']")
-        synopsis = tab_content.query_selector("xpath=.//div[@id='synpopsis']//p").text_content()
-        severity = tab_content.query_selector("xpath=.//div[@id='type-severity']//p").text_content()
-        topics = self.query_inner(tab_content, ".//div[@id='topic']//p")
-        description = tab_content.query_selector("xpath=.//div[@id='description']").inner_html()
-        solution = tab_content.query_selector("xpath=.//div[@id='solution']").inner_html()
-        affected_products = tab_content.query_selector("xpath=.//div[@id='affected_products']").inner_html()
-        fixes = tab_content.query_selector("xpath=.//div[@id='fixes']").inner_html()
-        cves = tab_content.query_selector("xpath=.//div[@id='cves']").inner_html()
-        references = tab_content.query_selector("xpath=.//div[@id='references']").inner_html()
-        self.TMP.append(
-            {
-                "cve": header["cve"],
-                "synopsis": synopsis,
-                "severity": severity,
-                "topics": topics,
-                "description": description,
-                "solution": solution,
-                "affected_products": affected_products,
-                "fixes": fixes,
-                "cves": cves,
-                "references": references,
-                "date": _date["date"],
+    def read_db(self) -> None:
+        redhat = self.db.redhat.find_first(
+            include={
+                "document": {
+                    "include": {
+                        "publisher": True,
+                        "notes": True,
+                    }
+                },
+                "vulnerabilities": True,
             }
         )
-        _2_tab.close()
-        return True
+        if redhat:
+            print(json_loads(redhat.model_dump_json()))
 
-    def write_to_db(self) -> bool:
-        self.db.redhat.create_many(data=self.TMP, skip_duplicates=True)
-        print(f"[redhat@save] done", flush=True)
-        return True
+    def write_db(self) -> None:
+        for csaf in get(f"{self.URL}/csaf.json", timeout=3).json():
+            if not self.db.redhat.find_first(where={"RHSA": csaf["RHSA"]}):
+                data = get(f"{self.URL}/csaf/{csaf['RHSA']}").json()
+                redhat = json_loads(
+                    self.db.redhat.create(
+                        {
+                            "RHSA": csaf["RHSA"],
+                            "severity": csaf["severity"],
+                            "released_on": csaf["released_on"],
+                            "CVEs": csaf["CVEs"],
+                            "bugzillas": csaf["bugzillas"],
+                            "released_packages": csaf["released_packages"],
+                            "resource_url": csaf["resource_url"],
+                        }
+                    ).model_dump_json()
+                )
+                print("[redhat]", redhat["RHSA"])
+                self.write_document(data, redhat)
+                self.write_vulnerabilities(data, redhat)
+                print("=" * 60)
+                # input("continue?")
+
+    def write_document(self, data, redhat) -> None:
+        document = json_loads(
+            self.db.redhat_document.create(
+                {
+                    "category": data["document"]["category"],
+                    "csaf_version": data["document"]["csaf_version"],
+                    "lang": data["document"]["lang"],
+                    "title": data["document"]["title"],
+                    "redhatId": redhat["id"],
+                }
+            ).model_dump_json()
+        )
+        print(f"[document] {document['id']}")
+        write_aggregateseverity = json_loads(
+            self.db.redhat_aggregateseverity.create(
+                {
+                    "namespace": data["document"]["aggregate_severity"]["namespace"],
+                    "text": data["document"]["aggregate_severity"]["text"],
+                    "documentId": document["id"],
+                }
+            ).model_dump_json()
+        )
+        distribution = json_loads(
+            self.db.redhat_distribution.create(
+                {
+                    "text": data["document"]["distribution"]["text"],
+                    "documentId": document["id"],
+                }
+            ).model_dump_json()
+        )
+        tlp = data["document"]["distribution"]["tlp"].copy()
+        tlp["distributionId"] = distribution["id"]
+
+        self.db.redhat_tlp.create(tlp)
+        for _ in data["document"]["notes"]:
+            write_notes = _.copy()
+            write_notes["documentId"] = document["id"]
+            self.db.redhat_document_note.create(write_notes)
+
+        write_publisher = data["document"]["publisher"].copy()
+        write_publisher["documentId"] = document["id"]
+        publisher = json_loads(self.db.redhat_publisher.create(write_publisher).model_dump_json())
+
+        for _ in data["document"]["references"]:
+            write_doc_references = _.copy()
+            write_doc_references["documentId"] = document["id"]
+            self.db.redhat_document_reference.create(write_doc_references)
+        self.db.redhat_document.update(
+            where={"id": document["id"]},
+            data={
+                "aggregateSeverityId": write_aggregateseverity["id"],
+                "distributionId": distribution["id"],
+                "publisherId": publisher["id"],
+            },
+        )
+
+    def write_vulnerabilities(self, data, redhat) -> None:
+        if not "vulnerabilities" in data:
+            return
+        for vulnerability in data["vulnerabilities"]:
+            record_vuln = json_loads(
+                self.db.redhat_vulnerability.create(
+                    {
+                        "cve": vulnerability["cve"],
+                        "discovery_date": vulnerability["discovery_date"],
+                        "release_date": vulnerability["release_date"],
+                        "title": vulnerability["title"],
+                        "redhatId": redhat["id"],
+                    }
+                ).model_dump_json()
+            )
+            if "cwe" in vulnerability:
+                self.db.redhat_vulnerability_cwe.create(
+                    {
+                        "name": vulnerability["cwe"]["name"],
+                        "cweId": vulnerability["cwe"]["id"],
+                        "vulnerabilityId": record_vuln["id"],
+                    }
+                )
+            for i in vulnerability["ids"]:
+                self.db.redhat_vulnerability_id.create(
+                    {
+                        "system_name": i["system_name"],
+                        "text": i["text"],
+                        "vulnerabilityId": record_vuln["id"],
+                    }
+                )
+            for i in vulnerability["notes"]:
+                self.db.redhat_vulnerability_note.create(
+                    {
+                        "category": i["category"],
+                        "text": i["text"],
+                        "title": i["title"],
+                        "vulnerabilityId": record_vuln["id"],
+                    }
+                )
+            self.db.redhat_vulnerability_productstatus.create(
+                {
+                    "fixed": vulnerability["product_status"]["fixed"],
+                    "vulnerabilityId": record_vuln["id"],
+                }
+            )
+            for i in vulnerability["references"]:
+                self.db.redhat_vulnerability_reference.create(
+                    {
+                        "category": i["category"],
+                        "summary": i["summary"],
+                        "url": i["url"],
+                        "vulnerabilityId": record_vuln["id"],
+                    }
+                )
+            for i in vulnerability["remediations"]:
+                tmp_record = json_loads(
+                    self.db.redhat_vulnerability_remediation.create(
+                        {
+                            "category": i["category"],
+                            "details": i["details"],
+                            "vulnerabilityId": record_vuln["id"],
+                            "product_ids": i["product_ids"],
+                        }
+                    ).model_dump_json()
+                )
+                if "url" in i:
+                    self.db.redhat_vulnerability_remediation.update(
+                        where={"id": tmp_record["id"]},
+                        data={
+                            "url": i["url"],
+                        },
+                    )
+                if "restart_required" in i:
+                    self.db.redhat_vulnerability_restartrequired.create(
+                        {
+                            "category": i["restart_required"]["category"],
+                            "remediationId": tmp_record["id"],
+                        }
+                    )
+            if "scores" in vulnerability:
+                for i in vulnerability["scores"]:
+                    tmp_record = json_loads(
+                        self.db.redhat_vulnerability_score.create(
+                            {
+                                "products": i["products"],
+                                "vulnerabilityId": record_vuln["id"],
+                            }
+                        ).model_dump_json()
+                    )
+                    write_cvssv3 = i["cvss_v3"].copy()
+                    write_cvssv3["scoreId"] = tmp_record["id"]
+                    self.db.redhat_vulnerability_cvssv3.create(write_cvssv3)
+                if "threads" in vulnerability:
+                    for i in vulnerability["threats"]:
+                        self.db.redhat_vulnerability_threat.create(
+                            {
+                                "category": i["category"],
+                                "details": i["details"],
+                                "vulnerabilityId": record_vuln["id"],
+                            }
+                        )
+            print(f"[vuln] {record_vuln['cve']}")
+
+    def clear_db(self) -> None:
+        self.db.redhat.delete_many()
+        self.db.redhat_document.delete_many()
+        self.db.redhat_aggregateseverity.delete_many()
+        self.db.redhat_distribution.delete_many()
+        self.db.redhat_tlp.delete_many()
+        self.db.redhat_document_note.delete_many()
+        self.db.redhat_publisher.delete_many()
+        self.db.redhat_document_reference.delete_many()
+        self.db.redhat_vulnerability.delete_many()
+        self.db.redhat_vulnerability_id.delete_many()
+        self.db.redhat_vulnerability_note.delete_many()
+        self.db.redhat_vulnerability_productstatus.delete_many()
+        self.db.redhat_vulnerability_reference.delete_many()
+        self.db.redhat_vulnerability_remediation.delete_many()
+        self.db.redhat_vulnerability_restartrequired.delete_many()
+        self.db.redhat_vulnerability_score.delete_many()
+        self.db.redhat_vulnerability_cvssv3.delete_many()
+        self.db.redhat_vulnerability_threat.delete_many()
+        self.db.redhat_vulnerability_cwe.delete_many()
+
+        print("[clear] done")
 
 
-def main():
+def main() -> None:
+    load_dotenv()
     db = Prisma()
     db.connect()
-    load_dotenv()
     formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M")
     print("[current_time]", formatted_time, flush=True)
     RedhatErrata(db)
