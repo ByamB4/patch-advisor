@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import * as fs from "fs";
 import * as path from "path";
-import { ICisco, IOracle, IRedhat, IVmware } from "interfaces";
+import { ICisco, IOracle, IVmware } from "@/interfaces";
 
 const prisma = new PrismaClient();
 
@@ -16,14 +16,6 @@ function readJsonFile(filePath: string) {
   }
 }
 
-async function insertRedhat(filePath: string) {
-  const items: IRedhat[] = readJsonFile(filePath);
-  await prisma.redhat.createMany({
-    data: items,
-    skipDuplicates: true,
-  });
-  console.log("[seed@redhat] done");
-}
 async function insertVmware(filePath: string) {
   const items: IVmware[] = readJsonFile(filePath);
   await prisma.vmware.createMany({
@@ -53,7 +45,6 @@ async function insertOracle(filePath: string) {
 async function main() {
   const parentDir = path.resolve(__dirname, "../..");
   const _static = path.resolve(parentDir, "scrape/static");
-  insertRedhat(`${_static}/redhat.json`);
   insertVmware(`${_static}/vmware.json`);
   insertCisco(`${_static}/cisco.json`);
   insertOracle(`${_static}/oracle.json`);

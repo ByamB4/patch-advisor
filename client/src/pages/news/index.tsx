@@ -5,10 +5,8 @@ import { useState } from "react";
 import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
-import { IRedhat } from "@/interfaces";
-import { db } from "@/server";
 
-const NewsPage: NextPage<{ data: IRedhat[] }> = ({ data }): React.ReactElement => {
+const NewsPage: NextPage = (): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
 
   return (
@@ -66,11 +64,7 @@ const NewsPage: NextPage<{ data: IRedhat[] }> = ({ data }): React.ReactElement =
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
   return {
     props: {
-      data: await db.redhat.findMany({
-        orderBy: {
-          date: "desc",
-        },
-      }),
+      data: [],
     },
   };
 };

@@ -1,13 +1,10 @@
-import { convertToLocal } from "@/utils";
 import { tableCellClasses } from "@mui/material/TableCell";
 import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import colors from "@/theme/colors";
-import { BsShieldExclamation } from "react-icons/bs";
-import { BiCog } from "react-icons/bi";
-import { IoBugOutline } from "react-icons/io5";
+import Link from "next/link";
 import { ICSAF } from "@/interfaces";
-import { useRouter } from "next/router";
+import { convertToLocalTime, renderSynopsis } from "@/utils";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -34,38 +31,22 @@ interface Props {
 }
 
 const RedHatUI: React.FC<Props> = ({ className = "", data }): React.ReactElement => {
-  const router = useRouter();
   const renderSeverity = (raw: string) => {
     var el = <></>;
-    if (raw.includes(":")) {
-      var parts = raw.split(": ");
-      if (parts[1] === "Important") {
-        el = <div className="bg-[#b85c00] p-1 rounded text-white">Important</div>;
-      } else if (parts[1] === "Moderate") {
-        el = <div className="bg-[#f5c12e] p-1 rounded">Moderate</div>;
-      } else if (parts[1] === "Low") {
-        el = <div className="bg-[#316dc1] p-1 rounded text-white">Low</div>;
-      } else if (parts[1] === "Critical") {
-        el = <div className="bg-[#a30000] p-1 rounded text-white">Critical</div>;
-      }
+    if (raw === "Important") {
+      el = <div className="flex items-center justify-center bg-[#b85c00] p-1 rounded text-white">Important</div>;
+    } else if (raw === "Moderate") {
+      el = <div className="flex items-center justify-center bg-[#f5c12e] p-1 rounded">Moderate</div>;
+    } else if (raw === "Low") {
+      el = <div className="flex items-center justify-center bg-[#316dc1] p-1 rounded text-white">Low</div>;
+    } else if (raw === "Critical") {
+      el = <div className="flex items-center justify-center bg-[#a30000] p-1 rounded text-white">Critical</div>;
     }
-    const containerBuild = (icon: React.ReactElement, el: React.ReactElement, raw: string) => {
-      return (
-        <div className="flex flex-col items-center gap-3">
-          <div className="flex gap-1">
-            {icon} {raw.split(": ")[0]}
-          </div>
-          <div className="flex">{el}</div>
-        </div>
-      );
-    };
-    if (raw.includes("Product Enhancement Advisory")) {
-      return <>{containerBuild(<BiCog size={20} />, el, raw)}</>;
-    } else if (raw.includes("Bug Fix")) {
-      return <>{containerBuild(<IoBugOutline size={20} />, el, raw)}</>;
-    } else if (raw.includes("Advisory")) {
-      return <>{containerBuild(<BsShieldExclamation size={20} />, el, raw)}</>;
-    }
+    return el;
+  };
+
+  const renderAdvisoryType = (raw: string) => {
+    return <Typography variant="subtitle2">{raw.split(":")[0].split("Red Hat ")[1]}</Typography>;
   };
 
   return (
@@ -81,8 +62,11 @@ const RedHatUI: React.FC<Props> = ({ className = "", data }): React.ReactElement
                 <StyledTableCell width={250} align="center">
                   Synopsis
                 </StyledTableCell>
+                <StyledTableCell width={250} align="center">
+                  Advisory Type
+                </StyledTableCell>
                 <StyledTableCell align="center">Type/Severity</StyledTableCell>
-                <StyledTableCell align="center">Products</StyledTableCell>
+                <StyledTableCell align="center">Summary</StyledTableCell>
                 <StyledTableCell width={200} align="center">
                   Publish Date
                 </StyledTableCell>
@@ -91,19 +75,20 @@ const RedHatUI: React.FC<Props> = ({ className = "", data }): React.ReactElement
             <TableBody>
               {data.map((row) => (
                 <StyledTableRow key={row.RHSA}>
-                  <StyledTableCell onClick={() => router.push(`/redhat/${row.RHSA}`)}>
-                    <Typography className="hover:cursor-pointer text-primary-blue underline">{row.RHSA}</Typography>
-                  </StyledTableCell>
-                  <StyledTableCell>{row.synopsis}</StyledTableCell>
-                  <StyledTableCell align="center">{renderSeverity(row.severity)}</StyledTableCell>
                   <StyledTableCell>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: row.affected_products,
-                      }}
-                    ></div>
+                    <Link href={`/redhat/${row.RHSA}`}>
+                      <Typography variant="subtitle2" className="hover:cursor-pointer text-primary-blue underline">
+                        {row.RHSA}
+                      </Typography>
+                    </Link>
                   </StyledTableCell>
-                  <StyledTableCell align="right">{convertToLocal(row.date)}</StyledTableCell>
+                  <StyledTableCell>{renderSynopsis(row.document.title)}</StyledTableCell>
+                  <StyledTableCell align="center">{renderAdvisoryType(row.document.title)}</StyledTableCell>
+                  <StyledTableCell width={100}>{renderSeverity(row.document.aggregate_severity.text)}</StyledTableCell>
+                  <StyledTableCell>
+                    <Typography variant="subtitle2">{row.document.notes[0].text}</Typography>
+                  </StyledTableCell>
+                  <StyledTableCell align="right">{convertToLocalTime(row.document.tracking.current_release_date)}</StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>

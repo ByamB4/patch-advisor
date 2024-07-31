@@ -12,21 +12,21 @@ export const NEWS_TABS = [
 ];
 
 export const REDHAT_TABS = [
-  {
-    id: "56ac2c96-784b-4323-bdc3-624562c68ff2",
-    title: "All",
-    unread: 0,
-  },
-  {
-    id: "19835b78-4ef5-4a06-9247-6e6f7dae32e0",
-    title: "Enhancement",
-    unread: 2,
-  },
-  {
-    id: "9864af6c-3db5-4a0f-a0bb-9dcc0ea08aae",
-    title: "Bug Fix",
-    unread: 0,
-  },
+  // {
+  //   id: "56ac2c96-784b-4323-bdc3-624562c68ff2",
+  //   title: "All",
+  //   unread: 0,
+  // },
+  // {
+  //   id: "19835b78-4ef5-4a06-9247-6e6f7dae32e0",
+  //   title: "Enhancement",
+  //   unread: 2,
+  // },
+  // {
+  //   id: "9864af6c-3db5-4a0f-a0bb-9dcc0ea08aae",
+  //   title: "Bug Fix",
+  //   unread: 0,
+  // },
   {
     id: "39301f48-cb53-4425-81bc-5d4e8777ad9b",
     title: "Security Advisory",

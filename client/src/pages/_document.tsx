@@ -6,7 +6,7 @@ class _ extends Document<unknown> {
       <Html lang="en">
         <Head>
           <meta name="robots" content="index, follow" />
-          <link rel="icon" href="favicon.png" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
         <body>
           <Main />

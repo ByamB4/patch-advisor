@@ -13,7 +13,7 @@ import axios from "axios";
 const RedhatPage: NextPage<{ data: ICSAF[] }> = ({ data }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
   const [page, setPage] = useState<number>(1);
-  const postPerPage: number = 10;
+  const postPerPage: number = 100;
   // const enhancementData = [...data.filter((it) => it.severity.includes("Enhancement"))];
   // const bugFix = [...data.filter((it) => it.severity.includes("Bug Fix Advisory"))];
   // const securityAdvisory = [...data.filter((it) => it.severity.includes("Security Advisory"))];
@@ -57,7 +57,8 @@ const RedhatPage: NextPage<{ data: ICSAF[] }> = ({ data }): React.ReactElement =
           <div className="py-5">
             {tabNumber === 0 ? (
               <RedHatList data={data.slice((page - 1) * postPerPage, page * postPerPage)} />
-            ) : tabNumber === 1 ? (
+            ) : // <div>{JSON.stringify(data[0])}</div>
+            tabNumber === 1 ? (
               <h1>enhancement</h1>
             ) : // <RedHatList data={enhancementData.slice((page - 1) * postPerPage, page * postPerPage)} />
             tabNumber === 2 ? (
@@ -71,14 +72,7 @@ const RedhatPage: NextPage<{ data: ICSAF[] }> = ({ data }): React.ReactElement =
             )}
           </div>
           <div className="flex items-center justify-center">
-            <Pagination
-              size="large"
-              // count={Math.ceil((tabNumber === 0 ? data.length : tabNumber === 1 ? enhancementData.length : tabNumber === 2 ? bugFix.length : securityAdvisory.length) / postPerPage)}
-              defaultPage={1}
-              onChange={(e, val) => setPage(val)}
-              variant="outlined"
-              color="primary"
-            />
+            <Pagination size="large" count={Math.ceil(data.length / postPerPage)} defaultPage={1} onChange={(e, val) => setPage(val)} variant="outlined" color="primary" />
           </div>
         </div>
       </div>
@@ -87,11 +81,28 @@ const RedhatPage: NextPage<{ data: ICSAF[] }> = ({ data }): React.ReactElement =
 };
 
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
-  const a = await axios.get("https://access.redhat.com/hydra/rest/securitydata/csaf.json?after=2024-06-14");
-  console.log(a.data);
   return {
     props: {
-      data: (await axios.get("https://access.redhat.com/hydra/rest/securitydata/csaf.json?after=2024-06-14")).data,
+      data: await db.redhat.findMany({
+        include: {
+          document: {
+            select: {
+              title: true,
+              notes: true,
+              tracking: {
+                select: {
+                  current_release_date: true,
+                },
+              },
+              aggregate_severity: {
+                select: {
+                  text: true,
+                },
+              },
+            },
+          },
+        },
+      }),
     },
   };
 };

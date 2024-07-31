@@ -1,4 +1,6 @@
 import { useRouter } from "next/router";
+import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   className?: string;
@@ -12,11 +14,11 @@ const AppNavbar: React.FC<Props> = ({ className = "" }): React.ReactElement => {
   };
 
   const middleLinks = [
-    {
-      id: "716a267a-c157-4409-8cf9-318489460ef0",
-      title: "News",
-      link: "/news",
-    },
+    // {
+    //   id: "716a267a-c157-4409-8cf9-318489460ef0",
+    //   title: "News",
+    //   link: "/news",
+    // },
     {
       id: "92e15847-0493-4ed9-a7df-086ea4b0713e",
       title: "Redhat",
@@ -46,13 +48,17 @@ const AppNavbar: React.FC<Props> = ({ className = "" }): React.ReactElement => {
   return (
     <nav className={`flex items-center justify-between border-[#D6D8DB] border-b bg-white py-4 px-12 ${className}`}>
       <div className="cursor-pointer w-full">
-        <img src="/kb-logo.svg" className="h-8" onClick={() => router.push("/")} />
+        <Link href="/">
+          <Image src="/kb-logo.svg" width={150} height={150} alt="kb-logo" className="h-8" />
+        </Link>
       </div>
       <div className="flex gap-4 justify-center w-full">
         {middleLinks.map((it) => (
-          <div className={`hover:cursor-pointer rounded-2xl py-2 px-5 ${checkActivePage(it.title) ? "bg-[#EFF6FF]" : ""}`} key={it.id} onClick={() => router.push(it.link)}>
-            <span className={`font-exo font-medium ${checkActivePage(it.title) ? "font-semibold text-[#044BE7]" : "text-[#384454]"}`}>{it.title}</span>
-          </div>
+          <Link href={it.link} key={it.id}>
+            <div className={`hover:cursor-pointer rounded-2xl py-2 px-5 ${checkActivePage(it.title) ? "bg-[#EFF6FF]" : ""}`}>
+              <span className={`font-exo font-medium ${checkActivePage(it.title) ? "font-semibold text-[#044BE7]" : "text-[#384454]"}`}>{it.title}</span>
+            </div>
+          </Link>
         ))}
       </div>
       <div className="cursor-pointer bg-red-200 w-full">

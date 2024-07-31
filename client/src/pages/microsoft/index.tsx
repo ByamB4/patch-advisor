@@ -65,8 +65,6 @@ const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.Re
 };
 
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
-  console.log("[DEBUG]", await db.microsoft.findFirst({}));
-
   return {
     props: {
       data: await db.microsoft.findMany({}),

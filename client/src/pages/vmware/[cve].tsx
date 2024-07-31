@@ -4,7 +4,7 @@ import { MainLayout } from "@/layouts";
 import { IVmware } from "@/interfaces";
 import { useRouter } from "next/router";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import styles from "styles/vmware.module.scss";
+import styles from "@/styles/vmware.module.scss";
 import { db } from "@/server";
 
 const VmwareDetail: NextPage<{
