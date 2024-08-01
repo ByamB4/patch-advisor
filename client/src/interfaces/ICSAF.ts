@@ -1,30 +1,22 @@
-export interface ICisco {
-  advisoryId: string;
-  advisoryTitle: string;
-  bugIDs: string[];
-  ipsSignatures: string[];
-  cves: string[];
-  cvrfUrl: string;
-  csafUrl: string;
-  cvssBaseScore: string;
-  cwe: string[];
-  firstPublished: string;
-  lastUpdated: string;
-  status: string;
-  version: string;
-  productNames: string[];
-  publicationUrl: string;
-  sir: string;
-  summary: string;
+export interface ICSAF {
+  RHSA: string;
+  severity: string;
+  released_on: string;
+  CVEs: string[];
+  bugzillas: string[];
+  released_packages: string[];
+  resource_url: string;
   document: Document;
   product_tree: ProductTree;
   vulnerabilities: Vulnerability[];
 }
 
 interface Document {
-  acknowledgments: Acknowledgment[];
+  aggregate_severity: AggregateSeverity;
   category: string;
   csaf_version: string;
+  distribution: Distribution;
+  lang: string;
   notes: Note[];
   publisher: Publisher;
   references: Reference[];
@@ -32,14 +24,25 @@ interface Document {
   tracking: Tracking;
 }
 
-interface Acknowledgment {
-  summary: string;
+interface AggregateSeverity {
+  namespace: string;
+  text: string;
+}
+
+interface Distribution {
+  text: string;
+  tlp: Tlp;
+}
+
+interface Tlp {
+  label: string;
+  url: string;
 }
 
 interface Note {
   category: string;
-  title: string;
   text: string;
+  title: string;
 }
 
 interface Publisher {
@@ -73,6 +76,7 @@ interface Generator {
 
 interface Engine {
   name: string;
+  version: string;
 }
 
 interface RevisionHistory {
@@ -83,34 +87,68 @@ interface RevisionHistory {
 
 interface ProductTree {
   branches: Branch[];
+  relationships: Relationship[];
 }
 
 interface Branch {
-  name: string;
-  category: string;
   branches: Branch2[];
+  category: string;
+  name: string;
 }
 
 interface Branch2 {
-  name: string;
+  branches: Branch3[];
   category: string;
+  name: string;
+}
+
+interface Branch3 {
+  category: string;
+  name: string;
   product: Product;
 }
 
 interface Product {
   name: string;
   product_id: string;
+  product_identification_helper: ProductIdentificationHelper;
+}
+
+interface ProductIdentificationHelper {
+  cpe?: string;
+  purl?: string;
+}
+
+interface Relationship {
+  category: string;
+  full_product_name: FullProductName;
+  product_reference: string;
+  relates_to_product_reference: string;
+}
+
+interface FullProductName {
+  name: string;
+  product_id: string;
 }
 
 interface Vulnerability {
   cve: string;
+  cwe: Cwe;
+  discovery_date: string;
   ids: Id[];
   notes: Note2[];
   product_status: ProductStatus;
+  references: Reference2[];
   release_date: string;
   remediations: Remediation[];
   scores: Score[];
+  threats: Threat[];
   title: string;
+}
+
+interface Cwe {
+  id: string;
+  name: string;
 }
 
 interface Id {
@@ -120,19 +158,30 @@ interface Id {
 
 interface Note2 {
   category: string;
-  title: string;
   text: string;
+  title: string;
 }
 
 interface ProductStatus {
-  known_affected: string[];
+  fixed: string[];
+}
+
+interface Reference2 {
+  category: string;
+  summary: string;
+  url: string;
 }
 
 interface Remediation {
   category: string;
   details: string;
   product_ids: string[];
-  url: string;
+  restart_required?: RestartRequired;
+  url?: string;
+}
+
+interface RestartRequired {
+  category: string;
 }
 
 interface Score {
@@ -141,8 +190,21 @@ interface Score {
 }
 
 interface CvssV3 {
+  attackComplexity: string;
+  attackVector: string;
+  availabilityImpact: string;
   baseScore: number;
   baseSeverity: string;
+  confidentialityImpact: string;
+  integrityImpact: string;
+  privilegesRequired: string;
+  scope: string;
+  userInteraction: string;
   vectorString: string;
   version: string;
+}
+
+interface Threat {
+  category: string;
+  details: string;
 }

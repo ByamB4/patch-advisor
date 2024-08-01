@@ -86,9 +86,16 @@ const RedHatUI: React.FC<Props> = ({ className = "", data }): React.ReactElement
                   <StyledTableCell align="center">{renderAdvisoryType(row.document.title)}</StyledTableCell>
                   <StyledTableCell width={100}>{renderSeverity(row.document.aggregate_severity.text)}</StyledTableCell>
                   <StyledTableCell>
-                    <Typography variant="subtitle2">{row.document.notes[0].text}</Typography>
+                    <Typography variant="subtitle2">
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: row.document.notes[0].text,
+                        }}
+                      />
+                      {/* {row.document.notes[0].text} */}
+                    </Typography>
                   </StyledTableCell>
-                  <StyledTableCell align="right">{convertToLocalTime(row.document.tracking.current_release_date)}</StyledTableCell>
+                  <StyledTableCell align="center">{convertToLocalTime(row.document.tracking.current_release_date)}</StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>

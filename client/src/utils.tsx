@@ -4,7 +4,7 @@ export const convertToLocalTime = (raw: string): string => {
   const originalDate: Date = new Date(raw);
   originalDate.setUTCHours(originalDate.getUTCHours() + 8);
 
-  return originalDate.toISOString().slice(0, 19).replace("T", " ");
+  return originalDate.toISOString().slice(0, 10).replace("T", " ");
 };
 
 export const renderSynopsis = (raw: string): React.ReactElement => {

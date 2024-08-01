@@ -32,6 +32,10 @@ class RedhatErrata:
 
     def write_db(self) -> None:
         for csaf in get(f"{self.URL}/csaf.json", timeout=self.HTTP_TIMEOUT).json():
+            # if csaf["RHSA"] == "RHSA-2024:4846":
+            #     data = get(f"{self.URL}/csaf/{csaf['RHSA']}", timeout=self.HTTP_TIMEOUT).json()
+            #     print(data)
+            #     input()
             if not self.db.redhat.find_first(where={"RHSA": csaf["RHSA"]}):
                 data = get(f"{self.URL}/csaf/{csaf['RHSA']}", timeout=self.HTTP_TIMEOUT).json()
                 redhat = json_loads(
@@ -64,7 +68,7 @@ class RedhatErrata:
                 }
             ).model_dump_json()
         )
-        self.db.redhat_tracking.create(
+        self.db.redhat_document_tracking.create(
             {
                 "current_release_date": data["document"]["tracking"]["current_release_date"],
                 "ID": data["document"]["tracking"]["id"],
@@ -73,7 +77,7 @@ class RedhatErrata:
         )
         print(f"[document] {document['id']}")
         write_aggregateseverity = json_loads(
-            self.db.redhat_aggregateseverity.create(
+            self.db.redhat_document_aggregateseverity.create(
                 {
                     "namespace": data["document"]["aggregate_severity"]["namespace"],
                     "text": data["document"]["aggregate_severity"]["text"],
@@ -82,7 +86,7 @@ class RedhatErrata:
             ).model_dump_json()
         )
         distribution = json_loads(
-            self.db.redhat_distribution.create(
+            self.db.redhat_document_distribution.create(
                 {
                     "text": data["document"]["distribution"]["text"],
                     "documentId": document["id"],
@@ -92,15 +96,16 @@ class RedhatErrata:
         tlp = data["document"]["distribution"]["tlp"].copy()
         tlp["distributionId"] = distribution["id"]
 
-        self.db.redhat_tlp.create(tlp)
+        self.db.redhat_document_distribution_tlp.create(tlp)
         for _ in data["document"]["notes"]:
             write_notes = _.copy()
             write_notes["documentId"] = document["id"]
+            write_notes["text"] = _["text"].replace("\n", "<br>")
             self.db.redhat_document_note.create(write_notes)
 
         write_publisher = data["document"]["publisher"].copy()
         write_publisher["documentId"] = document["id"]
-        publisher = json_loads(self.db.redhat_publisher.create(write_publisher).model_dump_json())
+        publisher = json_loads(self.db.redhat_document_publisher.create(write_publisher).model_dump_json())
 
         for _ in data["document"]["references"]:
             write_doc_references = _.copy()
@@ -189,7 +194,7 @@ class RedhatErrata:
                         },
                     )
                 if "restart_required" in i:
-                    self.db.redhat_vulnerability_restartrequired.create(
+                    self.db.redhat_vulnerability_remediation_restartrequired.create(
                         {
                             "category": i["restart_required"]["category"],
                             "remediationId": tmp_record["id"],
@@ -207,7 +212,7 @@ class RedhatErrata:
                     )
                     write_cvssv3 = i["cvss_v3"].copy()
                     write_cvssv3["scoreId"] = tmp_record["id"]
-                    self.db.redhat_vulnerability_cvssv3.create(write_cvssv3)
+                    self.db.redhat_vulnerability_score_cvssv3.create(write_cvssv3)
                 if "threads" in vulnerability:
                     for i in vulnerability["threats"]:
                         self.db.redhat_vulnerability_threat.create(
@@ -221,25 +226,25 @@ class RedhatErrata:
 
     def clear_db(self) -> None:
         self.db.redhat.delete_many()
-        self.db.redhat_document.delete_many()
-        self.db.redhat_aggregateseverity.delete_many()
-        self.db.redhat_distribution.delete_many()
-        self.db.redhat_tracking.delete_many()
-        self.db.redhat_tlp.delete_many()
-        self.db.redhat_document_note.delete_many()
-        self.db.redhat_publisher.delete_many()
-        self.db.redhat_document_reference.delete_many()
-        self.db.redhat_vulnerability.delete_many()
-        self.db.redhat_vulnerability_id.delete_many()
-        self.db.redhat_vulnerability_note.delete_many()
-        self.db.redhat_vulnerability_productstatus.delete_many()
-        self.db.redhat_vulnerability_reference.delete_many()
-        self.db.redhat_vulnerability_remediation.delete_many()
-        self.db.redhat_vulnerability_restartrequired.delete_many()
-        self.db.redhat_vulnerability_score.delete_many()
-        self.db.redhat_vulnerability_cvssv3.delete_many()
-        self.db.redhat_vulnerability_threat.delete_many()
-        self.db.redhat_vulnerability_cwe.delete_many()
+        # self.db.redhat_document.delete_many()
+        # self.db.redhat_document_aggregateseverity.delete_many()
+        # self.db.redhat_document_distribution.delete_many()
+        # self.db.redhat_document_tracking.delete_many()
+        # self.db.redhat_document_distribution_tlp.delete_many()
+        # self.db.redhat_document_note.delete_many()
+        # self.db.redhat_document_publisher.delete_many()
+        # self.db.redhat_document_reference.delete_many()
+        # self.db.redhat_vulnerability.delete_many()
+        # self.db.redhat_vulnerability_id.delete_many()
+        # self.db.redhat_vulnerability_note.delete_many()
+        # self.db.redhat_vulnerability_productstatus.delete_many()
+        # self.db.redhat_vulnerability_reference.delete_many()
+        # self.db.redhat_vulnerability_remediation.delete_many()
+        # self.db.redhat_vulnerability_remediation_restartrequired.delete_many()
+        # self.db.redhat_vulnerability_score.delete_many()
+        # self.db.redhat_vulnerability_score_cvssv3.delete_many()
+        # self.db.redhat_vulnerability_threat.delete_many()
+        # self.db.redhat_vulnerability_cwe.delete_many()
 
         print("[clear] done")
 

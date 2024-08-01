@@ -1,8 +1,10 @@
 import { tableCellClasses } from "@mui/material/TableCell";
 import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import Link from "next/link";
 import colors from "@/theme/colors";
 import { ICisco } from "@/interfaces";
+import { convertToLocalTime } from "@/utils";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -23,12 +25,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-interface Props {
-  className?: string;
-  data: ICisco[];
-}
-
-const CiscoUI: React.FC<Props> = ({ className = "", data }): React.ReactElement => {
+const CiscoUI: React.FC<{ className?: string; data: ICisco[] }> = ({ className = "", data }): React.ReactElement => {
   const renderSeverity = (raw: string) => {
     var el = <></>;
     if (raw === "Medium") {
@@ -41,15 +38,15 @@ const CiscoUI: React.FC<Props> = ({ className = "", data }): React.ReactElement 
     } else if (raw === "High") {
       el = (
         <div className="flex items-center gap-2">
-          <div className=" bg-[#a30000] rounded h-4 w-4" />
-          <div>Critical</div>
+          <div className=" bg-[#ff7302] rounded h-4 w-4" />
+          <div>{raw}</div>
         </div>
       );
     } else if (raw === "Critical") {
       el = (
         <div className="flex items-center gap-2">
           <div className="bg-[#a30000] rounded h-4 w-4" />
-          <div>Critical</div>
+          <div>{raw}</div>
         </div>
       );
     }
@@ -65,32 +62,46 @@ const CiscoUI: React.FC<Props> = ({ className = "", data }): React.ReactElement 
                 <StyledTableCell width={500} align="center">
                   Advisory
                 </StyledTableCell>
-                <StyledTableCell width={50}>Impact</StyledTableCell>
+                <StyledTableCell align="left" width={50}>
+                  Impact
+                </StyledTableCell>
                 <StyledTableCell width={100} align="center">
                   CVE
                 </StyledTableCell>
                 <StyledTableCell width={200} align="center">
                   Last updated
                 </StyledTableCell>
+                <StyledTableCell width={200} align="center">
+                  CVSS score
+                </StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {data.map((row) => (
-                <StyledTableRow key={row.id}>
+                <StyledTableRow key={row.advisoryId}>
                   <StyledTableCell>
-                    <a target="_blank" href={row.link}>
-                      <Typography className="hover:cursor-pointer text-primary-blue underline">{row.title}</Typography>
-                    </a>
+                    <Link href={`/cisco/${row.advisoryId}`}>
+                      <Typography variant="subtitle2" className="hover:cursor-pointer text-primary-blue underline">
+                        {row.advisoryTitle}
+                      </Typography>
+                    </Link>
                   </StyledTableCell>
-                  <StyledTableCell>{renderSeverity(row.impact)}</StyledTableCell>
+                  <StyledTableCell align="left">
+                    <Typography variant="subtitle2">{renderSeverity(row.sir)}</Typography>
+                  </StyledTableCell>
                   <StyledTableCell className="flex flex-column gap-12" align="center">
-                    {row.clean_cves.map((it) => (
-                      <Typography variant="body1" key={it}>
+                    {row.cves.map((it) => (
+                      <Typography key={it} variant="subtitle2">
                         {it}
                       </Typography>
                     ))}
                   </StyledTableCell>
-                  <StyledTableCell align="center">{row.last_updated}</StyledTableCell>
+                  <StyledTableCell align="center">
+                    <Typography variant="subtitle2">{convertToLocalTime(row.lastUpdated)}</Typography>
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    <Typography variant="subtitle2">{row.cvssBaseScore}</Typography>
+                  </StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>

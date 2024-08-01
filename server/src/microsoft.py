@@ -6,6 +6,8 @@ from datetime import datetime
 from dotenv import load_dotenv
 from prisma import Prisma, Client
 
+load_dotenv()
+
 
 class Microsoft:
     NEW_ITEMS: List[dict] = []
@@ -15,7 +17,7 @@ class Microsoft:
     def __init__(self, db: Client) -> any:
         with sync_playwright() as p:
             self.db = db
-            self.browser = p.chromium.launch(headless=True, args=["--start-maximized"])
+            self.browser = p.chromium.launch(headless=False, args=["--start-maximized"])
             self.context = self.browser.new_context(no_viewport=True)
             self._1_tab = self.context.new_page()
             stealth_sync(self._1_tab)
@@ -51,7 +53,6 @@ class Microsoft:
 def main():
     db = Prisma()
     db.connect()
-    load_dotenv()
     formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M")
     print("[current_time]", formatted_time, flush=True)
     Microsoft(db)

@@ -47,11 +47,12 @@ const CiscoPage: NextPage<{
             {tabNumber === 0 ? (
               <CiscoList data={data} />
             ) : tabNumber === 1 ? (
-              <CiscoList data={[...data.filter((it) => it.impact.includes("Medium"))]} />
-            ) : tabNumber === 2 ? (
-              <CiscoList data={[...data.filter((it) => it.impact.includes("High"))]} />
+              <CiscoList data={[...data.filter((it) => it.sir.includes("Medium"))]} />
+            ) : // <CiscoList  />
+            tabNumber === 2 ? (
+              <CiscoList data={[...data.filter((it) => it.sir.includes("High"))]} />
             ) : tabNumber === 3 ? (
-              <CiscoList data={[...data.filter((it) => it.impact.includes("Critical"))]} />
+              <CiscoList data={[...data.filter((it) => it.sir.includes("Critical"))]} />
             ) : (
               <></>
             )}

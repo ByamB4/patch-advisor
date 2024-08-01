@@ -4,7 +4,7 @@ import Link from "next/link";
 import { MainLayout } from "@/layouts";
 import { ICSAF } from "@/interfaces";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import { renderSynopsis } from "@/utils";
+import { convertToLocalTime, renderSynopsis } from "@/utils";
 import { db } from "@/server";
 
 const RedhatDetail: NextPage<{
@@ -33,11 +33,8 @@ const RedhatDetail: NextPage<{
               {data.RHSA}
             </Typography>
             <div className="flex gap-16">
-              <Typography variant="subtitle2" className="text-text-darkGrey">
-                Issued: 2024-03-07
-              </Typography>
-              <Typography variant="subtitle2" className="text-text-darkGrey">
-                Updated: 2024-03-07
+              <Typography variant="subtitle1" className="text-text-darkGrey">
+                Released on: {convertToLocalTime(data.released_on)}
               </Typography>
             </div>
           </div>
@@ -45,7 +42,7 @@ const RedhatDetail: NextPage<{
             <Typography variant="h3" className="text-primary-dark">
               Synopsis
             </Typography>
-            <Typography variant="subtitle1" className="text-primary-dark3">
+            <Typography variant="h6" className="text-primary-dark3">
               {renderSynopsis(data.document.title)}
             </Typography>
           </div>
@@ -53,27 +50,27 @@ const RedhatDetail: NextPage<{
             <Typography variant="h3" className="text-primary-dark">
               Type/Severity
             </Typography>
-            <Typography variant="subtitle1" className="text-primary-dark3">
+            <Typography variant="h6" className="text-primary-dark3">
               Security Advisory: {data.severity}
             </Typography>
           </div>
-          <div className="flex flex-col gap-2">
-            <Typography variant="h3" className="text-primary-dark">
-              Topic
-            </Typography>
-            <Typography variant="subtitle1">{data.document.notes[0].text}</Typography>
-          </div>
-          <div className="flex flex-col gap-2">
-            <Typography variant="h3" className="text-primary-dark">
-              Description
-            </Typography>
-            <Typography variant="subtitle1">{data.document.notes[1].text}</Typography>
+          <div className="flex flex-col gap-6">
+            {data.document.notes.map((it) => (
+              <div key={it.title} className="flex flex-col gap-4">
+                <Typography variant="h3" className="text-primary-dark">
+                  {it.title}
+                </Typography>
+                <Typography variant="h6">
+                  <div dangerouslySetInnerHTML={{ __html: it.text }} />
+                </Typography>
+              </div>
+            ))}
           </div>
           <div className="flex flex-col gap-2">
             <Typography variant="h3" className="text-primary-dark">
               Solution
             </Typography>
-            <Typography variant="subtitle1">{data.vulnerabilities[0]["remediations"][0]["details"]}</Typography>
+            <Typography variant="h6">{data.vulnerabilities[0]["remediations"][0]["details"]}</Typography>
           </div>
           <div className="flex flex-col gap-2">
             <Typography variant="h3" className="text-primary-dark">

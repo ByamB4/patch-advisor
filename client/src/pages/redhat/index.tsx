@@ -10,13 +10,19 @@ import { ICSAF } from "@/interfaces";
 import { db } from "@/server";
 import axios from "axios";
 
-const RedhatPage: NextPage<{ data: ICSAF[] }> = ({ data }): React.ReactElement => {
+const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
+  const [data, setData] = useState<ICSAF[]>(initialData);
+  const [search, setSearch] = useState<string>("");
   const [page, setPage] = useState<number>(1);
   const postPerPage: number = 100;
-  // const enhancementData = [...data.filter((it) => it.severity.includes("Enhancement"))];
-  // const bugFix = [...data.filter((it) => it.severity.includes("Bug Fix Advisory"))];
-  // const securityAdvisory = [...data.filter((it) => it.severity.includes("Security Advisory"))];
+
+  const handleSearchChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const searchValue = e.target.value;
+    setSearch(searchValue);
+    const res = await fetch("");
+    console.log("trying to search", searchValue);
+  };
 
   return (
     <MainLayout NO_PADDING>
@@ -25,9 +31,18 @@ const RedhatPage: NextPage<{ data: ICSAF[] }> = ({ data }): React.ReactElement =
           <div className={`${PADDING_X}`}>
             <div className="flex justify-between">
               <Typography variant="h1">Patch Advisor</Typography>
-              <Button variant="contained" size="medium" startIcon={<IoMdRefresh />}>
-                Rescan
-              </Button>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={search}
+                  onChange={handleSearchChange}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
+                  placeholder="CVE"
+                />
+                <Button variant="contained" size="medium" startIcon={<IoMdRefresh />}>
+                  Rescan
+                </Button>
+              </div>
             </div>
             <div className="mt-5">
               <Tabs value={tabNumber} onChange={(event, val) => setTabNumber(+val)} aria-label="homepage-tabs">
@@ -55,21 +70,7 @@ const RedhatPage: NextPage<{ data: ICSAF[] }> = ({ data }): React.ReactElement =
         </div>
         <div className={`bg-white min-h-screen ${PADDING_X}`}>
           <div className="py-5">
-            {tabNumber === 0 ? (
-              <RedHatList data={data.slice((page - 1) * postPerPage, page * postPerPage)} />
-            ) : // <div>{JSON.stringify(data[0])}</div>
-            tabNumber === 1 ? (
-              <h1>enhancement</h1>
-            ) : // <RedHatList data={enhancementData.slice((page - 1) * postPerPage, page * postPerPage)} />
-            tabNumber === 2 ? (
-              <h1>bugfix</h1>
-            ) : // <RedHatList data={bugFix.slice((page - 1) * postPerPage, page * postPerPage)} />
-            tabNumber === 3 ? (
-              <h1>security advisory</h1>
-            ) : (
-              // <RedHatList data={securityAdvisory.slice((page - 1) * postPerPage, page * postPerPage)} />
-              <></>
-            )}
+            <RedHatList data={data.slice((page - 1) * postPerPage, page * postPerPage)} />
           </div>
           <div className="flex items-center justify-center">
             <Pagination size="large" count={Math.ceil(data.length / postPerPage)} defaultPage={1} onChange={(e, val) => setPage(val)} variant="outlined" color="primary" />
@@ -83,7 +84,7 @@ const RedhatPage: NextPage<{ data: ICSAF[] }> = ({ data }): React.ReactElement =
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
   return {
     props: {
-      data: await db.redhat.findMany({
+      initialData: await db.redhat.findMany({
         include: {
           document: {
             select: {

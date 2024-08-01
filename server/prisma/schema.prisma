@@ -18,16 +18,6 @@ model vmware {
   detail   String
 }
 
-model cisco {
-  id           String   @id
-  link         String
-  title        String
-  impact       String
-  version      String
-  last_updated String
-  clean_cves   String[]
-}
-
 model oracle {
   id                    Int    @id @default(autoincrement())
   affected_product      String
@@ -71,25 +61,25 @@ model Redhat {
 }
 
 model Redhat_Document {
-  id                  String                      @id @unique @default(uuid())
+  id                  String                             @id @unique @default(uuid())
   category            String
   csaf_version        String
   lang                String
   title               String
-  aggregate_severity  Redhat_AggregateSeverity?
-  distribution        Redhat_Distribution?
-  publisher           Redhat_Publisher?
+  aggregate_severity  Redhat_Document_AggregateSeverity?
+  distribution        Redhat_Document_Distribution?
+  publisher           Redhat_Document_Publisher?
   notes               Redhat_Document_Note[]
   references          Redhat_Document_Reference[]
-  redhat              Redhat?                     @relation(fields: [redhatId], references: [id], onDelete: Cascade)
-  redhatId            String?                     @unique
+  redhat              Redhat?                            @relation(fields: [redhatId], references: [id], onDelete: Cascade)
+  redhatId            String?                            @unique
   aggregateSeverityId String?
   distributionId      String?
   publisherId         String?
-  tracking            Redhat_Tracking?
+  tracking            Redhat_Document_Tracking?
 }
 
-model Redhat_Tracking {
+model Redhat_Document_Tracking {
   id                   String           @id @unique @default(uuid())
   current_release_date String
   ID                   String
@@ -97,7 +87,7 @@ model Redhat_Tracking {
   documentId           String?          @unique
 }
 
-model Redhat_AggregateSeverity {
+model Redhat_Document_AggregateSeverity {
   id         String           @id @unique @default(uuid())
   namespace  String
   text       String
@@ -105,21 +95,21 @@ model Redhat_AggregateSeverity {
   documentId String?          @unique
 }
 
-model Redhat_Distribution {
-  id         String           @id @unique @default(uuid())
+model Redhat_Document_Distribution {
+  id         String                            @id @unique @default(uuid())
   text       String
-  tlp        Redhat_Tlp?
-  document   Redhat_Document? @relation(fields: [documentId], references: [id], onDelete: Cascade)
-  documentId String?          @unique
-  tlpId      String?          @unique
+  tlp        Redhat_Document_Distribution_Tlp?
+  document   Redhat_Document?                  @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  documentId String?                           @unique
+  tlpId      String?                           @unique
 }
 
-model Redhat_Tlp {
-  id             String               @id @unique @default(uuid())
+model Redhat_Document_Distribution_Tlp {
+  id             String                        @id @unique @default(uuid())
   label          String
   url            String
-  distribution   Redhat_Distribution? @relation(fields: [distributionId], references: [id], onDelete: Cascade)
-  distributionId String?              @unique
+  distribution   Redhat_Document_Distribution? @relation(fields: [distributionId], references: [id], onDelete: Cascade)
+  distributionId String?                       @unique
 }
 
 model Redhat_Document_Note {
@@ -131,7 +121,7 @@ model Redhat_Document_Note {
   documentId String?
 }
 
-model Redhat_Publisher {
+model Redhat_Document_Publisher {
   id                String           @id @unique @default(uuid())
   category          String
   contact_details   String
@@ -203,17 +193,17 @@ model Redhat_Vulnerability_Reference {
 }
 
 model Redhat_Vulnerability_Remediation {
-  id               String                                 @id @unique @default(uuid())
+  id               String                                             @id @unique @default(uuid())
   category         String
   details          String
   product_ids      String[]
   url              String?
-  vulnerability    Redhat_Vulnerability?                  @relation(fields: [vulnerabilityId], references: [id], onDelete: Cascade)
+  vulnerability    Redhat_Vulnerability?                              @relation(fields: [vulnerabilityId], references: [id], onDelete: Cascade)
   vulnerabilityId  String
-  restart_required Redhat_Vulnerability_RestartRequired[]
+  restart_required Redhat_Vulnerability_Remediation_RestartRequired[]
 }
 
-model Redhat_Vulnerability_RestartRequired {
+model Redhat_Vulnerability_Remediation_RestartRequired {
   id            String                            @id @unique @default(uuid())
   category      String                            @default("")
   remediation   Redhat_Vulnerability_Remediation? @relation(fields: [remediationId], references: [id], onDelete: Cascade)
@@ -221,14 +211,14 @@ model Redhat_Vulnerability_RestartRequired {
 }
 
 model Redhat_Vulnerability_Score {
-  id              String                       @id @unique @default(uuid())
-  cvss_v3         Redhat_Vulnerability_CvssV3?
+  id              String                             @id @unique @default(uuid())
+  cvss_v3         Redhat_Vulnerability_Score_CvssV3?
   products        String[]
-  vulnerability   Redhat_Vulnerability?        @relation(fields: [vulnerabilityId], references: [id], onDelete: Cascade)
+  vulnerability   Redhat_Vulnerability?              @relation(fields: [vulnerabilityId], references: [id], onDelete: Cascade)
   vulnerabilityId String
 }
 
-model Redhat_Vulnerability_CvssV3 {
+model Redhat_Vulnerability_Score_CvssV3 {
   id                    String                      @id @unique @default(uuid())
   attackComplexity      String
   attackVector          String
@@ -263,3 +253,213 @@ model Redhat_Vulnerability_Cwe {
 }
 
 // ============== END OF REDHAT ==============
+// ============== START OF CISCO ==============
+model Cisco {
+  advisoryId      String                  @id @unique
+  advisoryTitle   String
+  bugIDs          String[]
+  ipsSignatures   String[]
+  cves            String[]
+  cvrfUrl         String
+  csafUrl         String
+  cvssBaseScore   String
+  cwe             String[]
+  firstPublished  String
+  lastUpdated     String
+  status          String
+  version         String
+  productNames    String[]
+  publicationUrl  String
+  sir             String
+  summary         String
+  document        Cisco_Document?
+  productTree     Cisco_Product_Tree?
+  vulnerabilities Cisco_Vulnerabilities[]
+}
+
+model Cisco_Document {
+  id              String                           @id @unique @default(uuid())
+  acknowledgments Cisco_Document_Acknowledgments[]
+  category        String
+  csaf_version    String
+  notes           Cisco_Document_Note[]
+  publisher       Cisco_Document_Publisher?
+  references      Cisco_Document_References[]
+  title           String
+  tracking        Cisco_Document_Tracking?
+  cisco           Cisco?                           @relation(fields: [ciscoId], references: [advisoryId], onDelete: Cascade)
+  ciscoId         String                           @unique
+}
+
+model Cisco_Document_Acknowledgments {
+  id              String         @id @unique @default(uuid())
+  summary         String
+  ciscoDocument   Cisco_Document @relation(fields: [ciscoDocumentId], references: [id], onDelete: Cascade)
+  ciscoDocumentId String
+}
+
+model Cisco_Document_Note {
+  id              String         @id @unique @default(uuid())
+  category        String
+  title           String
+  text            String
+  ciscoDocument   Cisco_Document @relation(fields: [ciscoDocumentId], references: [id], onDelete: Cascade)
+  ciscoDocumentId String
+}
+
+model Cisco_Document_Publisher {
+  id                String         @id @unique @default(uuid())
+  category          String
+  contact_details   String
+  issuing_authority String
+  name              String
+  namespace         String
+  ciscoDocument     Cisco_Document @relation(fields: [ciscoDocumentId], references: [id], onDelete: Cascade)
+  ciscoDocumentId   String         @unique
+}
+
+model Cisco_Document_References {
+  id              String         @id @unique @default(uuid())
+  category        String
+  summary         String
+  url             String
+  ciscoDocument   Cisco_Document @relation(fields: [ciscoDocumentId], references: [id], onDelete: Cascade)
+  ciscoDocumentId String
+}
+
+model Cisco_Document_Tracking {
+  id                   String                                     @id @unique
+  current_release_date String
+  generator            Cisco_Document_Tracking_Generator?
+  initial_release_date String
+  revisionHistory      Cisco_Document_Tracking_Revision_History[]
+  status               String
+  version              String
+  ciscoDocument        Cisco_Document                             @relation(fields: [ciscoDocumentId], references: [id], onDelete: Cascade)
+  ciscoDocumentId      String                                     @unique
+}
+
+model Cisco_Document_Tracking_Generator {
+  id              String                                    @id @unique @default(uuid())
+  date            String
+  engine          Cisco_Document_Tracking_Generator_Engine?
+  ciscoTracking   Cisco_Document_Tracking                   @relation(fields: [ciscoTrackingId], references: [id], onDelete: Cascade)
+  ciscoTrackingId String                                    @unique
+}
+
+model Cisco_Document_Tracking_Generator_Engine {
+  id                       String                            @id @unique @default(uuid())
+  name                     String
+  ciscoTrackingGenerator   Cisco_Document_Tracking_Generator @relation(fields: [ciscoTrackingGeneratorId], references: [id], onDelete: Cascade)
+  ciscoTrackingGeneratorId String                            @unique
+}
+
+model Cisco_Document_Tracking_Revision_History {
+  id              String                  @id @unique @default(uuid())
+  date            String
+  number          String
+  summary         String
+  ciscoTracking   Cisco_Document_Tracking @relation(fields: [ciscoTrackingId], references: [id], onDelete: Cascade)
+  ciscoTrackingId String
+}
+
+model Cisco_Product_Tree {
+  id       String                        @id @unique @default(uuid())
+  branches Cisco_Product_Tree_Branches[]
+  cisco    Cisco?                        @relation(fields: [ciscoId], references: [advisoryId], onDelete: Cascade)
+  ciscoId  String                        @unique
+}
+
+model Cisco_Product_Tree_Branches {
+  id                 String                                 @id @unique @default(uuid())
+  name               String
+  category           String
+  branches           Cisco_Product_Tree_Branches_Branches[]
+  ciscoProductTree   Cisco_Product_Tree                     @relation(fields: [ciscoProductTreeId], references: [id], onDelete: Cascade)
+  ciscoProductTreeId String
+}
+
+model Cisco_Product_Tree_Branches_Branches {
+  id                         String                                        @id @unique @default(uuid())
+  name                       String
+  category                   String
+  ciscoProductTreeBranches   Cisco_Product_Tree_Branches                   @relation(fields: [ciscoProductTreeBranchesId], references: [id], onDelete: Cascade)
+  ciscoProductTreeBranchesId String
+  product                    Cisco_Product_Tree_Branches_Branches_Product?
+}
+
+model Cisco_Product_Tree_Branches_Branches_Product {
+  id                                 String                               @id @unique @default(uuid())
+  name                               String
+  product_id                         String
+  ciscoProductTreeBranchesBranches   Cisco_Product_Tree_Branches_Branches @relation(fields: [ciscoProductTreeBranchesBranchesId], references: [id], onDelete: Cascade)
+  ciscoProductTreeBranchesBranchesId String                               @unique
+}
+
+model Cisco_Vulnerabilities {
+  id            String                                @id @unique @default(uuid())
+  cve           String
+  ids           Cisco_Vulnerabilities_Ids[]
+  notes         Cisco_Vulnerabilities_Notes[]
+  productStatus Cisco_Vulnerabilities_Product_Status?
+  release_date  String?
+  remediations  Cisco_Vulnerabilities_Remediation[]
+  scores        Cisco_Vulnerabilities_Score[]
+  title         String
+  cisco         Cisco?                                @relation(fields: [ciscoId], references: [advisoryId], onDelete: Cascade)
+  ciscoId       String
+}
+
+model Cisco_Vulnerabilities_Ids {
+  id                     String                @id @unique @default(uuid())
+  system_name            String
+  text                   String
+  ciscoVulnerabilities   Cisco_Vulnerabilities @relation(fields: [ciscoVulnerabilitiesId], references: [id], onDelete: Cascade)
+  ciscoVulnerabilitiesId String
+}
+
+model Cisco_Vulnerabilities_Notes {
+  id                     String                @id @unique @default(uuid())
+  category               String
+  title                  String
+  text                   String
+  ciscoVulnerabilities   Cisco_Vulnerabilities @relation(fields: [ciscoVulnerabilitiesId], references: [id], onDelete: Cascade)
+  ciscoVulnerabilitiesId String
+}
+
+model Cisco_Vulnerabilities_Product_Status {
+  id                     String                @id @unique @default(uuid())
+  known_affected         String[]
+  ciscoVulnerabilities   Cisco_Vulnerabilities @relation(fields: [ciscoVulnerabilitiesId], references: [id], onDelete: Cascade)
+  ciscoVulnerabilitiesId String                @unique
+}
+
+model Cisco_Vulnerabilities_Remediation {
+  id                     String                @id @unique @default(uuid())
+  category               String
+  details                String
+  product_ids            String[]
+  url                    String?
+  ciscoVulnerabilities   Cisco_Vulnerabilities @relation(fields: [ciscoVulnerabilitiesId], references: [id], onDelete: Cascade)
+  ciscoVulnerabilitiesId String
+}
+
+model Cisco_Vulnerabilities_Score {
+  id                     String                            @id @unique @default(uuid())
+  cvss_v3                Cisco_Vulnerabilities_Score_Cvss?
+  products               String[]
+  ciscoVulnerabilities   Cisco_Vulnerabilities             @relation(fields: [ciscoVulnerabilitiesId], references: [id], onDelete: Cascade)
+  ciscoVulnerabilitiesId String
+}
+
+model Cisco_Vulnerabilities_Score_Cvss {
+  id                          String                      @id @unique @default(uuid())
+  baseScore                   Int
+  baseSeverity                String
+  vectorString                String
+  version                     String
+  ciscoVulnerabilitiesScore   Cisco_Vulnerabilities_Score @relation(fields: [ciscoVulnerabilitiesScoreId], references: [id], onDelete: Cascade)
+  ciscoVulnerabilitiesScoreId String                      @unique
+}
+
+// ============== END OF CISCO ==============

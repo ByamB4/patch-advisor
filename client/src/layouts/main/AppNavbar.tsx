@@ -25,14 +25,14 @@ const AppNavbar: React.FC<Props> = ({ className = "" }): React.ReactElement => {
       link: "/redhat",
     },
     {
-      id: "424f5e35-8f1e-430d-af6a-88d86eb29207",
-      title: "VMware",
-      link: "/vmware",
-    },
-    {
       id: "930a48d3-c9c2-4aa7-8603-01284a343bcc",
       title: "Cisco",
       link: "/cisco",
+    },
+    {
+      id: "424f5e35-8f1e-430d-af6a-88d86eb29207",
+      title: "VMware",
+      link: "/vmware",
     },
     {
       id: "ff3ad85f-88be-499e-9e96-0f1e36c243fa",
