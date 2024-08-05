@@ -8,6 +8,10 @@ RUN DEBIAN_FRONTEND=noninteractive \
   && pip install pytest-playwright \
   && pip install playwright-stealth \
   && pip install python-dotenv \
+  && pip install prisma \
+  && pip install prisma-client \
+  && prisma generate \
+  && prisma migrate  \
   && playwright install-deps \
   && playwright install
 
