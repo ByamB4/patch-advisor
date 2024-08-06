@@ -1,56 +1,80 @@
-/*
-  Warnings:
+-- CreateTable
+CREATE TABLE "vmware" (
+    "cve" TEXT NOT NULL,
+    "synopsis" TEXT NOT NULL,
+    "severity" TEXT NOT NULL,
+    "date" TEXT NOT NULL,
+    "link" TEXT NOT NULL,
+    "detail" TEXT NOT NULL,
 
-  - You are about to drop the `Redhat_AggregateSeverity` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Redhat_Distribution` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Redhat_Publisher` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Redhat_Tlp` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Redhat_Tracking` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Redhat_Vulnerability_CvssV3` table. If the table is not empty, all the data it contains will be lost.
-  - You are about to drop the `Redhat_Vulnerability_RestartRequired` table. If the table is not empty, all the data it contains will be lost.
+    CONSTRAINT "vmware_pkey" PRIMARY KEY ("cve")
+);
 
-*/
--- DropForeignKey
-ALTER TABLE "Redhat_AggregateSeverity" DROP CONSTRAINT "Redhat_AggregateSeverity_documentId_fkey";
+-- CreateTable
+CREATE TABLE "oracle" (
+    "id" SERIAL NOT NULL,
+    "affected_product" TEXT NOT NULL,
+    "affected_product_link" TEXT NOT NULL,
+    "patch_document" TEXT NOT NULL,
+    "patch_document_link" TEXT NOT NULL,
 
--- DropForeignKey
-ALTER TABLE "Redhat_Distribution" DROP CONSTRAINT "Redhat_Distribution_documentId_fkey";
+    CONSTRAINT "oracle_pkey" PRIMARY KEY ("id")
+);
 
--- DropForeignKey
-ALTER TABLE "Redhat_Publisher" DROP CONSTRAINT "Redhat_Publisher_documentId_fkey";
+-- CreateTable
+CREATE TABLE "microsoft" (
+    "cve" TEXT NOT NULL,
+    "release_date" TEXT NOT NULL,
+    "revision_date" TEXT NOT NULL,
+    "cve_link" TEXT NOT NULL,
+    "cve_title" TEXT NOT NULL,
+    "impact" TEXT NOT NULL,
+    "severity" TEXT NOT NULL,
+    "tag" TEXT NOT NULL,
 
--- DropForeignKey
-ALTER TABLE "Redhat_Tlp" DROP CONSTRAINT "Redhat_Tlp_distributionId_fkey";
+    CONSTRAINT "microsoft_pkey" PRIMARY KEY ("cve")
+);
 
--- DropForeignKey
-ALTER TABLE "Redhat_Tracking" DROP CONSTRAINT "Redhat_Tracking_documentId_fkey";
+-- CreateTable
+CREATE TABLE "hackernews" (
+    "title" TEXT NOT NULL,
+    "link" TEXT NOT NULL,
+    "img" TEXT NOT NULL,
+    "date" TEXT NOT NULL,
+    "description" TEXT NOT NULL,
+    "detail" TEXT NOT NULL,
 
--- DropForeignKey
-ALTER TABLE "Redhat_Vulnerability_CvssV3" DROP CONSTRAINT "Redhat_Vulnerability_CvssV3_scoreId_fkey";
+    CONSTRAINT "hackernews_pkey" PRIMARY KEY ("title")
+);
 
--- DropForeignKey
-ALTER TABLE "Redhat_Vulnerability_RestartRequired" DROP CONSTRAINT "Redhat_Vulnerability_RestartRequired_remediationId_fkey";
+-- CreateTable
+CREATE TABLE "Redhat" (
+    "id" TEXT NOT NULL,
+    "RHSA" TEXT NOT NULL,
+    "severity" TEXT NOT NULL,
+    "released_on" TEXT NOT NULL,
+    "CVEs" TEXT[],
+    "bugzillas" TEXT[],
+    "released_packages" TEXT[],
+    "resource_url" TEXT NOT NULL,
 
--- DropTable
-DROP TABLE "Redhat_AggregateSeverity";
+    CONSTRAINT "Redhat_pkey" PRIMARY KEY ("id")
+);
 
--- DropTable
-DROP TABLE "Redhat_Distribution";
+-- CreateTable
+CREATE TABLE "Redhat_Document" (
+    "id" TEXT NOT NULL,
+    "category" TEXT NOT NULL,
+    "csaf_version" TEXT NOT NULL,
+    "lang" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "redhatId" TEXT,
+    "aggregateSeverityId" TEXT,
+    "distributionId" TEXT,
+    "publisherId" TEXT,
 
--- DropTable
-DROP TABLE "Redhat_Publisher";
-
--- DropTable
-DROP TABLE "Redhat_Tlp";
-
--- DropTable
-DROP TABLE "Redhat_Tracking";
-
--- DropTable
-DROP TABLE "Redhat_Vulnerability_CvssV3";
-
--- DropTable
-DROP TABLE "Redhat_Vulnerability_RestartRequired";
+    CONSTRAINT "Redhat_Document_pkey" PRIMARY KEY ("id")
+);
 
 -- CreateTable
 CREATE TABLE "Redhat_Document_Tracking" (
@@ -93,6 +117,17 @@ CREATE TABLE "Redhat_Document_Distribution_Tlp" (
 );
 
 -- CreateTable
+CREATE TABLE "Redhat_Document_Note" (
+    "id" TEXT NOT NULL,
+    "category" TEXT NOT NULL,
+    "text" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "documentId" TEXT,
+
+    CONSTRAINT "Redhat_Document_Note_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "Redhat_Document_Publisher" (
     "id" TEXT NOT NULL,
     "category" TEXT NOT NULL,
@@ -106,12 +141,97 @@ CREATE TABLE "Redhat_Document_Publisher" (
 );
 
 -- CreateTable
+CREATE TABLE "Redhat_Document_Reference" (
+    "id" TEXT NOT NULL,
+    "category" TEXT NOT NULL,
+    "summary" TEXT NOT NULL,
+    "url" TEXT NOT NULL,
+    "documentId" TEXT,
+
+    CONSTRAINT "Redhat_Document_Reference_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Redhat_Vulnerability" (
+    "id" TEXT NOT NULL,
+    "cve" TEXT NOT NULL,
+    "discovery_date" TEXT NOT NULL,
+    "release_date" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "redhatId" TEXT NOT NULL,
+
+    CONSTRAINT "Redhat_Vulnerability_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Redhat_Vulnerability_Id" (
+    "id" TEXT NOT NULL,
+    "system_name" TEXT NOT NULL,
+    "text" TEXT NOT NULL,
+    "vulnerabilityId" TEXT,
+
+    CONSTRAINT "Redhat_Vulnerability_Id_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Redhat_Vulnerability_Note" (
+    "id" TEXT NOT NULL,
+    "category" TEXT NOT NULL,
+    "text" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "vulnerabilityId" TEXT,
+
+    CONSTRAINT "Redhat_Vulnerability_Note_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Redhat_Vulnerability_ProductStatus" (
+    "id" TEXT NOT NULL,
+    "fixed" TEXT[],
+    "vulnerabilityId" TEXT,
+
+    CONSTRAINT "Redhat_Vulnerability_ProductStatus_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Redhat_Vulnerability_Reference" (
+    "id" TEXT NOT NULL,
+    "category" TEXT NOT NULL,
+    "summary" TEXT NOT NULL,
+    "url" TEXT NOT NULL,
+    "vulnerabilityId" TEXT,
+
+    CONSTRAINT "Redhat_Vulnerability_Reference_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Redhat_Vulnerability_Remediation" (
+    "id" TEXT NOT NULL,
+    "category" TEXT NOT NULL,
+    "details" TEXT NOT NULL,
+    "product_ids" TEXT[],
+    "url" TEXT,
+    "vulnerabilityId" TEXT NOT NULL,
+
+    CONSTRAINT "Redhat_Vulnerability_Remediation_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "Redhat_Vulnerability_Remediation_RestartRequired" (
     "id" TEXT NOT NULL,
     "category" TEXT NOT NULL DEFAULT '',
     "remediationId" TEXT NOT NULL,
 
     CONSTRAINT "Redhat_Vulnerability_Remediation_RestartRequired_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Redhat_Vulnerability_Score" (
+    "id" TEXT NOT NULL,
+    "products" TEXT[],
+    "vulnerabilityId" TEXT NOT NULL,
+
+    CONSTRAINT "Redhat_Vulnerability_Score_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
@@ -132,6 +252,49 @@ CREATE TABLE "Redhat_Vulnerability_Score_CvssV3" (
     "scoreId" TEXT NOT NULL,
 
     CONSTRAINT "Redhat_Vulnerability_Score_CvssV3_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Redhat_Vulnerability_Threat" (
+    "id" TEXT NOT NULL,
+    "category" TEXT NOT NULL,
+    "details" TEXT NOT NULL,
+    "vulnerabilityId" TEXT,
+
+    CONSTRAINT "Redhat_Vulnerability_Threat_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Redhat_Vulnerability_Cwe" (
+    "id" TEXT NOT NULL,
+    "cweId" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "vulnerabilityId" TEXT,
+
+    CONSTRAINT "Redhat_Vulnerability_Cwe_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Cisco" (
+    "advisoryId" TEXT NOT NULL,
+    "advisoryTitle" TEXT NOT NULL,
+    "bugIDs" TEXT[],
+    "ipsSignatures" TEXT[],
+    "cves" TEXT[],
+    "cvrfUrl" TEXT NOT NULL,
+    "csafUrl" TEXT NOT NULL,
+    "cvssBaseScore" TEXT NOT NULL,
+    "cwe" TEXT[],
+    "firstPublished" TEXT NOT NULL,
+    "lastUpdated" TEXT NOT NULL,
+    "status" TEXT NOT NULL,
+    "version" TEXT NOT NULL,
+    "productNames" TEXT[],
+    "publicationUrl" TEXT NOT NULL,
+    "sir" TEXT NOT NULL,
+    "summary" TEXT NOT NULL,
+
+    CONSTRAINT "Cisco_pkey" PRIMARY KEY ("advisoryId")
 );
 
 -- CreateTable
@@ -343,6 +506,15 @@ CREATE TABLE "Cisco_Vulnerabilities_Score_Cvss" (
 );
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Redhat_id_key" ON "Redhat"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Document_id_key" ON "Redhat_Document"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Document_redhatId_key" ON "Redhat_Document"("redhatId");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "Redhat_Document_Tracking_id_key" ON "Redhat_Document_Tracking"("id");
 
 -- CreateIndex
@@ -370,19 +542,61 @@ CREATE UNIQUE INDEX "Redhat_Document_Distribution_Tlp_id_key" ON "Redhat_Documen
 CREATE UNIQUE INDEX "Redhat_Document_Distribution_Tlp_distributionId_key" ON "Redhat_Document_Distribution_Tlp"("distributionId");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Document_Note_id_key" ON "Redhat_Document_Note"("id");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "Redhat_Document_Publisher_id_key" ON "Redhat_Document_Publisher"("id");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Redhat_Document_Publisher_documentId_key" ON "Redhat_Document_Publisher"("documentId");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Document_Reference_id_key" ON "Redhat_Document_Reference"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_id_key" ON "Redhat_Vulnerability"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_Id_id_key" ON "Redhat_Vulnerability_Id"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_Note_id_key" ON "Redhat_Vulnerability_Note"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_ProductStatus_id_key" ON "Redhat_Vulnerability_ProductStatus"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_ProductStatus_vulnerabilityId_key" ON "Redhat_Vulnerability_ProductStatus"("vulnerabilityId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_Reference_id_key" ON "Redhat_Vulnerability_Reference"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_Remediation_id_key" ON "Redhat_Vulnerability_Remediation"("id");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "Redhat_Vulnerability_Remediation_RestartRequired_id_key" ON "Redhat_Vulnerability_Remediation_RestartRequired"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_Score_id_key" ON "Redhat_Vulnerability_Score"("id");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Redhat_Vulnerability_Score_CvssV3_id_key" ON "Redhat_Vulnerability_Score_CvssV3"("id");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Redhat_Vulnerability_Score_CvssV3_scoreId_key" ON "Redhat_Vulnerability_Score_CvssV3"("scoreId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_Threat_id_key" ON "Redhat_Vulnerability_Threat"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_Cwe_id_key" ON "Redhat_Vulnerability_Cwe"("id");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Redhat_Vulnerability_Cwe_vulnerabilityId_key" ON "Redhat_Vulnerability_Cwe"("vulnerabilityId");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Cisco_advisoryId_key" ON "Cisco"("advisoryId");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Cisco_Document_id_key" ON "Cisco_Document"("id");
@@ -472,6 +686,9 @@ CREATE UNIQUE INDEX "Cisco_Vulnerabilities_Score_Cvss_id_key" ON "Cisco_Vulnerab
 CREATE UNIQUE INDEX "Cisco_Vulnerabilities_Score_Cvss_ciscoVulnerabilitiesScoreI_key" ON "Cisco_Vulnerabilities_Score_Cvss"("ciscoVulnerabilitiesScoreId");
 
 -- AddForeignKey
+ALTER TABLE "Redhat_Document" ADD CONSTRAINT "Redhat_Document_redhatId_fkey" FOREIGN KEY ("redhatId") REFERENCES "Redhat"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
 ALTER TABLE "Redhat_Document_Tracking" ADD CONSTRAINT "Redhat_Document_Tracking_documentId_fkey" FOREIGN KEY ("documentId") REFERENCES "Redhat_Document"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
@@ -484,13 +701,46 @@ ALTER TABLE "Redhat_Document_Distribution" ADD CONSTRAINT "Redhat_Document_Distr
 ALTER TABLE "Redhat_Document_Distribution_Tlp" ADD CONSTRAINT "Redhat_Document_Distribution_Tlp_distributionId_fkey" FOREIGN KEY ("distributionId") REFERENCES "Redhat_Document_Distribution"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
+ALTER TABLE "Redhat_Document_Note" ADD CONSTRAINT "Redhat_Document_Note_documentId_fkey" FOREIGN KEY ("documentId") REFERENCES "Redhat_Document"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
 ALTER TABLE "Redhat_Document_Publisher" ADD CONSTRAINT "Redhat_Document_Publisher_documentId_fkey" FOREIGN KEY ("documentId") REFERENCES "Redhat_Document"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Redhat_Document_Reference" ADD CONSTRAINT "Redhat_Document_Reference_documentId_fkey" FOREIGN KEY ("documentId") REFERENCES "Redhat_Document"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Redhat_Vulnerability" ADD CONSTRAINT "Redhat_Vulnerability_redhatId_fkey" FOREIGN KEY ("redhatId") REFERENCES "Redhat"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Redhat_Vulnerability_Id" ADD CONSTRAINT "Redhat_Vulnerability_Id_vulnerabilityId_fkey" FOREIGN KEY ("vulnerabilityId") REFERENCES "Redhat_Vulnerability"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Redhat_Vulnerability_Note" ADD CONSTRAINT "Redhat_Vulnerability_Note_vulnerabilityId_fkey" FOREIGN KEY ("vulnerabilityId") REFERENCES "Redhat_Vulnerability"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Redhat_Vulnerability_ProductStatus" ADD CONSTRAINT "Redhat_Vulnerability_ProductStatus_vulnerabilityId_fkey" FOREIGN KEY ("vulnerabilityId") REFERENCES "Redhat_Vulnerability"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Redhat_Vulnerability_Reference" ADD CONSTRAINT "Redhat_Vulnerability_Reference_vulnerabilityId_fkey" FOREIGN KEY ("vulnerabilityId") REFERENCES "Redhat_Vulnerability"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Redhat_Vulnerability_Remediation" ADD CONSTRAINT "Redhat_Vulnerability_Remediation_vulnerabilityId_fkey" FOREIGN KEY ("vulnerabilityId") REFERENCES "Redhat_Vulnerability"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Redhat_Vulnerability_Remediation_RestartRequired" ADD CONSTRAINT "Redhat_Vulnerability_Remediation_RestartRequired_remediati_fkey" FOREIGN KEY ("remediationId") REFERENCES "Redhat_Vulnerability_Remediation"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
+ALTER TABLE "Redhat_Vulnerability_Score" ADD CONSTRAINT "Redhat_Vulnerability_Score_vulnerabilityId_fkey" FOREIGN KEY ("vulnerabilityId") REFERENCES "Redhat_Vulnerability"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
 ALTER TABLE "Redhat_Vulnerability_Score_CvssV3" ADD CONSTRAINT "Redhat_Vulnerability_Score_CvssV3_scoreId_fkey" FOREIGN KEY ("scoreId") REFERENCES "Redhat_Vulnerability_Score"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Redhat_Vulnerability_Threat" ADD CONSTRAINT "Redhat_Vulnerability_Threat_vulnerabilityId_fkey" FOREIGN KEY ("vulnerabilityId") REFERENCES "Redhat_Vulnerability"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Redhat_Vulnerability_Cwe" ADD CONSTRAINT "Redhat_Vulnerability_Cwe_vulnerabilityId_fkey" FOREIGN KEY ("vulnerabilityId") REFERENCES "Redhat_Vulnerability"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Cisco_Document" ADD CONSTRAINT "Cisco_Document_ciscoId_fkey" FOREIGN KEY ("ciscoId") REFERENCES "Cisco"("advisoryId") ON DELETE CASCADE ON UPDATE CASCADE;

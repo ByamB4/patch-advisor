@@ -1,7 +1,7 @@
 import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
 import { REDHAT_TABS } from "@/constants/configs";
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography, Pagination } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
@@ -14,13 +14,22 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
   const [tabNumber, setTabNumber] = useState<number>(0);
   const [data, setData] = useState<ICSAF[]>(initialData);
   const [search, setSearch] = useState<string>("");
+  const [debouncedSearch, setDebouncedSearch] = useState<string>("");
   const [page, setPage] = useState<number>(1);
   const postPerPage: number = 100;
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearch(search);
+    }, 300);
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [search]);
 
   const handleSearchChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = e.target.value;
     setSearch(searchValue);
-    const res = await fetch("");
     console.log("trying to search", searchValue);
   };
 
@@ -32,13 +41,13 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
             <div className="flex justify-between">
               <Typography variant="h1">Patch Advisor</Typography>
               <div className="flex gap-2">
-                <input
+                {/* <input
                   type="text"
                   value={search}
                   onChange={handleSearchChange}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
                   placeholder="CVE"
-                />
+                /> */}
                 <Button variant="contained" size="medium" startIcon={<IoMdRefresh />}>
                   Rescan
                 </Button>

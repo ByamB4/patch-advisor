@@ -7,19 +7,31 @@
 2. docker compose up -d
 ```
 
-### Start python services
+### Build python services
 
 ```sh
 1. cd server
 2. docker build -t patch-python -f Dockerfile .
-3. docker run --rm -v $(pwd)/server:/home -e PYTHONBUFFERED=1 patch-python python3
-/home/src/redhat.py
 ```
 
 ### Start client using pm2
 
 ```sh
-1. pnpm build
-2. pnpm start
-3. pm2 start
+1. pnpm i
+2. prisma generate
+3. prisma migrate dev
+4. pnpm build
+5. pm2 start "pnpm start" --name patch-next
+```
+
+### Setup python services
+
+```sh
+1. cd server
+2. create python virtual env (this is not command)
+3. pip install prisma
+4. prisma generate
+5. prisma migrate dev
+6. python src/redhat.py
+7. python src/cisco.py
 ```

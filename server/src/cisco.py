@@ -23,7 +23,7 @@ class Cisco:
             if not self.db.cisco.find_first(where={"advisoryId": cisco["advisoryId"]}):
                 print(f"[id] {cisco['advisoryId']}")
                 print(f"[url] {cisco["csafUrl"]}")
-                cisco = json_loads(self.db.cisco.create(cisco).model_dump_json())
+                cisco = json_loads(self.db.cisco.create(cisco).json())
                 for _ in range(5):
                     try:
                         detail = self.session.get(cisco["csafUrl"]).json()
@@ -49,7 +49,7 @@ class Cisco:
             }
             if "release_date" in vuln:
                 write_object["release_date"] = vuln["release_date"]
-            cisco_vuln = json_loads(self.db.cisco_vulnerabilities.create(write_object).model_dump_json())
+            cisco_vuln = json_loads(self.db.cisco_vulnerabilities.create(write_object).json())
             if "ids" in vuln:
                 for id in vuln["ids"]:
                     self.db.cisco_vulnerabilities_ids.create(
@@ -92,7 +92,7 @@ class Cisco:
                                 "products": score["products"],
                                 "ciscoVulnerabilitiesId": cisco_vuln["id"],
                             }
-                        ).model_dump_json()
+                        ).json()
                     )
                     self.db.cisco_vulnerabilities_score_cvss.create(
                         {
@@ -110,7 +110,7 @@ class Cisco:
                 {
                     "ciscoId": cisco["advisoryId"],
                 }
-            ).model_dump_json()
+            ).json()
         )
         for branch in detail["branches"]:
             cisco_product_tree_branch = json_loads(
@@ -120,7 +120,7 @@ class Cisco:
                         "category": branch["category"],
                         "ciscoProductTreeId": cisco_product_tree["id"],
                     }
-                ).model_dump_json()
+                ).json()
             )
             for branch_branches in branch["branches"]:
                 tmp = json_loads(
@@ -130,7 +130,7 @@ class Cisco:
                             "category": branch_branches["category"],
                             "ciscoProductTreeBranchesId": cisco_product_tree_branch["id"],
                         }
-                    ).model_dump_json()
+                    ).json()
                 )
                 if "product" in branch_branches:
                     self.db.cisco_product_tree_branches_branches_product.create(
@@ -150,7 +150,7 @@ class Cisco:
                     "title": detail["title"],
                     "ciscoId": cisco["advisoryId"],
                 }
-            ).model_dump_json()
+            ).json()
         )
         if "acknowledgments" in detail:
             for acknowledgement in detail["acknowledgments"]:
@@ -198,7 +198,7 @@ class Cisco:
                     "version": detail["tracking"]["version"],
                     "ciscoDocumentId": cisco_document["id"],
                 }
-            ).model_dump_json()
+            ).json()
         )
         cisco_tracking_generator = json_loads(
             self.db.cisco_document_tracking_generator.create(
@@ -206,7 +206,7 @@ class Cisco:
                     "date": detail["tracking"]["generator"]["date"],
                     "ciscoTrackingId": cisco_tracking["id"],
                 }
-            ).model_dump_json()
+            ).json()
         )
         self.db.cisco_document_tracking_generator_engine.create(
             {

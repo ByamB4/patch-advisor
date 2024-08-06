@@ -28,7 +28,7 @@ class RedhatErrata:
             }
         )
         if redhat:
-            print(json_loads(redhat.model_dump_json()))
+            print(json_loads(redhat.json()))
 
     def write_db(self) -> None:
         for csaf in get(f"{self.URL}/csaf.json", timeout=self.HTTP_TIMEOUT).json():
@@ -49,7 +49,7 @@ class RedhatErrata:
                             "released_packages": csaf["released_packages"],
                             "resource_url": csaf["resource_url"],
                         }
-                    ).model_dump_json()
+                    ).json()
                 )
                 print("[redhat]", redhat["RHSA"])
                 self.write_document(data, redhat)
@@ -66,7 +66,7 @@ class RedhatErrata:
                     "title": data["document"]["title"],
                     "redhatId": redhat["id"],
                 }
-            ).model_dump_json()
+            ).json()
         )
         self.db.redhat_document_tracking.create(
             {
@@ -83,7 +83,7 @@ class RedhatErrata:
                     "text": data["document"]["aggregate_severity"]["text"],
                     "documentId": document["id"],
                 }
-            ).model_dump_json()
+            ).json()
         )
         distribution = json_loads(
             self.db.redhat_document_distribution.create(
@@ -91,7 +91,7 @@ class RedhatErrata:
                     "text": data["document"]["distribution"]["text"],
                     "documentId": document["id"],
                 }
-            ).model_dump_json()
+            ).json()
         )
         tlp = data["document"]["distribution"]["tlp"].copy()
         tlp["distributionId"] = distribution["id"]
@@ -105,7 +105,7 @@ class RedhatErrata:
 
         write_publisher = data["document"]["publisher"].copy()
         write_publisher["documentId"] = document["id"]
-        publisher = json_loads(self.db.redhat_document_publisher.create(write_publisher).model_dump_json())
+        publisher = json_loads(self.db.redhat_document_publisher.create(write_publisher).json())
 
         for _ in data["document"]["references"]:
             write_doc_references = _.copy()
@@ -133,7 +133,7 @@ class RedhatErrata:
                         "title": vulnerability["title"],
                         "redhatId": redhat["id"],
                     }
-                ).model_dump_json()
+                ).json()
             )
             if "cwe" in vulnerability:
                 self.db.redhat_vulnerability_cwe.create(
@@ -184,7 +184,7 @@ class RedhatErrata:
                             "vulnerabilityId": record_vuln["id"],
                             "product_ids": i["product_ids"],
                         }
-                    ).model_dump_json()
+                    ).json()
                 )
                 if "url" in i:
                     self.db.redhat_vulnerability_remediation.update(
@@ -208,7 +208,7 @@ class RedhatErrata:
                                 "products": i["products"],
                                 "vulnerabilityId": record_vuln["id"],
                             }
-                        ).model_dump_json()
+                        ).json()
                     )
                     write_cvssv3 = i["cvss_v3"].copy()
                     write_cvssv3["scoreId"] = tmp_record["id"]
