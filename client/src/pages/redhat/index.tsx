@@ -1,10 +1,10 @@
 import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
 import { REDHAT_TABS } from "@/constants/configs";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useRef } from "react";
 import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography, Pagination } from "@mui/material";
-import { IoMdRefresh } from "react-icons/io";
+import { LuSearch } from "react-icons/lu";
 import { RedHatList } from "@/ui/redhat";
 import { ICSAF } from "@/interfaces";
 import { db } from "@/server";
@@ -13,24 +13,14 @@ import axios from "axios";
 const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
   const [data, setData] = useState<ICSAF[]>(initialData);
-  const [search, setSearch] = useState<string>("");
-  const [debouncedSearch, setDebouncedSearch] = useState<string>("");
+  const inputRef = useRef(null);
   const [page, setPage] = useState<number>(1);
   const postPerPage: number = 100;
 
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedSearch(search);
-    }, 300);
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [search]);
-
-  const handleSearchChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const searchValue = e.target.value;
-    setSearch(searchValue);
-    console.log("trying to search", searchValue);
+  const handleSubmit = async () => {
+    const searchValue: any = (inputRef?.current as any)?.value || "";
+    const res = (await fetch(`/api/redhat_search?search=${searchValue}`)).json();
+    setData(await res);
   };
 
   return (
@@ -41,15 +31,9 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
             <div className="flex justify-between">
               <Typography variant="h1">Patch Advisor</Typography>
               <div className="flex gap-2">
-                {/* <input
-                  type="text"
-                  value={search}
-                  onChange={handleSearchChange}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
-                  placeholder="CVE"
-                /> */}
-                <Button variant="contained" size="medium" startIcon={<IoMdRefresh />}>
-                  Rescan
+                <input type="text" ref={inputRef} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="CVE" />
+                <Button variant="contained" size="medium" startIcon={<LuSearch />} onClick={() => handleSubmit()}>
+                  Search
                 </Button>
               </div>
             </div>

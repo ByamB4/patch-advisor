@@ -70,7 +70,7 @@ const RedhatDetail: NextPage<{
             <Typography variant="h3" className="text-primary-dark">
               Solution
             </Typography>
-            <Typography variant="h6">{data.vulnerabilities[0]["remediations"][0]["details"]}</Typography>
+            {data.vulnerabilities[0] && <Typography variant="h6">{data.vulnerabilities[0]["remediations"][0]["details"]}</Typography>}
           </div>
           <div className="flex flex-col gap-2">
             <Typography variant="h3" className="text-primary-dark">
