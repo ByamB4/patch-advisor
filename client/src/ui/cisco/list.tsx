@@ -89,7 +89,7 @@ const CiscoUI: React.FC<{ className?: string; data: ICisco[] }> = ({ className =
                   <StyledTableCell align="left">
                     <Typography variant="subtitle2">{renderSeverity(row.sir)}</Typography>
                   </StyledTableCell>
-                  <StyledTableCell className="flex flex-column gap-12" align="center">
+                  <StyledTableCell width={200} className="flex flex-col gap-12" align="center">
                     {row.cves.map((it) => (
                       <Typography key={it} variant="subtitle2">
                         {it}
