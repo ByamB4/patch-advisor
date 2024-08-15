@@ -1,10 +1,12 @@
 from playwright.sync_api import sync_playwright, ElementHandle
 from playwright_stealth import stealth_sync
 from typing import List
+from os import path
 from time import sleep
+from json import dump as json_dump
+from configs import *
 from datetime import datetime
 from dotenv import load_dotenv
-from prisma import Prisma, Client
 
 load_dotenv()
 
@@ -14,10 +16,9 @@ class Microsoft:
     RETRY_ATTEMPT: int = 3
     RETRY_DELAY: int = 2
 
-    def __init__(self, db: Client) -> any:
+    def __init__(self) -> any:
         with sync_playwright() as p:
-            self.db = db
-            self.browser = p.chromium.launch(headless=False, args=["--start-maximized"])
+            self.browser = p.chromium.launch(headless=True, args=["--start-maximized"])
             self.context = self.browser.new_context(no_viewport=True)
             self._1_tab = self.context.new_page()
             stealth_sync(self._1_tab)
@@ -45,18 +46,16 @@ class Microsoft:
         return True
 
     def write_to_db(self) -> bool:
-        self.db.microsoft.create_many(data=self.NEW_ITEMS, skip_duplicates=True)
-        print(f"[redhat@save] done", flush=True)
+        with open(path.join(STATIC_ROOT, "microsoft.json"), "w") as f:
+            json_dump(self.NEW_ITEMS, f, indent=2)
+        print("[microsoft@save] done", flush=True)
         return True
 
 
 def main():
-    db = Prisma()
-    db.connect()
     formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M")
     print("[current_time]", formatted_time, flush=True)
-    Microsoft(db)
-    db.disconnect()
+    Microsoft()
 
 
 if __name__ == "__main__":

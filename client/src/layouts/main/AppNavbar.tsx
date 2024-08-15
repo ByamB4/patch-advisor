@@ -29,21 +29,21 @@ const AppNavbar: React.FC<Props> = ({ className = "" }): React.ReactElement => {
       title: "Cisco",
       link: "/cisco",
     },
-    {
-      id: "424f5e35-8f1e-430d-af6a-88d86eb29207",
-      title: "VMware",
-      link: "/vmware",
-    },
+    // {
+    //   id: "424f5e35-8f1e-430d-af6a-88d86eb29207",
+    //   title: "VMware",
+    //   link: "/vmware",
+    // },
     {
       id: "ff3ad85f-88be-499e-9e96-0f1e36c243fa",
       title: "Microsoft",
       link: "/microsoft",
     },
-    {
-      id: "261e515c-2fc7-4e3e-972c-101eb117b974",
-      title: "Oracle",
-      link: "/oracle",
-    },
+    // {
+    //   id: "261e515c-2fc7-4e3e-972c-101eb117b974",
+    //   title: "Oracle",
+    //   link: "/oracle",
+    // },
   ];
   return (
     <nav className={`flex items-center justify-between border-[#D6D8DB] border-b bg-white py-4 px-12 ${className}`}>
