@@ -11,7 +11,7 @@ class RedhatErrata:
 
     def __init__(self, db: Client) -> None:
         self.db = db
-        self.clear_db()
+        # self.clear_db()
         self.write_db()
         # self.read_db()
 

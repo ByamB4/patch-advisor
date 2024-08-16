@@ -1,20 +1,25 @@
 from prisma import Prisma, Client
 from datetime import datetime
 from dotenv import load_dotenv
-from os import getenv
 from json import load as json_load
 from configs import *
 
 
-class MicrosoftDB:
+class DB_actor:
     def __init__(self, db: Client) -> None:
         self.db = db
-        self.write_db()
+        self.microsoft()
+        self.hackernews()
 
-    def write_db(self) -> None:
+    def microsoft(self) -> None:
         with open(f"{STATIC_ROOT}/microsoft.json", "r") as f:
             items = json_load(f)
             self.db.microsoft.create_many(data=items, skip_duplicates=True)
+
+    def hackernews(self) -> None:
+        with open(f"{STATIC_ROOT}/hackernews.json", "r") as f:
+            items = json_load(f)
+            self.db.hackernews.create_many(data=items, skip_duplicates=True)
 
 
 def main() -> None:
@@ -23,7 +28,7 @@ def main() -> None:
     db.connect()
     formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M")
     print("[current_time]", formatted_time, flush=True)
-    MicrosoftDB(db)
+    DB_actor(db)
     db.disconnect()
 
 

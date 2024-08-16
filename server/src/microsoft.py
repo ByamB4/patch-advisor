@@ -20,17 +20,17 @@ class Microsoft:
         with sync_playwright() as p:
             self.browser = p.chromium.launch(headless=True, args=["--start-maximized"])
             self.context = self.browser.new_context(no_viewport=True)
-            self._1_tab = self.context.new_page()
-            stealth_sync(self._1_tab)
+            self.page = self.context.new_page()
+            stealth_sync(self.page)
             self.scrape()
-            self.write_to_db()
-            self._1_tab.close()
+            self.save_to_json()
+            self.page.close()
             self.context.close()
 
     def scrape(self) -> bool:
-        self._1_tab.goto("https://msrc.microsoft.com/update-guide/vulnerability")
-        self._1_tab.wait_for_load_state("networkidle")
-        for root_group_tab in self._1_tab.query_selector_all("xpath=//div[@role='presentation' and @class='ms-List-surface']/div"):
+        self.page.goto("https://msrc.microsoft.com/update-guide/vulnerability")
+        self.page.wait_for_load_state("networkidle")
+        for root_group_tab in self.page.query_selector_all("xpath=//div[@role='presentation' and @class='ms-List-surface']/div"):
             for row in root_group_tab.query_selector_all("xpath=./div"):
                 release_date = row.wait_for_selector("xpath=.//div[@data-automation-key='releaseDate']").text_content()
                 revision_date = row.wait_for_selector("xpath=.//div[@data-automation-key='latestRevisionDate']").text_content()
@@ -45,9 +45,9 @@ class Microsoft:
         print(f"[microsoft@scrape] {len(self.NEW_ITEMS)}", flush=True)
         return True
 
-    def write_to_db(self) -> bool:
-        with open(path.join(STATIC_ROOT, "microsoft.json"), "w") as f:
-            json_dump(self.NEW_ITEMS, f, indent=2)
+    def save_to_json(self) -> bool:
+        with open(path.join(STATIC_ROOT, "microsoft.json"), "w", encoding="utf-8") as f:
+            json_dump(self.NEW_ITEMS, f, indent=2, ensure_ascii=False)
         print("[microsoft@save] done", flush=True)
         return True
 

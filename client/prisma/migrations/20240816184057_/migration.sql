@@ -36,15 +36,17 @@ CREATE TABLE "microsoft" (
 );
 
 -- CreateTable
-CREATE TABLE "hackernews" (
+CREATE TABLE "Hackernews" (
     "title" TEXT NOT NULL,
     "link" TEXT NOT NULL,
     "img" TEXT NOT NULL,
     "date" TEXT NOT NULL,
     "description" TEXT NOT NULL,
-    "detail" TEXT NOT NULL,
+    "page_content" TEXT NOT NULL,
+    "category" TEXT NOT NULL,
+    "author" TEXT NOT NULL,
 
-    CONSTRAINT "hackernews_pkey" PRIMARY KEY ("title")
+    CONSTRAINT "Hackernews_pkey" PRIMARY KEY ("title")
 );
 
 -- CreateTable

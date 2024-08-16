@@ -37,13 +37,15 @@ model microsoft {
   tag           String
 }
 
-model hackernews {
-  title       String @id
-  link        String
-  img         String
-  date        String
-  description String
-  detail      String
+model Hackernews {
+  title        String @id
+  link         String
+  img          String
+  date         String
+  description  String
+  page_content String
+  category     String
+  author       String
 }
 
 // ============== START OF REDHAT ==============

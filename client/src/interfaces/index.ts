@@ -27,3 +27,14 @@ export interface IVmware {
   severity: string;
   detail: string;
 }
+
+export interface IHackerNews {
+  title: string;
+  link: string;
+  img: string;
+  date: string;
+  description: string;
+  page_content: string;
+  category: string;
+  author: string;
+}

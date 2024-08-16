@@ -3,7 +3,7 @@ from prisma import Prisma, Client
 from dotenv import load_dotenv
 from os import getenv
 from datetime import datetime
-from json import loads as json_loads, load as json_load
+from json import loads as json_loads
 
 load_dotenv()
 
@@ -11,7 +11,7 @@ load_dotenv()
 class Cisco:
     def __init__(self, db: Client) -> None:
         self.db = db
-        self.clear_db()
+        # self.clear_db()
         self.login()
         self.write_db()
 

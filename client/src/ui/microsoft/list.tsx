@@ -69,12 +69,12 @@ const MicrosoftUI: React.FC<Props> = ({ className = "", data = [] }): React.Reac
                 <StyledTableRow key={row.cve}>
                   <StyledTableCell>{row.release_date}</StyledTableCell>
                   <StyledTableCell align="center">{row.revision_date}</StyledTableCell>
-                  <StyledTableCell align="center">
+                  <StyledTableCell align="left">
                     <a target="_blank" href={`https://msrc.microsoft.com/update-guide/vulnerability/${row.cve}`}>
                       {row.cve}
                     </a>
                   </StyledTableCell>
-                  <StyledTableCell align="center">{row.cve_title}</StyledTableCell>
+                  <StyledTableCell align="left">{row.cve_title}</StyledTableCell>
                   <StyledTableCell align="center">{row.impact}</StyledTableCell>
                   <StyledTableCell className="flex flex-column gap-12" align="center">
                     {row.severity}

@@ -1,14 +1,14 @@
 from playwright.sync_api import sync_playwright
 from playwright_stealth import stealth_sync
-from server.src.configs import STATIC_ROOT
+from configs import STATIC_ROOT
 from json import dump as json_dump, load as json_load
+from datetime import datetime
 from time import sleep
 from os import path
 from typing import List
 
 
 class HackerNews:
-    URL: str = "https://www.oracle.com"
     NEW_ITEMS: List[dict] = []
     DATA: List[dict] = []
     RETRY_ATTEMPT: int = 3
@@ -16,21 +16,20 @@ class HackerNews:
 
     def __init__(self) -> None:
         with sync_playwright() as p:
-            self.browser = p.chromium.launch(headless=False, channel="chrome")
+            self.browser = p.chromium.launch(headless=True, channel="chrome")
             self.context = self.browser.new_context(no_viewport=True)
             self.page = self.context.new_page()
             stealth_sync(self.page)
-            self.page.goto("https://thehackernews.com/")
             self.scrape_data()
-            self.write_db()
-            # self.read_data()
-            # if self.check_new_update():
-            #     self.save()
+            self.save_to_json()
             self.page.close()
             self.context.close()
 
-    def write_db(self) -> None:
-        print("test")
+    def save_to_json(self) -> bool:
+        with open(path.join(STATIC_ROOT, "hackernews.json"), "w", encoding="utf-8") as f:
+            json_dump(self.NEW_ITEMS, f, indent=2, ensure_ascii=False)
+        print("[hackernews@save] done", flush=True)
+        return True
 
     def scrape_data(self) -> None:
         self.page.goto("https://thehackernews.com")
@@ -39,10 +38,22 @@ class HackerNews:
             img = content.wait_for_selector("xpath=.//div[@class='img-ratio']").inner_html().split('src="')[1].split('"')[0]
             title = content.wait_for_selector("xpath=.//h2[@class='home-title']").text_content()
             date = content.wait_for_selector("xpath=.//span[@class='h-datetime']").inner_html().split("/i>")[-1]
+            category = content.wait_for_selector("xpath=.//span[@class='h-tags']").inner_html()
             description = content.wait_for_selector("xpath=.//div[@class='home-desc']").text_content()
-            self.NEW_ITEMS.append({"link": link, "img": img, "title": title, "date": date, "description": description})
             print("[title]", title)
+            page_content, author = self.fetch_detail(link)
+            self.NEW_ITEMS.append({"link": link, "img": img, "title": title, "date": date, "description": description, "category": category, "page_content": page_content, "author": author})
             print("=" * 50)
+
+    def fetch_detail(self, url: str) -> None:
+        self.page_2 = self.context.new_page()
+        stealth_sync(self.page_2)
+        self.page_2.goto(url)
+
+        page_content = self.page_2.wait_for_selector("xpath=//div[@id='articlebody']").inner_html()
+        author = self.page_2.query_selector_all("//span[@class='author']")[1].inner_text()
+        self.page_2.close()
+        return page_content, author
 
     def read_data(self) -> bool:
         try:
@@ -92,5 +103,11 @@ class HackerNews:
         return True
 
 
-if __name__ == "__main__":
+def main() -> None:
+    formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M")
+    print("[current_time]", formatted_time, flush=True)
     HackerNews()
+
+
+if __name__ == "__main__":
+    main()
