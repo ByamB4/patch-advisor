@@ -98,36 +98,47 @@ export const getServerSideProps: GetServerSideProps = async (context): Promise<G
   if (typeof cve === "string") {
     return {
       props: {
-        data: await db.redhat.findFirst({
-          where: {
-            RHSA: cve,
-          },
-          include: {
-            document: {
-              select: {
-                title: true,
-                notes: true,
-                tracking: {
-                  select: {
-                    current_release_date: true,
-                  },
-                },
-                aggregate_severity: {
-                  select: {
-                    text: true,
+        data: JSON.parse(
+          JSON.stringify(
+            await db.redhat.findFirst({
+              where: {
+                RHSA: cve,
+              },
+              orderBy: {
+                document: {
+                  tracking: {
+                    current_release_date: "desc",
                   },
                 },
               },
-            },
-            vulnerabilities: {
-              select: {
-                remediations: true,
-                cve: true,
-                title: true,
+              include: {
+                document: {
+                  select: {
+                    title: true,
+                    notes: true,
+                    tracking: {
+                      select: {
+                        current_release_date: true,
+                      },
+                    },
+                    aggregate_severity: {
+                      select: {
+                        text: true,
+                      },
+                    },
+                  },
+                },
+                vulnerabilities: {
+                  select: {
+                    remediations: true,
+                    cve: true,
+                    title: true,
+                  },
+                },
               },
-            },
-          },
-        }),
+            })
+          )
+        ),
       },
     };
   }

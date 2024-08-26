@@ -66,7 +66,11 @@ const CiscoPage: NextPage<{
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
   return {
     props: {
-      data: await db.cisco.findMany(),
+      data: await db.cisco.findMany({
+        orderBy: {
+          lastUpdated: "desc",
+        },
+      }),
     },
   };
 };

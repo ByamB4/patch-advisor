@@ -53,7 +53,7 @@ model Redhat {
   id                String                 @id @unique @default(uuid())
   RHSA              String
   severity          String
-  released_on       String
+  released_on       DateTime               @default(now())
   CVEs              String[]
   bugzillas         String[]
   released_packages String[]
@@ -83,7 +83,7 @@ model Redhat_Document {
 
 model Redhat_Document_Tracking {
   id                   String           @id @unique @default(uuid())
-  current_release_date String
+  current_release_date DateTime         @default(now())
   ID                   String
   document             Redhat_Document? @relation(fields: [documentId], references: [id], onDelete: Cascade)
   documentId           String?          @unique
@@ -331,7 +331,7 @@ model Cisco_Document_References {
 
 model Cisco_Document_Tracking {
   id                   String                                     @id @unique
-  current_release_date String
+  current_release_date DateTime                                   @default(now())
   generator            Cisco_Document_Tracking_Generator?
   initial_release_date String
   revisionHistory      Cisco_Document_Tracking_Revision_History[]

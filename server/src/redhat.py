@@ -28,7 +28,7 @@ class RedhatErrata:
             }
         )
         if redhat:
-            print(json_loads(redhat.json()))
+            print(json_loads(redhat.model_dump_json()))
 
     def write_db(self) -> None:
         for csaf in get(f"{self.URL}/csaf.json", timeout=self.HTTP_TIMEOUT).json():
@@ -43,13 +43,13 @@ class RedhatErrata:
                         {
                             "RHSA": csaf["RHSA"],
                             "severity": csaf["severity"],
-                            "released_on": csaf["released_on"],
+                            "released_on": datetime.fromisoformat(csaf["released_on"]),
                             "CVEs": csaf["CVEs"],
                             "bugzillas": csaf["bugzillas"],
                             "released_packages": csaf["released_packages"],
                             "resource_url": csaf["resource_url"],
                         }
-                    ).json()
+                    ).model_dump_json()
                 )
                 print("[redhat]", redhat["RHSA"])
                 self.write_document(data, redhat)
@@ -66,11 +66,11 @@ class RedhatErrata:
                     "title": data["document"]["title"],
                     "redhatId": redhat["id"],
                 }
-            ).json()
+            ).model_dump_json()
         )
         self.db.redhat_document_tracking.create(
             {
-                "current_release_date": data["document"]["tracking"]["current_release_date"],
+                "current_release_date": datetime.fromisoformat(data["document"]["tracking"]["current_release_date"]),
                 "ID": data["document"]["tracking"]["id"],
                 "documentId": document["id"],
             }
@@ -83,7 +83,7 @@ class RedhatErrata:
                     "text": data["document"]["aggregate_severity"]["text"],
                     "documentId": document["id"],
                 }
-            ).json()
+            ).model_dump_json()
         )
         distribution = json_loads(
             self.db.redhat_document_distribution.create(
@@ -91,7 +91,7 @@ class RedhatErrata:
                     "text": data["document"]["distribution"]["text"],
                     "documentId": document["id"],
                 }
-            ).json()
+            ).model_dump_json()
         )
         tlp = data["document"]["distribution"]["tlp"].copy()
         tlp["distributionId"] = distribution["id"]
@@ -133,7 +133,7 @@ class RedhatErrata:
                         "title": vulnerability["title"],
                         "redhatId": redhat["id"],
                     }
-                ).json()
+                ).model_dump_json()
             )
             if "cwe" in vulnerability:
                 self.db.redhat_vulnerability_cwe.create(
@@ -184,7 +184,7 @@ class RedhatErrata:
                             "vulnerabilityId": record_vuln["id"],
                             "product_ids": i["product_ids"],
                         }
-                    ).json()
+                    ).model_dump_json()
                 )
                 if "url" in i:
                     self.db.redhat_vulnerability_remediation.update(
@@ -208,7 +208,7 @@ class RedhatErrata:
                                 "products": i["products"],
                                 "vulnerabilityId": record_vuln["id"],
                             }
-                        ).json()
+                        ).model_dump_json()
                     )
                     write_cvssv3 = i["cvss_v3"].copy()
                     write_cvssv3["scoreId"] = tmp_record["id"]

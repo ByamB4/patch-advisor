@@ -22,7 +22,9 @@ const LandingPage: NextPage<{ initialData: IHackerNews[] }> = ({ initialData }):
                 <Image alt={it.title} width={300} height={300} src={it.img} className="rounded-lg" />
               </Link>
               <div className="flex flex-col justify-center gap-4 w-full">
-                <Typography variant="h5">{it.title}</Typography>
+                <Link href={`/hackernews/${it.title}`}>
+                  <Typography variant="h5">{it.title}</Typography>
+                </Link>
                 <div className="flex justify-between">
                   <div className="flex items-center gap-2">
                     <IoCalendarOutline size={16} />

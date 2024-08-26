@@ -77,26 +77,37 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
   return {
     props: {
-      initialData: await db.redhat.findMany({
-        include: {
-          document: {
-            select: {
-              title: true,
-              notes: true,
-              tracking: {
-                select: {
-                  current_release_date: true,
-                },
-              },
-              aggregate_severity: {
-                select: {
-                  text: true,
+      initialData: JSON.parse(
+        JSON.stringify(
+          await db.redhat.findMany({
+            orderBy: {
+              document: {
+                tracking: {
+                  current_release_date: "desc",
                 },
               },
             },
-          },
-        },
-      }),
+            include: {
+              document: {
+                select: {
+                  title: true,
+                  notes: true,
+                  tracking: {
+                    select: {
+                      current_release_date: true,
+                    },
+                  },
+                  aggregate_severity: {
+                    select: {
+                      text: true,
+                    },
+                  },
+                },
+              },
+            },
+          })
+        )
+      ),
     },
   };
 };

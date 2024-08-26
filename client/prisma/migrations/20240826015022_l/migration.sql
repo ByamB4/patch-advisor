@@ -54,7 +54,7 @@ CREATE TABLE "Redhat" (
     "id" TEXT NOT NULL,
     "RHSA" TEXT NOT NULL,
     "severity" TEXT NOT NULL,
-    "released_on" TEXT NOT NULL,
+    "released_on" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "CVEs" TEXT[],
     "bugzillas" TEXT[],
     "released_packages" TEXT[],
@@ -81,7 +81,7 @@ CREATE TABLE "Redhat_Document" (
 -- CreateTable
 CREATE TABLE "Redhat_Document_Tracking" (
     "id" TEXT NOT NULL,
-    "current_release_date" TEXT NOT NULL,
+    "current_release_date" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "ID" TEXT NOT NULL,
     "documentId" TEXT,
 
@@ -357,7 +357,7 @@ CREATE TABLE "Cisco_Document_References" (
 -- CreateTable
 CREATE TABLE "Cisco_Document_Tracking" (
     "id" TEXT NOT NULL,
-    "current_release_date" TEXT NOT NULL,
+    "current_release_date" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "initial_release_date" TEXT NOT NULL,
     "status" TEXT NOT NULL,
     "version" TEXT NOT NULL,

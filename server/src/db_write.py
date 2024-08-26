@@ -16,10 +16,14 @@ class DB_actor:
             items = json_load(f)
             self.db.microsoft.create_many(data=items, skip_duplicates=True)
 
+        print("[microsoft@save] done")
+
     def hackernews(self) -> None:
         with open(f"{STATIC_ROOT}/hackernews.json", "r") as f:
             items = json_load(f)
             self.db.hackernews.create_many(data=items, skip_duplicates=True)
+
+        print("[hackernews@save] done")
 
 
 def main() -> None:

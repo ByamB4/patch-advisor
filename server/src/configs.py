@@ -1,8 +1,11 @@
 from os import getenv, path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # windows
 PROJECT_NAME = "patch-advisor"
-DEBUG = True
+DEBUG = bool(getenv("DEBUG"))
 
 
 def get_project_root() -> str:
