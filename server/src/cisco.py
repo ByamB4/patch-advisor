@@ -22,7 +22,7 @@ class Cisco:
             # input()
             if not self.db.cisco.find_first(where={"advisoryId": cisco["advisoryId"]}):
                 print(f"[id] {cisco['advisoryId']}")
-                print(f"[url] {cisco["csafUrl"]}")
+                print(f"[url] {cisco['csafUrl']}")
                 cisco = json_loads(self.db.cisco.create(cisco).json())
                 for _ in range(5):
                     try:
