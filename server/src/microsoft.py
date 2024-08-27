@@ -28,25 +28,34 @@ class Microsoft:
             self.context.close()
 
     def scrape(self) -> bool:
-        self.page.goto("https://msrc.microsoft.com/update-guide/vulnerability")
-        self.page.wait_for_load_state("networkidle")
-        for root_group_tab in self.page.query_selector_all("xpath=//div[@role='presentation' and @class='ms-List-surface']/div"):
-            for row in root_group_tab.query_selector_all("xpath=./div"):
-                release_date = row.wait_for_selector("xpath=.//div[@data-automation-key='releaseDate']").text_content()
-                revision_date = row.wait_for_selector("xpath=.//div[@data-automation-key='latestRevisionDate']").text_content()
-                cve = row.wait_for_selector("xpath=.//div[@data-automation-key='cveNumber']/a").text_content()
-                cve_link = row.wait_for_selector("xpath=.//div[@data-automation-key='cveNumber']/a").get_attribute("href")
-                cve_title = row.wait_for_selector("xpath=.//div[@data-automation-key='cveTitle']").text_content()
-                impact = row.wait_for_selector("xpath=.//div[@data-automation-key='impact']").text_content()
-                severity = row.wait_for_selector("xpath=.//div[@data-automation-key='severity']").text_content()
-                tag = row.wait_for_selector("xpath=.//div[@data-automation-key='tag']").text_content()
-                self.NEW_ITEMS.append({"release_date": release_date, "revision_date": revision_date, "cve": cve, "cve_link": cve_link, "cve_title": cve_title, "impact": impact, "severity": severity, "tag": tag})
+        print("[microsoft@scrape] starting ...", flush=True)
+        for attempt in (1, self.RETRY_ATTEMPT+1):
+            try:
+                self.page.goto("https://msrc.microsoft.com/update-guide/vulnerability")
+                self.page.wait_for_load_state("networkidle")
+                for root_group_tab in self.page.query_selector_all("xpath=//div[@role='presentation' and @class='ms-List-surface']/div"):
+                    for row in root_group_tab.query_selector_all("xpath=./div"):
+                        release_date = row.wait_for_selector("xpath=.//div[@data-automation-key='releaseDate']").text_content()
+                        revision_date = row.wait_for_selector("xpath=.//div[@data-automation-key='latestRevisionDate']").text_content()
+                        cve = row.wait_for_selector("xpath=.//div[@data-automation-key='cveNumber']/a").text_content()
+                        cve_link = row.wait_for_selector("xpath=.//div[@data-automation-key='cveNumber']/a").get_attribute("href")
+                        cve_title = row.wait_for_selector("xpath=.//div[@data-automation-key='cveTitle']").text_content()
+                        impact = row.wait_for_selector("xpath=.//div[@data-automation-key='impact']").text_content()
+                        severity = row.wait_for_selector("xpath=.//div[@data-automation-key='severity']").text_content()
+                        tag = row.wait_for_selector("xpath=.//div[@data-automation-key='tag']").text_content()
+                        self.NEW_ITEMS.append({"release_date": release_date, "revision_date": revision_date, "cve": cve, "cve_link": cve_link, "cve_title": cve_title, "impact": impact, "severity": severity, "tag": tag})
 
-        print(f"[microsoft@scrape] {len(self.NEW_ITEMS)}", flush=True)
-        return True
+                print(f"[microsoft@scrape] {len(self.NEW_ITEMS)}", flush=True)
+                return True
+            except Exception as e:
+                print(f"[microsoft@attempt] {attempt} failed", flush=True)
+                sleep(self.RETRY_DELAY)
 
     def save_to_json(self) -> bool:
-        with open(path.join(STATIC_ROOT, "microsoft.json"), "w", encoding="utf-8") as f:
+        file_path = '/home/static/microsoft.json'
+        if DEBUG:
+            file_path = f"{STATIC_ROOT}/hackernews.json"
+        with open(file_path, "w", encoding="utf-8") as f:
             json_dump(self.NEW_ITEMS, f, indent=2, ensure_ascii=False)
         print("[microsoft@save] done", flush=True)
         return True
