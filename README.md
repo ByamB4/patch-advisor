@@ -30,6 +30,7 @@
 6. prisma migrate dev
 7. python src/redhat.py
 8. python src/cisco.py
+9. update .env DEBUG -> False
 ```
 
 ### Build python services
