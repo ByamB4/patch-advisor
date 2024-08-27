@@ -30,13 +30,25 @@
 6. prisma migrate dev
 7. python src/redhat.py
 8. python src/cisco.py
-9. update .env DEBUG -> False
 ```
 
 ### Build python services
 
 ```sh
 1. cd server
+2. Update /src/configs.py DEBUG=False
 2. docker build -t patch-python -f Dockerfile .
-3. docker run --rm -v $(pwd)/server:/home -e PYTHONBUFFERED=1 patch-python python3 /home/src/microsoft.py
+3. docker run --rm -v $(pwd):/home patch-python python3 /home/src/microsoft.py
+4. docker run --rm -v $(pwd):/home patch-python python3 /home/src/hackernews.py
+```
+
+### Set up cron job
+
+```sh
+1. crontab -e
+2. 0 * * * * /root/khanbank-patch-advisor/server/venv/bin/python3 /root/khanbank-patch-advisor/server/src/redhat.py 2>/tmp/redhat.err
+3. 0 * * * * /root/khanbank-patch-advisor/server/venv/bin/python3 /root/khanbank-patch-advisor/server/src/cisco.py 2>/tmp/cisco.err
+4. 0 * * * * cd /root/khanbank-patch-advisor/server; docker run --rm -v $(pwd):/home patch-python python3 /home/src/hackernews.py 2>/tmp/hackernews.err;
+5. 0 * * * * cd /root/khanbank-patch-advisor/server; docker run --rm -v $(pwd):/home patch-python python3 /home/src/microsoft.py 2>/tmp/microsoft.err;
+6. */30 * * * * /root/khanbank-patch-advisor/server/venv/bin/python3 /root/khanbank-patch-advisor/server/src/db_write.py 2>/tmp/db_write.err
 ```
