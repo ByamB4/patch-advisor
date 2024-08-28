@@ -35,7 +35,7 @@ const HackernewsDetail: NextPage<{
             </Typography>
             <div className="flex gap-16">
               <Typography variant="subtitle1" className="text-text-darkGrey">
-                Date: <span className="font-semibold">{data.date}</span>
+                Date: <span className="font-semibold">{convertToLocalTime(data.date)}</span>
               </Typography>
             </div>
           </div>
@@ -54,11 +54,15 @@ export const getServerSideProps: GetServerSideProps = async (context): Promise<G
   if (typeof title === "string") {
     return {
       props: {
-        data: await db.hackernews.findFirst({
-          where: {
-            title: title,
-          },
-        }),
+        data: JSON.parse(
+          JSON.stringify(
+            await db.hackernews.findFirst({
+              where: {
+                title: title,
+              },
+            })
+          )
+        ),
       },
     };
   }

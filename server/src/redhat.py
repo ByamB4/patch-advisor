@@ -261,3 +261,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+# {'release_date': 'Aug 8, 2024', 'revision_date': '-', 'cve': 'CVE-2024-7550', 'cve_link': '/update-guide/vulnerability/CVE-2024-7550', 'cve_title': 'Chromium: CVE-2024-7532 Out of bounds memory access in ANGLE', 'impact': '', 'severity': '', 'tag': 'Microsoft Edge (Chromium-based)'}

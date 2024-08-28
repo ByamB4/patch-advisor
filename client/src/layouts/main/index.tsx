@@ -1,5 +1,5 @@
 import AppNavbar from "./AppNavbar";
-import { MARGIN_Y, PADDING_X } from "@/constants/layout";
+import { MARGIN_Y, PADDING_X } from "@/constants/configs";
 
 interface Props {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ const MainLayout: React.FC<Props> = ({ children, className = "", NO_PADDING = fa
     <>
       <div className={`flex flex-col bg-[#F3FAFB] h-full w-full ${className}`}>
         <AppNavbar />
-        <main className={`min-h-screen ${NO_PADDING ? "" : MARGIN_Y + " " + PADDING_X}`}>{children}</main>
+        <main className={`${NO_PADDING ? "" : MARGIN_Y + " " + PADDING_X}`}>{children}</main>
       </div>
     </>
   );

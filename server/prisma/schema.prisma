@@ -9,7 +9,7 @@ generator client {
   interface            = "sync"
 }
 
-model vmware {
+model Vmware {
   cve      String @id
   synopsis String
   severity String
@@ -18,7 +18,7 @@ model vmware {
   detail   String
 }
 
-model oracle {
+model Oracle {
   id                    Int    @id @default(autoincrement())
   affected_product      String
   affected_product_link String
@@ -26,9 +26,9 @@ model oracle {
   patch_document_link   String
 }
 
-model microsoft {
-  cve           String @id
-  release_date  String
+model Microsoft {
+  cve           String   @id
+  release_date  DateTime @default(now())
   revision_date String
   cve_link      String
   cve_title     String
@@ -38,10 +38,10 @@ model microsoft {
 }
 
 model Hackernews {
-  title        String @id
+  title        String   @id
   link         String
   img          String
-  date         String
+  date         DateTime @default(now())
   description  String
   page_content String
   category     String

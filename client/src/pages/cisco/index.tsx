@@ -1,8 +1,7 @@
 import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import { CISCO_TABS } from "@/constants/configs";
-import { useState } from "react";
-import { MARGIN_Y, PADDING_X } from "@/constants/layout";
+import { CISCO_TABS, CURRENT_MONTH, MARGIN_T, PADDING_X } from "@/constants/configs";
+import { useEffect, useState } from "react";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
 import { CiscoList } from "@/ui/cisco";
@@ -10,14 +9,26 @@ import { ICisco } from "@/interfaces";
 import { db } from "@/server";
 
 const CiscoPage: NextPage<{
-  data: ICisco[];
-}> = ({ data }): React.ReactElement => {
+  initialData: ICisco[];
+}> = ({ initialData }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
+  const [data, setData] = useState<ICisco[]>(initialData);
+
+  useEffect(() => {
+    if (tabNumber === 4) {
+      setData(
+        data.filter((it: ICisco) => {
+          const itemDate = new Date(it.lastUpdated);
+          return itemDate.getMonth() === CURRENT_MONTH;
+        })
+      );
+    }
+  }, [tabNumber]);
 
   return (
     <MainLayout NO_PADDING>
-      <div className={`${MARGIN_Y}`}>
-        <div className="border-b">
+      <div>
+        <section className={`${MARGIN_T} border-b`}>
           <div className={`${PADDING_X}`}>
             <div className="flex justify-between">
               <Typography variant="h1">Patch Advisor</Typography>
@@ -41,8 +52,8 @@ const CiscoPage: NextPage<{
               </Tabs>
             </div>
           </div>
-        </div>
-        <div className={`bg-white min-h-screen ${PADDING_X}`}>
+        </section>
+        <section className={`bg-white min-h-screen ${PADDING_X}`}>
           <div className="py-5">
             {tabNumber === 0 ? (
               <CiscoList data={data} />
@@ -53,11 +64,13 @@ const CiscoPage: NextPage<{
               <CiscoList data={[...data.filter((it) => it.sir.includes("High"))]} />
             ) : tabNumber === 3 ? (
               <CiscoList data={[...data.filter((it) => it.sir.includes("Critical"))]} />
+            ) : tabNumber === 4 ? (
+              <CiscoList data={data} />
             ) : (
               <></>
             )}
           </div>
-        </div>
+        </section>
       </div>
     </MainLayout>
   );
@@ -66,7 +79,7 @@ const CiscoPage: NextPage<{
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
   return {
     props: {
-      data: await db.cisco.findMany({
+      initialData: await db.cisco.findMany({
         orderBy: {
           lastUpdated: "desc",
         },

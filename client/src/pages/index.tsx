@@ -1,15 +1,12 @@
 import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
 import Image from "next/image";
-import { NEWS_TABS } from "@/constants/configs";
-import { useState } from "react";
-import { MARGIN_Y, PADDING_X } from "@/constants/layout";
-import { Button, Tab, Tabs, Typography } from "@mui/material";
-import { IoMdRefresh } from "react-icons/io";
+import { Typography } from "@mui/material";
 import { db } from "@/server";
 import { IHackerNews } from "@/interfaces";
 import Link from "next/link";
 import { IoCalendarOutline } from "react-icons/io5";
+import { convertToLocalTime } from "@/utils";
 
 const LandingPage: NextPage<{ initialData: IHackerNews[] }> = ({ initialData }): React.ReactElement => {
   return (
@@ -28,7 +25,7 @@ const LandingPage: NextPage<{ initialData: IHackerNews[] }> = ({ initialData }):
                 <div className="flex justify-between">
                   <div className="flex items-center gap-2">
                     <IoCalendarOutline size={16} />
-                    <Typography variant="subtitle2">{it.date}</Typography>
+                    <Typography variant="subtitle2">{convertToLocalTime(it.date)}</Typography>
                   </div>
                   <Typography variant="subtitle2">{it.category}</Typography>
                 </div>
@@ -47,15 +44,22 @@ const LandingPage: NextPage<{ initialData: IHackerNews[] }> = ({ initialData }):
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
   return {
     props: {
-      initialData: await db.hackernews.findMany({
-        select: {
-          date: true,
-          description: true,
-          img: true,
-          title: true,
-          category: true,
-        },
-      }),
+      initialData: JSON.parse(
+        JSON.stringify(
+          await db.hackernews.findMany({
+            orderBy: {
+              date: "desc",
+            },
+            select: {
+              date: true,
+              description: true,
+              img: true,
+              title: true,
+              category: true,
+            },
+          })
+        )
+      ),
     },
   };
 };

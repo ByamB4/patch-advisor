@@ -7,6 +7,11 @@ from time import sleep
 from typing import List
 
 
+file_path = "/home/static/hackernews.json"
+if DEBUG:
+    file_path = f"{STATIC_ROOT}/hackernews.json"
+
+
 class HackerNews:
     NEW_ITEMS: List[dict] = []
     DATA: List[dict] = []
@@ -19,16 +24,19 @@ class HackerNews:
             self.context = self.browser.new_context(no_viewport=True)
             self.page = self.context.new_page()
             stealth_sync(self.page)
+            self.create_file()
             self.scrape_data()
             self.save_to_json()
             self.page.close()
             self.context.close()
 
-    def save_to_json(self) -> bool:
-        file_path = "/home/static/hackernews.json"
-        if DEBUG:
-            file_path = f"{STATIC_ROOT}/hackernews.json"
+    def create_file(self) -> bool:
+        with open(file_path, "w", encoding="utf-8") as f:
+            json_dump([], f, indent=2, ensure_ascii=False)
+        print("[hackernews@create_file] done", flush=True)
+        return True
 
+    def save_to_json(self) -> bool:
         with open(file_path, "w", encoding="utf-8") as f:
             json_dump(self.NEW_ITEMS, f, indent=2, ensure_ascii=False)
         print("[hackernews@save] done", flush=True)

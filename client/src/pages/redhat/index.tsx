@@ -1,21 +1,18 @@
 import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import { REDHAT_TABS } from "@/constants/configs";
-import { useState, useRef } from "react";
-import { MARGIN_Y, PADDING_X } from "@/constants/layout";
+import { REDHAT_TABS, MARGIN_T, PADDING_X, POST_PER_PAGE, CURRENT_MONTH, PADDING_Y } from "@/constants/configs";
+import { useState, useRef, useEffect } from "react";
 import { Button, Tab, Tabs, Typography, Pagination } from "@mui/material";
 import { LuSearch } from "react-icons/lu";
 import { RedHatList } from "@/ui/redhat";
 import { ICSAF } from "@/interfaces";
 import { db } from "@/server";
-import axios from "axios";
 
 const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
   const [data, setData] = useState<ICSAF[]>(initialData);
   const inputRef = useRef(null);
   const [page, setPage] = useState<number>(1);
-  const postPerPage: number = 100;
 
   const handleSubmit = async () => {
     const searchValue: any = (inputRef?.current as any)?.value || "";
@@ -23,11 +20,25 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
     setData(await res);
   };
 
+  useEffect(() => {
+    if (tabNumber === 0) {
+      setData(initialData);
+    } else if (tabNumber === 1) {
+      setData(
+        data.filter((it: ICSAF) => {
+          const itemDate = new Date(it.document.tracking.current_release_date);
+          return itemDate.getMonth() === CURRENT_MONTH;
+        })
+      );
+    }
+    setPage(1);
+  }, [tabNumber]);
+
   return (
     <MainLayout NO_PADDING>
-      <div className={`${MARGIN_Y}`}>
-        <div className="border-b">
-          <div className={`${PADDING_X}`}>
+      <div>
+        <section className={`${MARGIN_T} border-b`}>
+          <div className={`flex flex-col gap-6 ${PADDING_X}`}>
             <div className="flex justify-between">
               <Typography variant="h1">Patch Advisor</Typography>
               <div className="flex gap-2">
@@ -37,7 +48,7 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
                 </Button>
               </div>
             </div>
-            <div className="mt-5">
+            <div>
               <Tabs value={tabNumber} onChange={(event, val) => setTabNumber(+val)} aria-label="homepage-tabs">
                 {REDHAT_TABS.map((it, _: number) => (
                   <Tab
@@ -49,7 +60,7 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
                         {it.unread > 0 && (
                           <div className="bg-secondary-roseWhite border-secondary-lightPeach border-2 rounded-full px-1">
                             <Typography variant="caption" className="text-text-grey">
-                              2
+                              {it.unread}
                             </Typography>
                           </div>
                         )}
@@ -60,15 +71,21 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
               </Tabs>
             </div>
           </div>
-        </div>
-        <div className={`bg-white min-h-screen ${PADDING_X}`}>
+        </section>
+        <section className={`bg-white ${PADDING_X}`}>
           <div className="py-5">
-            <RedHatList data={data.slice((page - 1) * postPerPage, page * postPerPage)} />
+            {tabNumber === 0 ? (
+              <RedHatList data={data.slice((page - 1) * POST_PER_PAGE, page * POST_PER_PAGE)} />
+            ) : tabNumber === 1 ? (
+              <RedHatList data={data.slice((page - 1) * POST_PER_PAGE, page * POST_PER_PAGE)} />
+            ) : (
+              <></>
+            )}
           </div>
-          <div className="flex items-center justify-center">
-            <Pagination size="large" count={Math.ceil(data.length / postPerPage)} defaultPage={1} onChange={(e, val) => setPage(val)} variant="outlined" color="primary" />
+          <div className="flex items-center justify-center py-12">
+            <Pagination size="large" count={Math.ceil(data.length / POST_PER_PAGE)} defaultPage={1} onChange={(e, val) => setPage(val)} variant="outlined" color="primary" />
           </div>
-        </div>
+        </section>
       </div>
     </MainLayout>
   );

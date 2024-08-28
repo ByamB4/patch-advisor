@@ -1,7 +1,6 @@
-from playwright.sync_api import sync_playwright, ElementHandle
+from playwright.sync_api import sync_playwright
 from playwright_stealth import stealth_sync
 from typing import List
-from os import path
 from time import sleep
 from json import dump as json_dump
 from configs import *
@@ -9,6 +8,11 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 load_dotenv()
+
+
+file_path = "/home/static/microsoft.json"
+if DEBUG:
+    file_path = f"{STATIC_ROOT}/microsoft.json"
 
 
 class Microsoft:
@@ -22,14 +26,21 @@ class Microsoft:
             self.context = self.browser.new_context(no_viewport=True)
             self.page = self.context.new_page()
             stealth_sync(self.page)
+            self.create_file()
             self.scrape()
             self.save_to_json()
             self.page.close()
             self.context.close()
 
+    def create_file(self) -> bool:
+        with open(file_path, "w", encoding="utf-8") as f:
+            json_dump([], f, indent=2, ensure_ascii=False)
+        print("[microsoft@create_file] done", flush=True)
+        return True
+
     def scrape(self) -> bool:
         print("[microsoft@scrape] starting ...", flush=True)
-        for attempt in (1, self.RETRY_ATTEMPT+1):
+        for attempt in (1, self.RETRY_ATTEMPT + 1):
             try:
                 self.page.goto("https://msrc.microsoft.com/update-guide/vulnerability")
                 self.page.wait_for_load_state("networkidle")
@@ -44,6 +55,8 @@ class Microsoft:
                         severity = row.wait_for_selector("xpath=.//div[@data-automation-key='severity']").text_content()
                         tag = row.wait_for_selector("xpath=.//div[@data-automation-key='tag']").text_content()
                         self.NEW_ITEMS.append({"release_date": release_date, "revision_date": revision_date, "cve": cve, "cve_link": cve_link, "cve_title": cve_title, "impact": impact, "severity": severity, "tag": tag})
+                        print(f"[{cve}] {cve_title}", flush=True)
+                        print("=" * 50, flush=True)
 
                 print(f"[microsoft@scrape] {len(self.NEW_ITEMS)}", flush=True)
                 return True
@@ -52,12 +65,9 @@ class Microsoft:
                 sleep(self.RETRY_DELAY)
 
     def save_to_json(self) -> bool:
-        file_path = '/home/static/microsoft.json'
-        if DEBUG:
-            file_path = f"{STATIC_ROOT}/hackernews.json"
         with open(file_path, "w", encoding="utf-8") as f:
             json_dump(self.NEW_ITEMS, f, indent=2, ensure_ascii=False)
-        print("[microsoft@save] done", flush=True)
+        print("[microsoft@save_to_json] done", flush=True)
         return True
 
 

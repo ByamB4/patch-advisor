@@ -1,8 +1,7 @@
 import { MainLayout } from "@/layouts";
 import { NextPage } from "next";
-import { MICROSOFT_TABS } from "@/constants/configs";
+import { MICROSOFT_TABS, PADDING_X, MARGIN_T } from "@/constants/configs";
 import { useEffect, useState } from "react";
-import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
 import { GetServerSideProps, GetServerSidePropsResult } from "next";
@@ -11,20 +10,20 @@ import { IMicrosoft } from "@/interfaces";
 import MicrosoftUI from "@/ui/microsoft/list";
 
 interface Props {
-  className?: string;
   data: IMicrosoft[];
 }
 
-const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.ReactElement => {
+const MicrosoftPage: NextPage<Props> = ({ data = [] }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
+
   useEffect(() => {
     console.log(data);
   }, []);
 
   return (
     <MainLayout NO_PADDING>
-      <div className={`${MARGIN_Y} ${className}`}>
-        <div className="border-b">
+      <div>
+        <section className={`${MARGIN_T} border-b`}>
           <div className={`${PADDING_X}`}>
             <div className="flex justify-between">
               <Typography variant="h1">Patch Advisor</Typography>
@@ -55,10 +54,10 @@ const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.Re
               </Tabs>
             </div>
           </div>
-        </div>
-        <div className={`bg-white min-h-screen ${PADDING_X}`}>
+        </section>
+        <section className={`bg-white min-h-screen ${PADDING_X}`}>
           <div className="py-5">{tabNumber === 0 ? <MicrosoftUI data={data} /> : <></>}</div>
-        </div>
+        </section>
       </div>
     </MainLayout>
   );
@@ -67,7 +66,15 @@ const MicrosoftPage: NextPage<Props> = ({ className = "", data = [] }): React.Re
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
   return {
     props: {
-      data: await db.microsoft.findMany({}),
+      data: JSON.parse(
+        JSON.stringify(
+          await db.microsoft.findMany({
+            orderBy: {
+              release_date: "desc",
+            },
+          })
+        )
+      ),
     },
   };
 };

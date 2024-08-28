@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import colors from "@/theme/colors";
 import { IMicrosoft } from "@/interfaces";
 import { useEffect, useState } from "react";
+import { convertToLocalTime } from "@/utils";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -53,21 +54,27 @@ const MicrosoftUI: React.FC<Props> = ({ className = "", data = [] }): React.Reac
           <Table sx={{ minWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow>
-                <StyledTableCell>Release date</StyledTableCell>
-                <StyledTableCell align="center" width={200}>
+                <StyledTableCell width={150}>Release date</StyledTableCell>
+                <StyledTableCell align="center" width={150}>
                   Last Updated
                 </StyledTableCell>
-                <StyledTableCell align="center">CVE Number</StyledTableCell>
-                <StyledTableCell align="center">CVE Title</StyledTableCell>
+                <StyledTableCell align="center" width={200}>
+                  CVE Number
+                </StyledTableCell>
+                <StyledTableCell align="center" width={500}>
+                  CVE Title
+                </StyledTableCell>
                 <StyledTableCell align="center">Impact</StyledTableCell>
-                <StyledTableCell align="center">Max Severity</StyledTableCell>
+                <StyledTableCell align="center" width={100}>
+                  Max Severity
+                </StyledTableCell>
                 <StyledTableCell align="center">Tag</StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {sortedData.map((row) => (
                 <StyledTableRow key={row.cve}>
-                  <StyledTableCell>{row.release_date}</StyledTableCell>
+                  <StyledTableCell>{convertToLocalTime(row.release_date)}</StyledTableCell>
                   <StyledTableCell align="center">{row.revision_date}</StyledTableCell>
                   <StyledTableCell align="left">
                     <a target="_blank" href={`https://msrc.microsoft.com/update-guide/vulnerability/${row.cve}`}>

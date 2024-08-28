@@ -1,8 +1,7 @@
 import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import { ORACLE_TABS } from "@/constants/configs";
+import { ORACLE_TABS, MARGIN_Y, PADDING_X } from "@/constants/configs";
 import { useState } from "react";
-import { MARGIN_Y, PADDING_X } from "@/constants/layout";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
 import { OracleList } from "@/ui/oracle";

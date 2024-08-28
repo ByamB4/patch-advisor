@@ -3,8 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# windows
-PROJECT_NAME = "patch-advisor"
+PROJECT_NAME = "khanbank-patch-advisor"
 DEBUG = bool(getenv("DEBUG"))
 
 

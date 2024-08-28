@@ -1,3 +1,46 @@
+// tailwind
+export const MARGIN_Y: string = "my-12";
+export const MARGIN_T: string = "mt-12";
+export const PADDING_X: string = "px-12";
+export const PADDING_Y: string = "py-12";
+
+export const POST_PER_PAGE: number = 30;
+export const CURRENT_MONTH = new Date().getMonth();
+
+// tabs
+export const ROOT_TABS = [
+  // {
+  //   id: "716a267a-c157-4409-8cf9-318489460ef0",
+  //   title: "News",
+  //   link: "/news",
+  // },
+  {
+    id: "92e15847-0493-4ed9-a7df-086ea4b0713e",
+    title: "Redhat",
+    link: "/redhat",
+  },
+  {
+    id: "930a48d3-c9c2-4aa7-8603-01284a343bcc",
+    title: "Cisco",
+    link: "/cisco",
+  },
+  // {
+  //   id: "424f5e35-8f1e-430d-af6a-88d86eb29207",
+  //   title: "VMware",
+  //   link: "/vmware",
+  // },
+  {
+    id: "ff3ad85f-88be-499e-9e96-0f1e36c243fa",
+    title: "Microsoft",
+    link: "/microsoft",
+  },
+  // {
+  //   id: "261e515c-2fc7-4e3e-972c-101eb117b974",
+  //   title: "Oracle",
+  //   link: "/oracle",
+  // },
+];
+
 export const NEWS_TABS = [
   {
     id: "5225ad4c-6388-4720-b434-e12fd607a926",
@@ -12,24 +55,14 @@ export const NEWS_TABS = [
 ];
 
 export const REDHAT_TABS = [
-  // {
-  //   id: "56ac2c96-784b-4323-bdc3-624562c68ff2",
-  //   title: "All",
-  //   unread: 0,
-  // },
-  // {
-  //   id: "19835b78-4ef5-4a06-9247-6e6f7dae32e0",
-  //   title: "Enhancement",
-  //   unread: 2,
-  // },
-  // {
-  //   id: "9864af6c-3db5-4a0f-a0bb-9dcc0ea08aae",
-  //   title: "Bug Fix",
-  //   unread: 0,
-  // },
   {
     id: "39301f48-cb53-4425-81bc-5d4e8777ad9b",
-    title: "Security Advisory",
+    title: "All",
+    unread: 0,
+  },
+  {
+    id: "5f79ea7a-9df5-4ac1-9dc8-c0e8a85faa59",
+    title: "This month",
     unread: 0,
   },
 ];
@@ -79,8 +112,12 @@ export const CISCO_TABS = [
     title: "High",
   },
   {
-    id: "120e458f-01e6-4e2f-9594-024a2603cfb7",
+    id: "22723175-0130-43d8-9ed0-95654d0d0944",
     title: "Critical",
+  },
+  {
+    id: "759f6442-2c49-4af3-8c9b-3588385aa336",
+    title: "This month",
   },
 ];
 
