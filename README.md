@@ -23,7 +23,7 @@
 ```sh
 1. cd server
 2. python3.11 -m venv venv
-3. source env/bin/activate
+3. source venv/bin/activate
 3. pip install prisma
 4. pip install requests
 5. prisma generate
@@ -39,7 +39,7 @@
 2. Update /src/configs.py DEBUG=False
 2. docker build -t patch-python -f Dockerfile .
 3. docker run --rm -v $(pwd):/home patch-python python3 /home/src/microsoft.py
-4. docker run --rm -v $(pwd):/home patch-python python3 /home/src/hackernews.py
+4. docker run --rm -v $(pwd):/home patch-python python3 /home/src/hackernews.  py
 ```
 
 ### Set up cron job
