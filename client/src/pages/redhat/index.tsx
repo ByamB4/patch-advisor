@@ -41,12 +41,18 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
           <div className={`flex flex-col gap-6 ${PADDING_X}`}>
             <div className="flex justify-between">
               <Typography variant="h1">Patch Advisor</Typography>
-              <div className="flex gap-2">
+              <form
+                className="flex gap-2"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleSubmit();
+                }}
+              >
                 <input type="text" ref={inputRef} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="CVE" />
                 <Button variant="contained" size="medium" startIcon={<LuSearch />} onClick={() => handleSubmit()}>
                   Search
                 </Button>
-              </div>
+              </form>
             </div>
             <div>
               <Tabs value={tabNumber} onChange={(event, val) => setTabNumber(+val)} aria-label="homepage-tabs">

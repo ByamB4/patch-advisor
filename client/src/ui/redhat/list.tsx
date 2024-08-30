@@ -104,7 +104,7 @@ const RedHatUI: React.FC<Props> = ({ className = "", data }): React.ReactElement
         </TableContainer>
       ) : (
         <div className="flex items-center justify-center my-60">
-          <CircularProgress />
+          <Typography variant="h4">No data found 😕</Typography>
         </div>
       )}
     </>

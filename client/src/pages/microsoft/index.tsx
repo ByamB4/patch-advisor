@@ -1,24 +1,41 @@
 import { MainLayout } from "@/layouts";
 import { NextPage } from "next";
-import { MICROSOFT_TABS, PADDING_X, MARGIN_T } from "@/constants/configs";
-import { useEffect, useState } from "react";
+import { MICROSOFT_TABS, PADDING_X, MARGIN_T, CURRENT_MONTH } from "@/constants/configs";
+import { useEffect, useRef, useState } from "react";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
-import { IoMdRefresh } from "react-icons/io";
 import { GetServerSideProps, GetServerSidePropsResult } from "next";
 import { db } from "@/server";
 import { IMicrosoft } from "@/interfaces";
 import MicrosoftUI from "@/ui/microsoft/list";
+import { LuSearch } from "react-icons/lu";
 
 interface Props {
-  data: IMicrosoft[];
+  initialData: IMicrosoft[];
 }
 
-const MicrosoftPage: NextPage<Props> = ({ data = [] }): React.ReactElement => {
+const MicrosoftPage: NextPage<Props> = ({ initialData = [] }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
+  const [data, setData] = useState<IMicrosoft[]>(initialData);
+  const inputRef = useRef(null);
+
+  const handleSubmit = async () => {
+    const searchValue: any = (inputRef?.current as any)?.value || "";
+    const res = (await fetch(`/api/microsoft_search?search=${searchValue}`)).json();
+    setData(await res);
+  };
 
   useEffect(() => {
-    console.log(data);
-  }, []);
+    if (tabNumber === 0) {
+      setData(initialData);
+    } else if (tabNumber === 1) {
+      setData(
+        data.filter((it: IMicrosoft) => {
+          const itemDate = new Date(it.release_date);
+          return itemDate.getMonth() === CURRENT_MONTH;
+        })
+      );
+    }
+  }, [tabNumber]);
 
   return (
     <MainLayout NO_PADDING>
@@ -27,9 +44,18 @@ const MicrosoftPage: NextPage<Props> = ({ data = [] }): React.ReactElement => {
           <div className={`${PADDING_X}`}>
             <div className="flex justify-between">
               <Typography variant="h1">Patch Advisor</Typography>
-              <Button variant="contained" size="medium" startIcon={<IoMdRefresh />}>
-                Rescan
-              </Button>
+              <form
+                className="flex gap-2"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleSubmit();
+                }}
+              >
+                <input type="text" ref={inputRef} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="CVE" />
+                <Button variant="contained" size="medium" startIcon={<LuSearch />} onClick={() => handleSubmit()}>
+                  Search
+                </Button>
+              </form>
             </div>
             <div className="mt-5">
               <Tabs value={tabNumber} onChange={(event, val) => setTabNumber(+val)} aria-label="homepage-tabs">
@@ -56,7 +82,7 @@ const MicrosoftPage: NextPage<Props> = ({ data = [] }): React.ReactElement => {
           </div>
         </section>
         <section className={`bg-white min-h-screen ${PADDING_X}`}>
-          <div className="py-5">{tabNumber === 0 ? <MicrosoftUI data={data} /> : <></>}</div>
+          <div className="py-5">{<MicrosoftUI data={data} />}</div>
         </section>
       </div>
     </MainLayout>
@@ -66,7 +92,7 @@ const MicrosoftPage: NextPage<Props> = ({ data = [] }): React.ReactElement => {
 export const getServerSideProps: GetServerSideProps = async (context): Promise<GetServerSidePropsResult<any>> => {
   return {
     props: {
-      data: JSON.parse(
+      initialData: JSON.parse(
         JSON.stringify(
           await db.microsoft.findMany({
             orderBy: {

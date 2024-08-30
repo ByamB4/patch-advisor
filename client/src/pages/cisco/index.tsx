@@ -1,9 +1,9 @@
 import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
 import { CISCO_TABS, CURRENT_MONTH, MARGIN_T, PADDING_X } from "@/constants/configs";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
-import { IoMdRefresh } from "react-icons/io";
+import { LuSearch } from "react-icons/lu";
 import { CiscoList } from "@/ui/cisco";
 import { ICisco } from "@/interfaces";
 import { db } from "@/server";
@@ -13,9 +13,18 @@ const CiscoPage: NextPage<{
 }> = ({ initialData }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
   const [data, setData] = useState<ICisco[]>(initialData);
+  const inputRef = useRef(null);
+
+  const handleSubmit = async () => {
+    const searchValue: any = (inputRef?.current as any)?.value || "";
+    const res = (await fetch(`/api/cisco_search?search=${searchValue}`)).json();
+    setData(await res);
+  };
 
   useEffect(() => {
-    if (tabNumber === 4) {
+    if (tabNumber === 0) {
+      setData(initialData);
+    } else if (tabNumber === 4) {
       setData(
         data.filter((it: ICisco) => {
           const itemDate = new Date(it.lastUpdated);
@@ -32,9 +41,18 @@ const CiscoPage: NextPage<{
           <div className={`${PADDING_X}`}>
             <div className="flex justify-between">
               <Typography variant="h1">Patch Advisor</Typography>
-              <Button variant="contained" size="medium" startIcon={<IoMdRefresh />}>
-                Rescan
-              </Button>
+              <form
+                className="flex gap-2"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  handleSubmit();
+                }}
+              >
+                <input type="text" ref={inputRef} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5" placeholder="CVE" />
+                <Button variant="contained" size="medium" startIcon={<LuSearch />} onClick={() => handleSubmit()}>
+                  Search
+                </Button>
+              </form>
             </div>
             <div className="mt-5">
               <Tabs value={tabNumber} onChange={(event, val) => setTabNumber(+val)} aria-label="homepage-tabs">
@@ -59,8 +77,7 @@ const CiscoPage: NextPage<{
               <CiscoList data={data} />
             ) : tabNumber === 1 ? (
               <CiscoList data={[...data.filter((it) => it.sir.includes("Medium"))]} />
-            ) : // <CiscoList  />
-            tabNumber === 2 ? (
+            ) : tabNumber === 2 ? (
               <CiscoList data={[...data.filter((it) => it.sir.includes("High"))]} />
             ) : tabNumber === 3 ? (
               <CiscoList data={[...data.filter((it) => it.sir.includes("Critical"))]} />

@@ -73,6 +73,11 @@ export const MICROSOFT_TABS = [
     title: "All",
     unread: 0,
   },
+  {
+    id: "23cf0210-891e-471c-9e3f-1eb868668055",
+    title: "This month",
+    unread: 0,
+  },
 ];
 
 export const VMWARE_TABS = [

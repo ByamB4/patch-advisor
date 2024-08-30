@@ -1,9 +1,9 @@
 import { tableCellClasses } from "@mui/material/TableCell";
-import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper } from "@mui/material";
+import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import colors from "@/theme/colors";
 import { IMicrosoft } from "@/interfaces";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { convertToLocalTime } from "@/utils";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -96,7 +96,7 @@ const MicrosoftUI: React.FC<Props> = ({ className = "", data = [] }): React.Reac
         </TableContainer>
       ) : (
         <div className="flex items-center justify-center my-60">
-          <CircularProgress />
+          <Typography variant="h4">No data found 😕</Typography>
         </div>
       )}
     </>

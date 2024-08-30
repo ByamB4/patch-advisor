@@ -3,18 +3,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { search } = req.query;
-  const data = await db.redhat.findMany({
+  const data = await db.cisco.findMany({
     orderBy: {
-      document: {
-        tracking: {
-          current_release_date: "desc",
-        },
-      },
+      lastUpdated: "desc",
     },
     where: {
       OR: [
         {
-          RHSA: {
+          advisoryTitle: {
             contains: search as string,
             mode: "insensitive",
           },
@@ -39,6 +35,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
       ],
     },
+    // initialData: await db.cisco.findMany({
+    //   orderBy: {
+    //     lastUpdated: "desc",
+    //   },
+    // }),
     include: {
       document: {
         select: {
@@ -47,11 +48,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           tracking: {
             select: {
               current_release_date: true,
-            },
-          },
-          aggregate_severity: {
-            select: {
-              text: true,
             },
           },
         },
