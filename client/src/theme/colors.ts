@@ -1,4 +1,4 @@
-module.exports = {
+const colors = {
   primary: {
     blue: "#044BE7",
     purple: "#6A4BFF",
@@ -37,3 +37,5 @@ module.exports = {
     rosePink: "#FA8190",
   },
 };
+
+export default colors;

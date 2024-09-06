@@ -39,7 +39,8 @@
 2. Update /src/configs.py DEBUG=False
 2. docker build -t patch-python -f Dockerfile .
 3. docker run --rm -v $(pwd):/home patch-python python3 /home/src/microsoft.py
-4. docker run --rm -v $(pwd):/home patch-python python3 /home/src/hackernews.  py
+4. docker run --rm -v $(pwd):/home patch-python python3 /home/src/hackernews.py
+5. python src/db_write.py
 ```
 
 ### Set up cron job

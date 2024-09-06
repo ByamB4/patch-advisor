@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 PROJECT_NAME = "khanbank-patch-advisor"
-DEBUG = bool(getenv("DEBUG"))
+DEBUG = True
 
 
 def get_project_root() -> str:

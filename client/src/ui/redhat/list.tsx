@@ -1,5 +1,5 @@
 import { tableCellClasses } from "@mui/material/TableCell";
-import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, CircularProgress, Paper, Typography } from "@mui/material";
+import { Table, TableBody, TableContainer, TableRow, TableHead, TableCell, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import colors from "@/theme/colors";
 import Link from "next/link";

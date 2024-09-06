@@ -1,7 +1,7 @@
 // src/theme.ts
 "use client";
 import { createTheme } from "@mui/material/styles";
-import colors from "./colors";
+import colors from "@/theme/colors";
 
 export const MuiTheme = createTheme({
   typography: {
