@@ -14,17 +14,17 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
   const hover_animation: string = "hover:scale-95 duration-500";
 
   return (
-    <MainLayout className="bg-white">
+    <MainLayout className="bg-white min-h-screen">
       <section className="grid grid-cols-8 gap-8 flex-center justify-center">
         <div className="col-span-3 justify-center flex-center h-full">
           <div className={`flex flex-col gap-8 justify-center h-full`}>
             <div className={`flex flex-col font-semibold ${comfortaa.className}`}>
-              <span className="text-[56px]">No-paper Rules</span>
-              <span className="text-[56px]">Engine for</span>
-              <span className="text-[56px]">Automated Patch</span>
+              <span className="text-[48px]">No-paper Rules</span>
+              <span className="text-[48px]">Engine for</span>
+              <span className="text-[48px]">Automated Patch</span>
             </div>
             <div>
-              <span className="font-exo text-lg text-[#696974]">
+              <span className="font-exo text-md text-[#696974]">
                 We moved from Excel reports to an automated patch scraper combined with a news platform, letting you access real-time updates whenever you need them
               </span>
             </div>
@@ -50,25 +50,25 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
               <TbAnalyze size={24} className="text-white" />
             </IconButton>
           </div>
-          <div className="flex flex-col w-full gap-40 my-24">
+          <div className="flex flex-col w-full gap-32 my-24">
             <section className="flex gap-32">
               <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white ${hover_animation}`}>
                 <div className="flex gap-2 items-center">
-                  <FaPix className="text-white p-2 bg-[#3E4178] rounded-md" size={36} />
-                  <Typography variant="h6" className="font-medium">
+                  <FaPix className="text-white p-[5px] bg-[#3E4178] rounded-md" size={28} />
+                  <Typography variant="subtitle2" className="font-medium">
                     Fetch data using API
                   </Typography>
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center">
                     <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ring-offset-gray-800 focus:ring-2" />
-                    <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium ">
+                    <label htmlFor="default-checkbox" className="ms-2 text-xs font-medium ">
                       Check if there is new update
                     </label>
                   </div>
                   <div className="flex items-center">
                     <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ring-offset-gray-800 focus:ring-2" />
-                    <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium ">
+                    <label htmlFor="default-checkbox" className="ms-2 text-xs font-medium ">
                       Fetch data
                     </label>
                   </div>
@@ -79,51 +79,51 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
               </div> */}
               <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white mr-24 ${hover_animation}`}>
                 <div className="flex gap-2 items-center">
-                  <FaPix className="text-white p-2 bg-[#3E4178] rounded-md" size={36} />
-                  <Typography variant="h6" className="font-medium">
+                  <FaPix className="text-white p-[5px] bg-[#3E4178] rounded-md" size={28} />
+                  <Typography variant="subtitle2" className="font-medium">
                     Write data to database
                   </Typography>
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center">
                     <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ring-offset-gray-800 focus:ring-2" />
-                    <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium ">
+                    <label htmlFor="default-checkbox" className="ms-2 text-xs font-medium ">
                       Clean raw data
                     </label>
                   </div>
                   <div className="flex items-center">
                     <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ring-offset-gray-800 focus:ring-2" />
-                    <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium ">
+                    <label htmlFor="default-checkbox" className="ms-2 text-xs font-medium ">
                       Using prisma client to append database
                     </label>
                   </div>
                 </div>
               </section>
             </section>
-            <section className="flex gap-32">
+            <section className="flex gap-5">
               <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white mr-24 ${hover_animation}`}>
                 <div className="flex gap-2 items-center">
-                  <FaPix className="text-white p-2 bg-[#3E4178] rounded-md" size={36} />
-                  <Typography variant="h6" className="font-medium">
+                  <FaPix className="text-white p-[5px] bg-[#3E4178] rounded-md" size={28} />
+                  <Typography variant="subtitle2" className="font-medium">
                     Scrape data using headless browser
                   </Typography>
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-center">
                     <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ring-offset-gray-800 focus:ring-2" />
-                    <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium ">
+                    <label htmlFor="default-checkbox" className="ms-2 text-xs font-medium ">
                       Run from docker container (headless=True)
                     </label>
                   </div>
                   <div className="flex items-center">
                     <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ring-offset-gray-800 focus:ring-2" />
-                    <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium ">
+                    <label htmlFor="default-checkbox" className="ms-2 text-xs font-medium ">
                       Check if there is new update
                     </label>
                   </div>
                   <div className="flex items-center">
                     <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ring-offset-gray-800 focus:ring-2" />
-                    <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium ">
+                    <label htmlFor="default-checkbox" className="ms-2 text-xs font-medium ">
                       Scrape possible data
                     </label>
                   </div>
@@ -132,8 +132,8 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
               <div>
                 <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white ${hover_animation}`}>
                   <div className="flex gap-2 items-center">
-                    <FaPix className="text-white p-2 bg-[#3E4178] rounded-md" size={36} />
-                    <Typography variant="h6" className="font-medium">
+                    <FaPix className="text-white p-[5px] bg-[#3E4178] rounded-md" size={28} />
+                    <Typography variant="subtitle2" className="font-medium">
                       Front end application
                     </Typography>
                   </div>
@@ -145,7 +145,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
                         value=""
                         className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 ring-offset-gray-800 focus:ring-2"
                       />
-                      <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium ">
+                      <label htmlFor="default-checkbox" className="ms-2 text-xs font-medium ">
                         Main framework is NextJS
                       </label>
                     </div>
@@ -156,7 +156,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
                         value=""
                         className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300  rounded focus:ring-blue-500 ring-offset-gray-800 focus:ring-2"
                       />
-                      <label htmlFor="default-checkbox" className="ms-2 text-sm font-medium ">
+                      <label htmlFor="default-checkbox" className="ms-2 text-xs font-medium ">
                         CRUD operation using Prisma client
                       </label>
                     </div>
