@@ -9,11 +9,11 @@ export const CURRENT_MONTH = new Date().getMonth();
 
 // tabs
 export const ROOT_TABS = [
-  // {
-  //   id: "716a267a-c157-4409-8cf9-318489460ef0",
-  //   title: "News",
-  //   link: "/news",
-  // },
+  {
+    id: "716a267a-c157-4409-8cf9-318489460ef0",
+    title: "News",
+    link: "/hackernews",
+  },
   {
     id: "92e15847-0493-4ed9-a7df-086ea4b0713e",
     title: "Redhat",

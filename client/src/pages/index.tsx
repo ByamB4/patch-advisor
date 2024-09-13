@@ -34,7 +34,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
           className="flex gap-6 shadow-xl rounded-xl p-6 col-span-5"
           style={{
             backgroundImage: "radial-gradient(#9797A0 0.5px, #fff 0.5px)",
-            backgroundSize: "15px 15px",
+            backgroundSize: "13px 13px",
           }}
         >
           <div className="flex flex-col justify-between py-6 px-3 h-full bg-[#364670] rounded-xl">
@@ -50,8 +50,8 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
               <TbAnalyze size={24} className="text-white" />
             </IconButton>
           </div>
-          <div className="flex flex-col w-full gap-48 my-32">
-            <section className="flex">
+          <div className="flex flex-col w-full gap-40 my-24">
+            <section className="flex gap-32">
               <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white ${hover_animation}`}>
                 <div className="flex gap-2 items-center">
                   <FaPix className="text-white p-2 bg-[#3E4178] rounded-md" size={36} />
@@ -74,9 +74,9 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
                   </div>
                 </div>
               </section>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <div className={`h-2 w-52 border-dotted border-[#5C698B] border-t-2 animate-pulse`} />
-              </div>
+              </div> */}
               <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white mr-24 ${hover_animation}`}>
                 <div className="flex gap-2 items-center">
                   <FaPix className="text-white p-2 bg-[#3E4178] rounded-md" size={36} />
@@ -100,7 +100,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
                 </div>
               </section>
             </section>
-            <section className="flex justify-between">
+            <section className="flex gap-32">
               <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white mr-24 ${hover_animation}`}>
                 <div className="flex gap-2 items-center">
                   <FaPix className="text-white p-2 bg-[#3E4178] rounded-md" size={36} />
