@@ -1,8 +1,7 @@
 import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import { NEWS_TABS } from "@/constants/configs";
 import { useState } from "react";
-import { MARGIN_Y, PADDING_X } from "@/constants/layout";
+import { MARGIN_Y, PADDING_X, NEWS_TABS } from "@/constants/configs";
 import { Button, Tab, Tabs, Typography } from "@mui/material";
 import { IoMdRefresh } from "react-icons/io";
 
