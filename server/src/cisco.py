@@ -67,13 +67,15 @@ class Cisco:
                         "text": note["text"],
                         "ciscoVulnerabilitiesId": cisco_vuln["id"],
                     }
+ 
                 )
-            self.db.cisco_vulnerabilities_product_status.create(
-                {
-                    "known_affected": vuln["product_status"]["known_affected"],
-                    "ciscoVulnerabilitiesId": cisco_vuln["id"],
-                }
-            )
+            if 'product_status' in vuln:
+                self.db.cisco_vulnerabilities_product_status.create(
+                    {
+                        "known_affected": vuln["product_status"]["known_affected"],
+                        "ciscoVulnerabilitiesId": cisco_vuln["id"],
+                    }
+                )
             for remediate in vuln["remediations"]:
                 write_remediate = {
                     "category": remediate["category"],

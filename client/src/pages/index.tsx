@@ -1,17 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 import { MainLayout } from "@/layouts";
 import { IconButton, Typography } from "@mui/material";
+import Xarrow from "react-xarrows";
 import { NextPage } from "next";
 import { Comfortaa } from "next/font/google";
 import { FaPix } from "react-icons/fa6";
 import { RxDashboard } from "react-icons/rx";
 import { HiOutlineBell } from "react-icons/hi";
 import { TbAnalyze } from "react-icons/tb";
+import { useEffect, useRef } from "react";
+import React from "react";
 
 const comfortaa = Comfortaa({ subsets: ["latin"] });
 
+React.useLayoutEffect = useEffect;
+
 const LandingPage: NextPage<unknown> = (): React.ReactElement => {
   const hover_animation: string = "hover:scale-95 duration-500";
+  const box1Ref = useRef(null);
+  const box2Ref = useRef(null);
+  const box3Ref = useRef(null);
+  const box4Ref = useRef(null);
 
   return (
     <MainLayout className="bg-white min-h-screen">
@@ -52,7 +61,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
           </div>
           <div className="flex flex-col w-full gap-32 my-24">
             <section className="flex gap-32">
-              <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white ${hover_animation}`}>
+              <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white ${hover_animation}`} ref={box1Ref}>
                 <div className="flex gap-2 items-center">
                   <FaPix className="text-white p-[5px] bg-[#3E4178] rounded-md" size={28} />
                   <Typography variant="subtitle2" className="font-medium">
@@ -74,10 +83,10 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
                   </div>
                 </div>
               </section>
-              {/* <div className="flex items-center">
-                <div className={`h-2 w-52 border-dotted border-[#5C698B] border-t-2 animate-pulse`} />
-              </div> */}
-              <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white mr-24 ${hover_animation}`}>
+              <Xarrow start={box1Ref} end={box2Ref} color={"#5C698B"} curveness={2} headSize={4} dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: -2 }} showTail={false} />
+              <Xarrow start={box3Ref} end={box2Ref} color={"#5C698B"} curveness={2} headSize={4} dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: -2 }} showTail={false} />
+              <Xarrow start={box2Ref} end={box4Ref} color={"#5C698B"} headSize={2} dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: -2 }} showHead={false} showTail={false} />
+              <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white mr-24 ${hover_animation}`} ref={box2Ref}>
                 <div className="flex gap-2 items-center">
                   <FaPix className="text-white p-[5px] bg-[#3E4178] rounded-md" size={28} />
                   <Typography variant="subtitle2" className="font-medium">
@@ -101,7 +110,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
               </section>
             </section>
             <section className="flex gap-5">
-              <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white mr-24 ${hover_animation}`}>
+              <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white mr-24 ${hover_animation}`} ref={box3Ref}>
                 <div className="flex gap-2 items-center">
                   <FaPix className="text-white p-[5px] bg-[#3E4178] rounded-md" size={28} />
                   <Typography variant="subtitle2" className="font-medium">
@@ -130,7 +139,7 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
                 </div>
               </section>
               <div>
-                <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white ${hover_animation}`}>
+                <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white ${hover_animation}`} ref={box4Ref}>
                   <div className="flex gap-2 items-center">
                     <FaPix className="text-white p-[5px] bg-[#3E4178] rounded-md" size={28} />
                     <Typography variant="subtitle2" className="font-medium">

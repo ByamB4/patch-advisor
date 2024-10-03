@@ -3,8 +3,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 PROJECT_NAME = "khanbank-patch-advisor"
 DEBUG = True
+if not DEBUG:
+    PROJECT_NAME = "Patch-Advisory"
 
 
 def get_project_root() -> str:

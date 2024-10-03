@@ -1,5 +1,175 @@
 [
   {
+    "release_date": "Sep 26, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-9123",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-9123",
+    "cve_title": "Chromium: CVE-2024-9123 Integer overflow in Skia",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 26, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-9122",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-9122",
+    "cve_title": "Chromium: CVE-2024-9122 Type Confusion in V8",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 26, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-9121",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-9121",
+    "cve_title": "Chromium: CVE-2024-9121 Inappropriate implementation in V8",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 26, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-9120",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-9120",
+    "cve_title": "Chromium: CVE-2024-9120 Use after free in Dawn",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 19, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8909",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8909",
+    "cve_title": "Chromium: CVE-2024-8909 Inappropriate implementation in UI",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 19, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8908",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8908",
+    "cve_title": "Chromium: CVE-2024-8908 Inappropriate implementation in Autofill",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 19, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8907",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8907",
+    "cve_title": "Chromium: CVE-2024-8907 Insufficient data validation in Omnibox",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 19, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8906",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8906",
+    "cve_title": "Chromium: CVE-2024-8906 Incorrect security UI in Downloads",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 19, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8905",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8905",
+    "cve_title": "Chromium: CVE-2024-8905 Inappropriate implementation in V8",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 19, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8904",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8904",
+    "cve_title": "Chromium: CVE-2024-8904 Type Confusion in V8",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 13, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8639",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8639",
+    "cve_title": "Chromium: CVE-2024-8639 Use after free in Autofill",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 13, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8638",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8638",
+    "cve_title": "Chromium: CVE-2024-8638 Type Confusion in V8",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 13, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8637",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8637",
+    "cve_title": "Chromium: CVE-2024-8637 Use after free in Media Router",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 13, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8636",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8636",
+    "cve_title": "Chromium: CVE-2024-8636 Heap buffer overflow in Skia",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 12, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8362",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8362",
+    "cve_title": "Chromium: CVE-2024-8362 Use after free in WebAudio",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 12, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8198",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8198",
+    "cve_title": "Chromium: CVE-2024-8198 Heap buffer overflow in Skia",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 12, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-8194",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-8194",
+    "cve_title": "Chromium: CVE-2024-8194 Type Confusion in V8",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
     "release_date": "Aug 22, 2024",
     "revision_date": "-",
     "cve": "CVE-2024-8035",
@@ -135,6 +305,16 @@
     "cve": "CVE-2024-7971",
     "cve_link": "/update-guide/vulnerability/CVE-2024-7971",
     "cve_title": "Chromium: CVE-2024-7971 Type confusion in V8",
+    "impact": "",
+    "severity": "",
+    "tag": "Microsoft Edge (Chromium-based)"
+  },
+  {
+    "release_date": "Sep 12, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-7970",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-7970",
+    "cve_title": "Chromium: CVE-2024-7970 Out of bounds write in V8",
     "impact": "",
     "severity": "",
     "tag": "Microsoft Edge (Chromium-based)"
@@ -291,7 +471,7 @@
   },
   {
     "release_date": "Jul 11, 2024",
-    "revision_date": "Aug 1, 2024",
+    "revision_date": "Sep 19, 2024",
     "cve": "CVE-2024-6387",
     "cve_link": "/update-guide/vulnerability/CVE-2024-6387",
     "cve_title": "RedHat Openssh: CVE-2024-6387  Remote Code Execution Due To A Race Condition In Signal Handling",
@@ -300,303 +480,123 @@
     "tag": "Open Source Software"
   },
   {
-    "release_date": "Aug 22, 2024",
+    "release_date": "Sep 19, 2024",
     "revision_date": "-",
-    "cve": "CVE-2024-43477",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-43477",
-    "cve_title": "Entra ID Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Critical",
-    "tag": "Entra ID"
-  },
-  {
-    "release_date": "Aug 15, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-43472",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-43472",
-    "cve_title": "Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Moderate",
-    "tag": "Microsoft Edge (Chromium-based)"
-  },
-  {
-    "release_date": "Aug 22, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-41879",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-41879",
-    "cve_title": "Adobe: CVE-2024-41879 Adobe PDF Viewer Remote Code Execution Vulnerability",
-    "impact": "Remote Code Execution",
-    "severity": "Moderate",
-    "tag": "Adobe"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38223",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38223",
-    "cve_title": "Windows Initial Machine Configuration Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Initial Machine Configuration"
-  },
-  {
-    "release_date": "Aug 8, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38219",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38219",
+    "cve": "CVE-2024-43496",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43496",
     "cve_title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
     "impact": "Remote Code Execution",
-    "severity": "Moderate",
+    "severity": "Important",
     "tag": "Microsoft Edge (Chromium-based)"
   },
   {
-    "release_date": "Aug 8, 2024",
+    "release_date": "Sep 10, 2024",
     "revision_date": "-",
-    "cve": "CVE-2024-38218",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38218",
-    "cve_title": "Microsoft Edge (HTML-based) Memory Corruption Vulnerability",
+    "cve": "CVE-2024-43495",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43495",
+    "cve_title": "Windows libarchive Remote Code Execution Vulnerability",
+    "impact": "Remote Code Execution",
+    "severity": "Important",
+    "tag": "Windows Libarchive"
+  },
+  {
+    "release_date": "Sep 10, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-43492",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43492",
+    "cve_title": "Microsoft AutoUpdate (MAU) Elevation of Privilege Vulnerability",
+    "impact": "Elevation of Privilege",
+    "severity": "Important",
+    "tag": "Microsoft AutoUpdate (MAU)"
+  },
+  {
+    "release_date": "Sep 10, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-43491",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43491",
+    "cve_title": "Microsoft Windows Update Remote Code Execution Vulnerability",
+    "impact": "Remote Code Execution",
+    "severity": "Critical",
+    "tag": "Windows Update"
+  },
+  {
+    "release_date": "Sep 19, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-43489",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43489",
+    "cve_title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
     "impact": "Remote Code Execution",
     "severity": "Important",
     "tag": "Microsoft Edge (Chromium-based)"
   },
   {
-    "release_date": "Aug 13, 2024",
+    "release_date": "Sep 10, 2024",
     "revision_date": "-",
-    "cve": "CVE-2024-38215",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38215",
-    "cve_title": "Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Cloud Files Mini Filter Driver"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38214",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38214",
-    "cve_title": "Windows Routing and Remote Access Service (RRAS) Information Disclosure Vulnerability",
-    "impact": "Information Disclosure",
-    "severity": "Important",
-    "tag": "Windows Routing and Remote Access Service (RRAS)"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38213",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38213",
+    "cve": "CVE-2024-43487",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43487",
     "cve_title": "Windows Mark of the Web Security Feature Bypass Vulnerability",
     "impact": "Security Feature Bypass",
     "severity": "Moderate",
     "tag": "Windows Mark of the Web (MOTW)"
   },
   {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "Aug 14, 2024",
-    "cve": "CVE-2024-38211",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38211",
+    "release_date": "Sep 10, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-43482",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43482",
+    "cve_title": "Microsoft Outlook for iOS Information Disclosure Vulnerability",
+    "impact": "Information Disclosure",
+    "severity": "Important",
+    "tag": "Microsoft Outlook for iOS"
+  },
+  {
+    "release_date": "Sep 10, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-43479",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43479",
+    "cve_title": "Microsoft Power Automate Desktop Remote Code Execution Vulnerability",
+    "impact": "Remote Code Execution",
+    "severity": "Important",
+    "tag": "Power Automate"
+  },
+  {
+    "release_date": "Aug 22, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-43477",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43477",
+    "cve_title": "Microsoft Entra ID Elevation of Privilege Vulnerability",
+    "impact": "Elevation of Privilege",
+    "severity": "Critical",
+    "tag": "Entra ID"
+  },
+  {
+    "release_date": "Sep 10, 2024",
+    "revision_date": "-",
+    "cve": "CVE-2024-43476",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43476",
     "cve_title": "Microsoft Dynamics 365 (on-premises) Cross-site Scripting Vulnerability",
     "impact": "Spoofing",
     "severity": "Important",
-    "tag": "Microsoft Dynamics"
+    "tag": "Microsoft Dynamics 365 (on-premises)"
   },
   {
-    "release_date": "Aug 22, 2024",
+    "release_date": "Sep 10, 2024",
     "revision_date": "-",
-    "cve": "CVE-2024-38210",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38210",
-    "cve_title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
-    "impact": "Remote Code Execution",
-    "severity": "Important",
-    "tag": "Microsoft Edge (Chromium-based)"
-  },
-  {
-    "release_date": "Aug 22, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38209",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38209",
-    "cve_title": "Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability",
-    "impact": "Remote Code Execution",
-    "severity": "Important",
-    "tag": "Microsoft Edge (Chromium-based)"
-  },
-  {
-    "release_date": "Aug 22, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38208",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38208",
-    "cve_title": "Microsoft Edge for Android Spoofing Vulnerability",
-    "impact": "Spoofing",
-    "severity": "Moderate",
-    "tag": "Microsoft Edge for Android"
-  },
-  {
-    "release_date": "Aug 22, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38207",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38207",
-    "cve_title": "Microsoft Edge (HTML-based) Memory Corruption Vulnerability",
-    "impact": "Remote Code Execution",
-    "severity": "Moderate",
-    "tag": "Microsoft Edge (Chromium-based)"
-  },
-  {
-    "release_date": "Aug 6, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38206",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38206",
-    "cve_title": "Microsoft Copilot Studio Information Disclosure Vulnerability",
+    "cve": "CVE-2024-43475",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43475",
+    "cve_title": "Microsoft Windows Admin Center Information Disclosure Vulnerability",
     "impact": "Information Disclosure",
-    "severity": "Critical",
-    "tag": "Microsoft Copilot Studio"
-  },
-  {
-    "release_date": "Aug 7, 2024",
-    "revision_date": "Aug 8, 2024",
-    "cve": "CVE-2024-38202",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38202",
-    "cve_title": "Windows Update Stack Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
     "severity": "Important",
-    "tag": "Windows Update Stack"
+    "tag": "Windows Admin Center"
   },
   {
-    "release_date": "Aug 13, 2024",
+    "release_date": "Sep 10, 2024",
     "revision_date": "-",
-    "cve": "CVE-2024-38201",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38201",
-    "cve_title": "Azure Stack Hub Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
+    "cve": "CVE-2024-43474",
+    "cve_link": "/update-guide/vulnerability/CVE-2024-43474",
+    "cve_title": "Microsoft SQL Server Information Disclosure Vulnerability",
+    "impact": "Information Disclosure",
     "severity": "Important",
-    "tag": "Azure Stack"
-  },
-  {
-    "release_date": "Aug 8, 2024",
-    "revision_date": "Aug 13, 2024",
-    "cve": "CVE-2024-38200",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38200",
-    "cve_title": "Microsoft Office Spoofing Vulnerability",
-    "impact": "Spoofing",
-    "severity": "Important",
-    "tag": "Microsoft Office"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38199",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38199",
-    "cve_title": "Windows Line Printer Daemon (LPD) Service Remote Code Execution Vulnerability",
-    "impact": "Remote Code Execution",
-    "severity": "Important",
-    "tag": "Line Printer Daemon Service (LPD)"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38198",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38198",
-    "cve_title": "Windows Print Spooler Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Print Spooler Components"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38197",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38197",
-    "cve_title": "Microsoft Teams for iOS Spoofing Vulnerability",
-    "impact": "Spoofing",
-    "severity": "Important",
-    "tag": "Microsoft Teams"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38196",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38196",
-    "cve_title": "Windows Common Log File System Driver Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Common Log File System Driver"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38195",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38195",
-    "cve_title": "Azure CycleCloud Remote Code Execution Vulnerability",
-    "impact": "Remote Code Execution",
-    "severity": "Important",
-    "tag": "Azure CycleCloud"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38193",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38193",
-    "cve_title": "Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Ancillary Function Driver for WinSock"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38191",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38191",
-    "cve_title": "Kernel Streaming Service Driver Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Kernel-Mode Drivers"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "Aug 14, 2024",
-    "cve": "CVE-2024-38189",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38189",
-    "cve_title": "Microsoft Project Remote Code Execution Vulnerability",
-    "impact": "Remote Code Execution",
-    "severity": "Important",
-    "tag": "Microsoft Office Project"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38187",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38187",
-    "cve_title": "Windows Kernel-Mode Driver Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Kernel-Mode Drivers"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38186",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38186",
-    "cve_title": "Windows Kernel-Mode Driver Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Kernel-Mode Drivers"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38185",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38185",
-    "cve_title": "Windows Kernel-Mode Driver Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Kernel-Mode Drivers"
-  },
-  {
-    "release_date": "Aug 13, 2024",
-    "revision_date": "-",
-    "cve": "CVE-2024-38184",
-    "cve_link": "/update-guide/vulnerability/CVE-2024-38184",
-    "cve_title": "Windows Kernel-Mode Driver Elevation of Privilege Vulnerability",
-    "impact": "Elevation of Privilege",
-    "severity": "Important",
-    "tag": "Windows Kernel-Mode Drivers"
+    "tag": "SQL Server"
   }
 ]

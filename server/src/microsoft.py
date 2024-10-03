@@ -1,5 +1,4 @@
 from playwright.sync_api import sync_playwright
-from playwright_stealth import stealth_sync
 from typing import List
 from time import sleep
 from json import dump as json_dump
@@ -25,7 +24,6 @@ class Microsoft:
             self.browser = p.chromium.launch(headless=True, args=["--start-maximized"])
             self.context = self.browser.new_context(no_viewport=True)
             self.page = self.context.new_page()
-            stealth_sync(self.page)
             self.create_file()
             self.scrape()
             self.save_to_json()
@@ -44,6 +42,7 @@ class Microsoft:
             try:
                 self.page.goto("https://msrc.microsoft.com/update-guide/vulnerability")
                 self.page.wait_for_load_state("networkidle")
+                self.page.screenshot(path="./out.png")
                 for root_group_tab in self.page.query_selector_all("xpath=//div[@role='presentation' and @class='ms-List-surface']/div"):
                     for row in root_group_tab.query_selector_all("xpath=./div"):
                         release_date = row.wait_for_selector("xpath=.//div[@data-automation-key='releaseDate']").text_content()

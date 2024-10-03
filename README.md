@@ -47,9 +47,10 @@
 
 ```sh
 1. crontab -e
-2. 0 * * * * /root/khanbank-patch-advisor/server/venv/bin/python3 /root/khanbank-patch-advisor/server/src/redhat.py 2>/tmp/redhat.err
-3. 0 * * * * /root/khanbank-patch-advisor/server/venv/bin/python3 /root/khanbank-patch-advisor/server/src/cisco.py 2>/tmp/cisco.err
-4. 0 * * * * cd /root/khanbank-patch-advisor/server; docker run --rm -v $(pwd):/home patch-python python3 /home/src/hackernews.py 2>/tmp/hackernews.err;
-5. 0 * * * * cd /root/khanbank-patch-advisor/server; docker run --rm -v $(pwd):/home patch-python python3 /home/src/microsoft.py 2>/tmp/microsoft.err;
-6. */30 * * * * /root/khanbank-patch-advisor/server/venv/bin/python3 /root/khanbank-patch-advisor/server/src/db_write.py 2>/tmp/db_write.err
+PATCH_PATH=/root/Patch-Advisory
+0 * * * * $PATCH_PATH/server/venv/bin/python3 $PATCH_PATH/server/src/redhat.py 2>/tmp/redhat.err
+0 * * * * $PATCH_PATH/server/venv/bin/python3 $PATCH_PATH/server/src/cisco.py 2>/tmp/cisco.err
+0 * * * * cd $PATCH_PATH/server; docker run --rm -v $(pwd):/home patch-python python3 /home/src/hackernews.py 2>/tmp/hackernews.err;
+0 * * * * cd $PATCH_PATH/server; docker run --rm -v $(pwd):/home patch-python python3 /home/src/microsoft.py 2>/tmp/microsoft.err;
+*/30 * * * * $PATCH_PATH/server/venv/bin/python3 $PATCH_PATH/server/src/db_write.py 2>/tmp/db_write.err
 ```
