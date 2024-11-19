@@ -4,7 +4,7 @@ import Head from "next/head";
 import { TabProvider } from "@/contexts/nav";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { MuiTheme, createEmotionCache } from "@/theme";
-import { CacheProvider, EmotionCache } from "@emotion/react";
+import { CacheProvider } from "@emotion/react";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -16,16 +16,16 @@ const App = ({ emotionCache = clientSideEmotionCache, Component, pageProps }: Pr
     <>
       <Head>
         <title>Patch Advisor | KhanBank</title>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"></meta>
       </Head>
-      <CacheProvider value={emotionCache}>
-        <ThemeProvider theme={MuiTheme}>
-          <TabProvider>
-            <CssBaseline />
-            <Component {...pageProps} />
-          </TabProvider>
-        </ThemeProvider>
-      </CacheProvider>
+      {/* <CacheProvider value={emotionCache}> */}
+      <ThemeProvider theme={MuiTheme}>
+        <TabProvider>
+          <CssBaseline />
+          <Component {...pageProps} />
+        </TabProvider>
+      </ThemeProvider>
+      {/* </CacheProvider> */}
     </>
   );
 };

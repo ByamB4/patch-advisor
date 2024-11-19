@@ -83,12 +83,8 @@ const MicrosoftUI: React.FC<Props> = ({ className = "", data = [] }): React.Reac
                   </StyledTableCell>
                   <StyledTableCell align="left">{row.cve_title}</StyledTableCell>
                   <StyledTableCell align="center">{row.impact}</StyledTableCell>
-                  <StyledTableCell className="flex flex-column gap-12" align="center">
-                    {row.severity}
-                  </StyledTableCell>
-                  <StyledTableCell className="flex flex-column gap-12" align="center">
-                    {row.tag}
-                  </StyledTableCell>
+                  <StyledTableCell align="center">{row.severity}</StyledTableCell>
+                  <StyledTableCell align="center">{row.tag}</StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>

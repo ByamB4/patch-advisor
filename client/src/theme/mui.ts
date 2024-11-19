@@ -1,49 +1,44 @@
-// src/theme.ts
 "use client";
 import { createTheme } from "@mui/material/styles";
 import colors from "@/theme/colors";
 
 export const MuiTheme = createTheme({
   typography: {
-    fontFamily: "Exo2",
-    h1: {
+    allVariants: {
       fontFamily: "Exo2",
+      color: "#1C273F",
+    },
+    h1: {
       fontStyle: "normal",
       fontWeight: 600,
       fontSize: "28px",
     },
     h2: {
-      fontFamily: "Exo2",
       fontStyle: "normal",
       fontWeight: 600,
       fontSize: "24px",
     },
     h3: {
-      fontFamily: "Exo2",
       fontStyle: "normal",
       fontWeight: 500,
       fontSize: "22px",
     },
     h4: {
-      fontFamily: "Exo2",
       fontStyle: "normal",
       fontWeight: 500,
       fontSize: "20px",
     },
     h5: {
-      fontFamily: "Exo2",
       fontStyle: "normal",
       fontWeight: 500,
       fontSize: "18px",
     },
     h6: {
-      fontFamily: "Exo2",
       fontStyle: "normal",
       fontWeight: 500,
       fontSize: "16px",
     },
     body1: {
-      fontFamily: "Exo2",
       fontStyle: "normal",
       fontWeight: "normal",
       fontSize: "14px",

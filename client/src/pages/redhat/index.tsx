@@ -1,12 +1,13 @@
 import { MainLayout } from "@/layouts";
 import { GetServerSideProps, GetServerSidePropsResult, NextPage } from "next";
-import { REDHAT_TABS, MARGIN_T, PADDING_X, POST_PER_PAGE, CURRENT_MONTH, PADDING_Y } from "@/constants/configs";
+import { REDHAT_TABS, MARGIN_T, PADDING_X, POST_PER_PAGE, CURRENT_MONTH } from "@/constants/configs";
 import { useState, useRef, useEffect } from "react";
 import { Button, Tab, Tabs, Typography, Pagination } from "@mui/material";
 import { LuSearch } from "react-icons/lu";
 import { RedHatList } from "@/ui/redhat";
 import { ICSAF } from "@/interfaces";
 import { db } from "@/server";
+import DownloadAsExcel from "@/components/download_excel";
 
 const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.ReactElement => {
   const [tabNumber, setTabNumber] = useState<number>(0);
@@ -23,6 +24,7 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
   useEffect(() => {
     if (tabNumber === 0) {
       setData(initialData);
+      console.log(data);
     } else if (tabNumber === 1) {
       setData(
         data.filter((it: ICSAF) => {
@@ -52,6 +54,7 @@ const RedhatPage: NextPage<{ initialData: ICSAF[] }> = ({ initialData }): React.
                 <Button variant="contained" size="medium" startIcon={<LuSearch />} onClick={() => handleSubmit()}>
                   Search
                 </Button>
+                <DownloadAsExcel label="redhat" data={data} />
               </form>
             </div>
             <div>

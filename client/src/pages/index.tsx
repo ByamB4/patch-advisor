@@ -83,9 +83,9 @@ const LandingPage: NextPage<unknown> = (): React.ReactElement => {
                   </div>
                 </div>
               </section>
-              <Xarrow start={box1Ref} end={box2Ref} color={"#5C698B"} curveness={2} headSize={4} dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: -2 }} showTail={false} />
-              <Xarrow start={box3Ref} end={box2Ref} color={"#5C698B"} curveness={2} headSize={4} dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: -2 }} showTail={false} />
-              <Xarrow start={box2Ref} end={box4Ref} color={"#5C698B"} headSize={2} dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: -2 }} showHead={false} showTail={false} />
+              <Xarrow start={box1Ref} end={box2Ref} color={"#5C698B"} curveness={0} headSize={4} dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: 1 }} showTail={false} />
+              <Xarrow start={box3Ref} end={box2Ref} color={"#5C698B"} curveness={0} headSize={4} dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: 1 }} showTail={false} />
+              <Xarrow start={box2Ref} end={box4Ref} color={"#5C698B"} headSize={2} dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: 1 }} showHead={false} showTail={false} />
               <section className={`flex flex-col gap-6 border-2 border-[#364670] px-8 py-4 rounded-2xl bg-white mr-24 ${hover_animation}`} ref={box2Ref}>
                 <div className="flex gap-2 items-center">
                   <FaPix className="text-white p-[5px] bg-[#3E4178] rounded-md" size={28} />

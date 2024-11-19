@@ -7,6 +7,7 @@ import { LuSearch } from "react-icons/lu";
 import { CiscoList } from "@/ui/cisco";
 import { ICisco } from "@/interfaces";
 import { db } from "@/server";
+import DownloadAsExcel from "@/components/download_excel";
 
 const CiscoPage: NextPage<{
   initialData: ICisco[];
@@ -52,6 +53,7 @@ const CiscoPage: NextPage<{
                 <Button variant="contained" size="medium" startIcon={<LuSearch />} onClick={() => handleSubmit()}>
                   Search
                 </Button>
+                <DownloadAsExcel label="cisco" data={data} />
               </form>
             </div>
             <div className="mt-5">

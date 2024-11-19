@@ -8,6 +8,7 @@ import { db } from "@/server";
 import { IMicrosoft } from "@/interfaces";
 import MicrosoftUI from "@/ui/microsoft/list";
 import { LuSearch } from "react-icons/lu";
+import DownloadAsExcel from "@/components/download_excel";
 
 interface Props {
   initialData: IMicrosoft[];
@@ -55,6 +56,8 @@ const MicrosoftPage: NextPage<Props> = ({ initialData = [] }): React.ReactElemen
                 <Button variant="contained" size="medium" startIcon={<LuSearch />} onClick={() => handleSubmit()}>
                   Search
                 </Button>
+
+                <DownloadAsExcel label="microsoft" data={data} />
               </form>
             </div>
             <div className="mt-5">
